@@ -1,0 +1,5 @@
+Check ltl property:
+spin -search -a -ltl p1 crossroads.pml
+
+To view trail file:
+spin -t -r -s -l -g -p crossroads.pml
