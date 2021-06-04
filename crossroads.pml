@@ -27,14 +27,12 @@ chan lightChannels [ROUTES_NUMBER] = [0] of {mtype};
 proctype TrafficGenerator(int routeId; chan trafficChannel)
 {
     do
-    ::  if
-        :: true ->
-            printf("[TrafficGenerator] [Route %d] New traffic\n", routeId)
-            trafficChannel! 1 //just dummy
-        // :: true ->
-        //     printf("[TrafficGenerator] [Route %d] No new traffic\n", routeId)
-        //     skip // no new object
-        fi
+    :: true ->
+        printf("[TrafficGenerator] [Route %d] New traffic\n", routeId)
+        trafficChannel! 1 //just dummy
+    // :: true ->
+    //     printf("[TrafficGenerator] [Route %d] No new traffic\n", routeId)
+    //     skip // no new object
     od
 }
 
