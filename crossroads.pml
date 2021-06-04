@@ -1,6 +1,6 @@
 
 #define INTERSECTION_NUMBER 3
-#define ROUTES_NUMBER 3
+#define ROUTES_NUMBER 2
 #define BUFSIZE 0
 #define MAX_INTERSECTIONS_NUMBER INTERSECTION_NUMBER
 
@@ -15,9 +15,12 @@ mtype = {green, red};
 
 
 bool isIntersectionOccupied [INTERSECTION_NUMBER] = {false, false, false};
-bool isObjectDetected [ROUTES_NUMBER] = {false, false, false}
-bool request [ROUTES_NUMBER] = {false, false, false};
-mtype trafficLights [ROUTES_NUMBER] = {red, red, red};
+bool isObjectDetected [ROUTES_NUMBER] = {false, false};
+bool request [ROUTES_NUMBER] = {false, false};
+mtype trafficLights [ROUTES_NUMBER] = {red, red};
+
+bool flag [ROUTES_NUMBER] = {false, false};
+int turn;   
 
 chan trafficChannels [ROUTES_NUMBER] = [0] of {bool};
 chan controllerChannels [ROUTES_NUMBER] = [0] of {byte};
@@ -47,7 +50,7 @@ proctype TrafficGenerator(int routeId; chan trafficChannel)
 proctype Sensor(int routeId; /*chan controllerChannel,*/ chan trafficChannel)
 {
     do
-    ::  trafficChannel? isObjectDetected[routeId] ->
+    ::  trafficChannel? isObjectDetected[routeId] -> //maybe should declare local variable and write it to isObjectDetected after printf.
         printf("[Sensor] [Route %d] request: %d, isObjectDetected: %d\n", routeId, request[routeId], isObjectDetected[routeId]);
         if
         :: !request[routeId] && isObjectDetected[routeId] ->
@@ -71,10 +74,17 @@ proctype TrafficLight(int routeId; chan lightChannel)
 
 proctype Controller(int routeId; chan lightChannel)
 {
+    int otherRouteId = (routeId == 1 -> 0 : 1);
     do
     ::  request[routeId] ->
         printf("[Controller] [Route %d] Handle request:\n", routeId);
-        // TODO: compete for resources
+
+        // Peterson lock
+        flag[routeId] = true;
+        turn = 1;
+        flag[otherRouteId] && turn == otherRouteId
+
+        // Critical section
         lightChannel! green;
 
         printf("[Controller] [Route %d] Wait for cars to pass\n", routeId);
@@ -83,16 +93,38 @@ proctype Controller(int routeId; chan lightChannel)
         request[routeId] = false;
         lightChannel! red;
         printf("[Controller] [Route %d] Request completed\n", routeId);
+        // End of critical section
+
+        // Peterson unlock
+        flag[routeId] = false;
     od
 }
 
 active proctype main()
 {
-    run Sensor(0, trafficChannels[0]);
-    run TrafficGenerator(0, trafficChannels[0])
-    run TrafficLight(0, lightChannels[0]);
-    run Controller(0, lightChannels[0]);
+    int i = 0;
+    do
+    ::  i < ROUTES_NUMBER ->
+        run Sensor(i, trafficChannels[i]);
+        run TrafficGenerator(i, trafficChannels[i])
+        run TrafficLight(i, lightChannels[i]);
+        run Controller(i, lightChannels[i]);
+        i++;
+    ::  i == ROUTES_NUMBER ->
+        break;
+    od;
+
+
 }
 
+ltl safety_0_1 { [] !(trafficLights[0] == green && trafficLights[1] == green)}
 
-ltl p1 { [] (!(isObjectDetected[0] && (trafficLights[0] == red)) || <> (trafficLights[0] == green))}
+ltl liveness_0 { [] (!(isObjectDetected[0] && (trafficLights[0] == red)) || <> (trafficLights[0] == green))}
+ltl liveness_1 { [] (!(isObjectDetected[1] && (trafficLights[1] == red)) || <> (trafficLights[1] == green))}
+
+ltl fairness_0 { [] <> !(trafficLights[0] == green && isObjectDetected[0])}
+ltl fairness_1 { [] <> !(trafficLights[1] == green && isObjectDetected[1])}
+
+// ltl liveness_2 { [] (!(isObjectDetected[2] && (trafficLights[2] == red)) || <> (trafficLights[2] == green))}
+// ltl liveness_3 { [] (!(isObjectDetected[3] && (trafficLights[3] == red)) || <> (trafficLights[3] == green))}
+// ltl liveness_4 { [] (!(isObjectDetected[4] && (trafficLights[4] == red)) || <> (trafficLights[4] == green))}
