@@ -1,6 +1,6 @@
 
 #define INTERSECTION_NUMBER 3
-#define ROUTES_NUMBER 2
+#define ROUTES_NUMBER 3
 #define BUFSIZE 0
 #define MAX_INTERSECTIONS_NUMBER INTERSECTION_NUMBER
 
@@ -15,12 +15,12 @@ mtype = {green, red};
 
 
 bool isIntersectionOccupied [INTERSECTION_NUMBER] = {false, false, false};
-bool isObjectDetected [ROUTES_NUMBER] = {false, false};
-bool request [ROUTES_NUMBER] = {false, false};
-mtype trafficLights [ROUTES_NUMBER] = {red, red};
+bool isObjectDetected [ROUTES_NUMBER] = {false, false, false};
+bool request [ROUTES_NUMBER] = {false, false, false};
+mtype trafficLights [ROUTES_NUMBER] = {red, red, red};
 
-int flag [ROUTES_NUMBER] = {0, 0};
-int turn [ROUTES_NUMBER] = {0, 0};
+int flag [ROUTES_NUMBER] = {0, 0, 0};
+int turn [ROUTES_NUMBER] = {0, 0, 0};
 
 chan trafficChannels [ROUTES_NUMBER] = [0] of {bool};
 chan controllerChannels [ROUTES_NUMBER] = [0] of {byte};
