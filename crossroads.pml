@@ -19,8 +19,8 @@ bool isObjectDetected [ROUTES_NUMBER] = {false, false};
 bool request [ROUTES_NUMBER] = {false, false};
 mtype trafficLights [ROUTES_NUMBER] = {red, red};
 
-bool flag [ROUTES_NUMBER] = {false, false};
-int turn;   
+int flag [ROUTES_NUMBER] = {0, 0};
+int turn [ROUTES_NUMBER] = {0, 0};
 
 chan trafficChannels [ROUTES_NUMBER] = [0] of {bool};
 chan controllerChannels [ROUTES_NUMBER] = [0] of {byte};
@@ -80,9 +80,25 @@ proctype Controller(int routeId; chan lightChannel)
         printf("[Controller] [Route %d] Handle request:\n", routeId);
 
         // Peterson lock
-        flag[routeId] = true;
-        turn = otherRouteId;
-        !(flag[otherRouteId] && turn == otherRouteId);
+        int count = 0;
+        do
+        ::  count < ROUTES_NUMBER - 1 ->
+            flag[routeId] = count;
+            turn[count] = routeId;
+            int k = 0;
+            do
+            ::  k < ROUTES_NUMBER && k != routeId ->
+                (flag[k] < count || turn[count] != routeId);
+                k++;
+            ::  k == routeId ->
+                k++;
+            ::  k >= ROUTES_NUMBER ->
+                break;
+            od;
+            count++;
+        ::  else ->
+            break;
+        od;
 
         // Critical section
         lightChannel! green;
@@ -98,7 +114,7 @@ proctype Controller(int routeId; chan lightChannel)
         // End of critical section
 
         // Peterson unlock
-        flag[routeId] = false;
+        flag[routeId] = 0;
     od
 }
 
