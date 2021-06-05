@@ -74,15 +74,15 @@ proctype TrafficLight(int routeId; chan lightChannel)
 
 proctype Controller(int routeId; chan lightChannel)
 {
-    int otherRouteId = (routeId == 1 -> 0 : 1);
+    int otherRouteId = 1 - routeId;
     do
     ::  request[routeId] ->
         printf("[Controller] [Route %d] Handle request:\n", routeId);
 
         // Peterson lock
         flag[routeId] = true;
-        turn = 1;
-        flag[otherRouteId] && turn == otherRouteId
+        turn = otherRouteId;
+        !(flag[otherRouteId] && turn == otherRouteId);
 
         // Critical section
         lightChannel! green;
@@ -122,7 +122,7 @@ ltl safety_0_1 { [] !(trafficLights[0] == green && trafficLights[1] == green)}
 ltl liveness_0 { [] (!(isObjectDetected[0] && (trafficLights[0] == red)) || <> (trafficLights[0] == green))}
 ltl liveness_1 { [] (!(isObjectDetected[1] && (trafficLights[1] == red)) || <> (trafficLights[1] == green))}
 
-ltl fairness_0 { [] <> !(trafficLights[0] == green && isObjectDetected[0])}
+ltl fairness_0 { [] <> !(trafficLights[0] == green && isObjectDetected[0])} // check if actually need isObjectDetected here
 ltl fairness_1 { [] <> !(trafficLights[1] == green && isObjectDetected[1])}
 
 // ltl liveness_2 { [] (!(isObjectDetected[2] && (trafficLights[2] == red)) || <> (trafficLights[2] == green))}
