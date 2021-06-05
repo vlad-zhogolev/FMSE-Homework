@@ -38,7 +38,7 @@ proctype TrafficGenerator(int routeId; chan trafficChannel)
         printf("[TrafficGenerator] [Route %d] Notify about traffic absence\n", routeId);
         trafficChannel! false;
         printf("[TrafficGenerator] [Route %d] Wait for red light\n", routeId);
-        trafficLights[routeId] == red;
+        request[routeId] == false;
     // Leads to violation of p1 property. Creates acceptance loop being executed forever.
     // Process responsible for traffic light swith does not proceed to switching light to green.
     // :: true ->
@@ -90,8 +90,10 @@ proctype Controller(int routeId; chan lightChannel)
         printf("[Controller] [Route %d] Wait for cars to pass\n", routeId);
         isObjectDetected[routeId] == false;
         
-        request[routeId] = false;
+        
         lightChannel! red;
+        trafficLights[routeId] == red;
+        request[routeId] = false;
         printf("[Controller] [Route %d] Request completed\n", routeId);
         // End of critical section
 
@@ -116,6 +118,8 @@ active proctype main()
 
 
 }
+
+//ltl p1 { [] <> !(trafficLights[0] == green && isObjectDetected[0]) && [] <> !(trafficLights[1] == green && isObjectDetected[1])}
 
 ltl safety_0_1 { [] !(trafficLights[0] == green && trafficLights[1] == green)}
 
