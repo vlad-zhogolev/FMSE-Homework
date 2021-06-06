@@ -50,14 +50,21 @@ inline InitRouteConfig(index)
     if
     ::  index == 0 ->
         RouteConfigs[0].routeId = 0;
-        RouteConfigs[0].intersectionIds[0] = 0;
-        RouteConfigs[0].intersectionIds[1] = 2;
-        RouteConfigs[0].intersectionIdsLength = 2;
+
+        // RouteConfigs[0].intersectionIds[0] = 0;
+        // RouteConfigs[0].intersectionIds[1] = 2;
+        // RouteConfigs[0].intersectionIdsLength = 2;
+
+        RouteConfigs[0].intersectionIds[0] = 2;
+        RouteConfigs[0].intersectionIdsLength = 1;
+
     ::  index == 1 ->
         RouteConfigs[1].routeId = 1;
         RouteConfigs[1].intersectionIds[0] = 1;
-        RouteConfigs[1].intersectionIds[1] = 0;
-        RouteConfigs[1].intersectionIdsLength = 2;
+        // RouteConfigs[1].intersectionIds[1] = 0;
+        // RouteConfigs[1].intersectionIdsLength = 2;
+        RouteConfigs[1].intersectionIdsLength = 1;
+
     ::  index == 2 ->
         RouteConfigs[2].routeId = 2;
         RouteConfigs[2].intersectionIds[0] = 2;
@@ -110,10 +117,15 @@ inline TryAcquireIntersection(index, routeId)
 
 inline ReleaseIntersection(index, routeId)
 {
+    printf("[Controller] [Route %d] Try release intersection %d\n", routeId, index);
     if
     ::  routeId == Intersections[index].owner ->
         Intersections[index].isAcquired = false;
         Intersections[index].owner = ROUTES_NUMBER;
+        printf("[Controller] [Route %d] Release intersection %d\n", routeId, index);
+    ::  else ->
+        skip;
+        printf("[Controller] [Route %d] Release skip %d\n", routeId, index);
     fi
 }
 
@@ -138,6 +150,8 @@ proctype Controller(int routeId; chan prevChannel, nextChannel, trafficChannel)
         ::  else ->
             break;
         od;
+
+        printf("[Controller] [Route %d] Released resources:\n", routeId);
 
         if
         ::  nempty(trafficChannel) ->
