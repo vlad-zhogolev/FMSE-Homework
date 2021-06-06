@@ -83,7 +83,7 @@ inline TryAcquireIntersection(index, routeId)
         ::  Intersections[index].firstRouteId == ROUTES_NUMBER -> //process is first in queue
             Intersections[index].firstRouteId = routeId;
 
-        ::  Intersections[index].firstRouteId != routeId && Intersections[index].firstRouteId != ROUTES_NUMBER ->
+        ::  Intersections[index].firstRouteId != ROUTES_NUMBER && Intersections[index].firstRouteId != routeId ->
             Intersections[index].secondRouteId = routeId;
 
         ::  else ->
@@ -92,15 +92,8 @@ inline TryAcquireIntersection(index, routeId)
         fi;
     ::  else ->
         if
-        ::  Intersections[index].firstRouteId == ROUTES_NUMBER ->
-            Intersections[index].isAcquired = true;
+        ::  Intersections[index].firstRouteId == ROUTES_NUMBER || Intersections[index].firstRouteId == routeId ->
             Intersections[index].isAcquisitionSucceded = true;
-
-        ::  Intersections[index].firstRouteId == routeId ->
-            Intersections[index].isAcquired = true;
-            Intersections[index].isAcquisitionSucceded = true;
-            Intersections[index].firstRouteId = Intersections[index].secondRouteId;
-            Intersections[index].secondRouteId = ROUTES_NUMBER;
 
         ::  Intersections[index].firstRouteId != routeId && Intersections[index].firstRouteId != ROUTES_NUMBER
             Intersections[index].isAcquisitionSucceded = false;
@@ -116,6 +109,9 @@ inline TryAcquireIntersection(index, routeId)
 inline SetAsOwner(index, routeId)
 {
     Intersections[index].owner = routeId;
+    Intersections[index].isAcquired = true;
+    Intersections[index].firstRouteId = Intersections[index].secondRouteId;
+    Intersections[index].secondRouteId = ROUTES_NUMBER;
     printf("[Controller] [Route %d] Set as owner for intersection %d\n", routeId, index);
 }
 
@@ -160,6 +156,7 @@ proctype Controller(int routeId; chan prevChannel, nextChannel, trafficChannel)
         if
         ::  nempty(trafficChannel) ->
             bool isAllIntersectionsAcquired = true;
+            // Try get all required intersections
             int i = 0;
             do
             ::  i < RouteConfigs[routeId].intersectionIdsLength ->
@@ -173,7 +170,7 @@ proctype Controller(int routeId; chan prevChannel, nextChannel, trafficChannel)
             od;
             
             if
-            ::  !isAllIntersectionsAcquired ->
+            ::  !isAllIntersectionsAcquired -> // Failed to get all of them but stepped into queue
                 nextChannel! true;
             ::  else ->
                 i = 0;
