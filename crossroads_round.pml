@@ -1,8 +1,8 @@
 
-#define INTERSECTIONS_NUMBER 3
-#define ROUTES_NUMBER 3
+#define INTERSECTIONS_NUMBER 9
+#define ROUTES_NUMBER 4
 #define BUFSIZE 0
-#define MAX_INTERSECTIONS_NUMBER INTERSECTIONS_NUMBER
+#define MAX_INTERSECTIONS_NUMBER 4
 
 typedef RouteConfig
 {
@@ -23,9 +23,9 @@ typedef Intersection
 mtype = {green, red};
 
 
-bool isIntersectionOccupied [INTERSECTIONS_NUMBER] = {false, false, false};
+bool isIntersectionOccupied [INTERSECTIONS_NUMBER] = {false, false, false, false, false, false, false, false, false};
 mtype trafficLights [ROUTES_NUMBER] = {red, red, red, red, red};
-Intersection Intersections [ROUTES_NUMBER];
+Intersection Intersections [INTERSECTIONS_NUMBER];
 RouteConfig RouteConfigs [ROUTES_NUMBER];
 
 int flag [ROUTES_NUMBER] = {0, 0, 0, 0, 0};
@@ -45,33 +45,68 @@ inline InitIntersection(i)
     Intersections[i].secondRouteId = ROUTES_NUMBER;
 }
 
+// inline InitRouteConfig(index)
+// {
+//     if
+//     ::  index == 0 ->
+//         RouteConfigs[0].routeId = 0;
+
+//         RouteConfigs[0].intersectionIds[0] = 0;
+//         RouteConfigs[0].intersectionIds[1] = 2;
+//         RouteConfigs[0].intersectionIdsLength = 2;
+
+//         // RouteConfigs[0].intersectionIds[0] = 2;
+//         // RouteConfigs[0].intersectionIdsLength = 1;
+
+//     ::  index == 1 ->
+//         RouteConfigs[1].routeId = 1;
+//         RouteConfigs[1].intersectionIds[0] = 1;
+//         RouteConfigs[1].intersectionIds[1] = 0;
+//         RouteConfigs[1].intersectionIdsLength = 2;
+//         // RouteConfigs[1].intersectionIdsLength = 1;
+
+//     ::  index == 2 ->
+//         RouteConfigs[2].routeId = 2;
+//         RouteConfigs[2].intersectionIds[0] = 2;
+//         RouteConfigs[2].intersectionIds[1] = 1;
+//         RouteConfigs[2].intersectionIdsLength = 2;
+//     fi;
+// }
+
 inline InitRouteConfig(index)
 {
     if
     ::  index == 0 ->
         RouteConfigs[0].routeId = 0;
 
-        RouteConfigs[0].intersectionIds[0] = 0;
-        RouteConfigs[0].intersectionIds[1] = 2;
-        RouteConfigs[0].intersectionIdsLength = 2;
-
-        // RouteConfigs[0].intersectionIds[0] = 2;
-        // RouteConfigs[0].intersectionIdsLength = 1;
+        RouteConfigs[0].intersectionIds[0] = 2;
+        RouteConfigs[0].intersectionIds[1] = 4;
+        RouteConfigs[0].intersectionIds[2] = 6;
+        RouteConfigs[0].intersectionIdsLength = 3;
 
     ::  index == 1 ->
         RouteConfigs[1].routeId = 1;
-        RouteConfigs[1].intersectionIds[0] = 1;
-        RouteConfigs[1].intersectionIds[1] = 0;
+        RouteConfigs[1].intersectionIds[0] = 0;
+        RouteConfigs[1].intersectionIds[1] = 6;
         RouteConfigs[1].intersectionIdsLength = 2;
-        // RouteConfigs[1].intersectionIdsLength = 1;
 
     ::  index == 2 ->
         RouteConfigs[2].routeId = 2;
-        RouteConfigs[2].intersectionIds[0] = 2;
-        RouteConfigs[2].intersectionIds[1] = 1;
-        RouteConfigs[2].intersectionIdsLength = 2;
+        RouteConfigs[2].intersectionIds[0] = 1;
+        RouteConfigs[2].intersectionIds[1] = 4;
+        RouteConfigs[2].intersectionIds[2] = 7;
+        RouteConfigs[2].intersectionIdsLength = 3;
+
+    ::  index == 3 ->
+        RouteConfigs[3].routeId = 2;
+        RouteConfigs[3].intersectionIds[0] = 0;
+        RouteConfigs[3].intersectionIds[1] = 1;
+        RouteConfigs[3].intersectionIds[2] = 2;
+        RouteConfigs[3].intersectionIds[3] = 3;
+        RouteConfigs[3].intersectionIdsLength = 4;
     fi;
 }
+
 
 // Can't call twice in sequence by the same route without calling ReleaseIntersection(...).
 inline TryAcquireIntersection(index, routeId)
@@ -232,8 +267,16 @@ active proctype main()
     turnChannel[0]! true; // start traffic processing
 }
 
+#define tl_green_0 (trafficLights[0] == green)
+#define tl_green_1 (trafficLights[1] == green)
+#define tl_green_2 (trafficLights[2] == green)
+#define tl_green_3 (trafficLights[3] == green)
 
-ltl safety { [] !(trafficLights[0] == green && trafficLights[1] == green && trafficLights[2] == green)}
+ltl safety_0_1 { [] !(tl_green_0 && tl_green_1)}
+ltl safety_0_2 { [] !(tl_green_0 && tl_green_2)}
+ltl safety_0_3 { [] !(tl_green_0 && tl_green_3)}
+ltl safety_1_3 { [] !(tl_green_1 && tl_green_3)}
+ltl safety_2_3 { [] !(tl_green_2 && tl_green_3)}
 
 #define traffic_present_0 (len(trafficChannels[0]) > 0)
 #define traffic_present_1 (len(trafficChannels[1]) > 0)
