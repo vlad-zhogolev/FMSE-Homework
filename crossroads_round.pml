@@ -51,19 +51,19 @@ inline InitRouteConfig(index)
     ::  index == 0 ->
         RouteConfigs[0].routeId = 0;
 
-        // RouteConfigs[0].intersectionIds[0] = 0;
-        // RouteConfigs[0].intersectionIds[1] = 2;
-        // RouteConfigs[0].intersectionIdsLength = 2;
+        RouteConfigs[0].intersectionIds[0] = 0;
+        RouteConfigs[0].intersectionIds[1] = 2;
+        RouteConfigs[0].intersectionIdsLength = 2;
 
-        RouteConfigs[0].intersectionIds[0] = 2;
-        RouteConfigs[0].intersectionIdsLength = 1;
+        // RouteConfigs[0].intersectionIds[0] = 2;
+        // RouteConfigs[0].intersectionIdsLength = 1;
 
     ::  index == 1 ->
         RouteConfigs[1].routeId = 1;
         RouteConfigs[1].intersectionIds[0] = 1;
-        // RouteConfigs[1].intersectionIds[1] = 0;
-        // RouteConfigs[1].intersectionIdsLength = 2;
-        RouteConfigs[1].intersectionIdsLength = 1;
+        RouteConfigs[1].intersectionIds[1] = 0;
+        RouteConfigs[1].intersectionIdsLength = 2;
+        // RouteConfigs[1].intersectionIdsLength = 1;
 
     ::  index == 2 ->
         RouteConfigs[2].routeId = 2;
@@ -88,19 +88,17 @@ inline TryAcquireIntersection(index, routeId)
 
         ::  else ->
             // can't be since resource is acquired by other route
-            printf("[TryAcquireIntersection] [Route %d] Error during intersection acquisition 1\n", routeId);
+            printf("[TryAcquireIntersection] [Route %d] Error during intersection acquisition 1, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
         fi;
     ::  else ->
         if
         ::  Intersections[index].firstRouteId == ROUTES_NUMBER ->
             Intersections[index].isAcquired = true;
             Intersections[index].isAcquisitionSucceded = true;
-            Intersections[index].owner = routeId;
 
         ::  Intersections[index].firstRouteId == routeId ->
             Intersections[index].isAcquired = true;
             Intersections[index].isAcquisitionSucceded = true;
-            Intersections[index].owner = routeId;
             Intersections[index].firstRouteId = Intersections[index].secondRouteId;
             Intersections[index].secondRouteId = ROUTES_NUMBER;
 
@@ -110,9 +108,15 @@ inline TryAcquireIntersection(index, routeId)
         
         ::  else ->
             // can't be since the other route had to move us to first position
-            printf("[TryAcquireIntersection] [Route %d] Error during intersection acquisition 2\n", routeId);
+            printf("[TryAcquireIntersection] [Route %d] Error during intersection acquisition 2, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
         fi;
     fi
+}
+
+inline SetAsOwner(index, routeId)
+{
+    Intersections[index].owner = routeId;
+    printf("[Controller] [Route %d] Set as owner for intersection %d\n", routeId, index);
 }
 
 inline ReleaseIntersection(index, routeId)
@@ -172,6 +176,14 @@ proctype Controller(int routeId; chan prevChannel, nextChannel, trafficChannel)
             ::  !isAllIntersectionsAcquired ->
                 nextChannel! true;
             ::  else ->
+                i = 0;
+                do
+                ::  i < RouteConfigs[routeId].intersectionIdsLength ->
+                    SetAsOwner(RouteConfigs[routeId].intersectionIds[i], routeId);
+                    i++;
+                ::  else ->
+                    break;
+                od;
                 nextChannel! true;
 
                 // Pass cars
