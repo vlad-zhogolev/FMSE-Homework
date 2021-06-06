@@ -36,7 +36,7 @@ chan turnChannel [ROUTES_NUMBER] = [0] of {bool};
 
 bool locked = false;
 
-inline InitIntersection(int index)
+inline InitIntersection(i)
 {
     Intersections[i].isAcquired = false;
     Intersections[i].isAcquisitionSucceded = false;
@@ -45,26 +45,29 @@ inline InitIntersection(int index)
     Intersections[i].secondRouteId = ROUTES_NUMBER;
 }
 
-inline InitRouteConfig(int index)
+inline InitRouteConfig(index)
 {
     if
     ::  index == 0 ->
         RouteConfigs[0].routeId = 0;
-        RouteConfigs[0].intersectionIds = {0, 2};
+        RouteConfigs[0].intersectionIds[0] = 0;
+        RouteConfigs[0].intersectionIds[1] = 2;
         RouteConfigs[0].intersectionIdsLength = 2;
     ::  index == 1 ->
         RouteConfigs[1].routeId = 1;
-        RouteConfigs[1].intersectionIds = {1, 0};
+        RouteConfigs[1].intersectionIds[0] = 1;
+        RouteConfigs[1].intersectionIds[1] = 0;
         RouteConfigs[1].intersectionIdsLength = 2;
     ::  index == 2 ->
         RouteConfigs[2].routeId = 2;
-        RouteConfigs[2].intersectionIds = {2, 1};
+        RouteConfigs[2].intersectionIds[0] = 2;
+        RouteConfigs[2].intersectionIds[1] = 1;
         RouteConfigs[2].intersectionIdsLength = 2;
-    fi
+    fi;
 }
 
 // Can't call twice in sequence by the same route without calling ReleaseIntersection(...).
-inline TryAcquireIntersection(int index, int routeId)
+inline TryAcquireIntersection(index, routeId)
 {
     if
     ::  Intersections[index].isAcquired ->
@@ -101,11 +104,11 @@ inline TryAcquireIntersection(int index, int routeId)
         ::  else ->
             // can't be since the other route had to move us to first position
             printf("[TryAcquireIntersection] [Route %d] Error during intersection acquisition 2\n", routeId);
-        fi
+        fi;
     fi
 }
 
-inline ReleaseIntersection(int index)
+inline ReleaseIntersection(index, routeId)
 {
     if
     ::  routeId == Intersections[index].owner ->
@@ -122,16 +125,15 @@ proctype TrafficGenerator(int routeId; chan trafficChannel)
     od
 }
 
-proctype Controller(int routeId; RouteConfig config; chan prevChannel, nextChannel, trafficChannel)
+proctype Controller(int routeId; chan prevChannel, nextChannel, trafficChannel)
 {
     do
     ::  prevChannel? _ ->
         printf("[Controller] [Route %d] My turn:\n", routeId);
         int j = 0;
         do
-        ::  j < config.intersectionIdsLength ->
-            int id = config.intersectionIds[j];
-            ReleaseIntersection(id, routeId);
+        ::  (j < RouteConfigs[routeId].intersectionIdsLength) ->
+            ReleaseIntersection(RouteConfigs[routeId].intersectionIds[j], routeId);
             j++;
         ::  else ->
             break;
@@ -142,8 +144,8 @@ proctype Controller(int routeId; RouteConfig config; chan prevChannel, nextChann
             bool isAllIntersectionsAcquired = true;
             int i = 0;
             do
-            ::  i < config.intersectionIdsLength ->
-                int id = config.intersectionIds[i];
+            ::  i < RouteConfigs[routeId].intersectionIdsLength ->
+                int id = RouteConfigs[routeId].intersectionIds[i];
                 TryAcquireIntersection(id, routeId);
                 isAllIntersectionsAcquired = isAllIntersectionsAcquired && Intersections[id].isAcquisitionSucceded;
                 Intersections[id].isAcquisitionSucceded = false;
@@ -199,7 +201,7 @@ active proctype main()
     ::  routeId < ROUTES_NUMBER ->
         run TrafficGenerator(routeId, trafficChannels[routeId])
         int nextRouteId = (routeId + 1) % ROUTES_NUMBER;
-        run Controller(routeId, RouteConfigs[routeId], turnChannel[routeId], turnChannel[nextRouteId], trafficChannels[routeId]);
+        run Controller(routeId, turnChannel[routeId], turnChannel[nextRouteId], trafficChannels[routeId]);
         routeId++;
     ::  routeId == ROUTES_NUMBER ->
         break;
