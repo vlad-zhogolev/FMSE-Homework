@@ -1,40 +1,33 @@
 
 #define INTERSECTIONS_NUMBER 9
-#define ROUTES_NUMBER 6
+#define ROUTES_NUMBER 4
 #define BUFSIZE 0
 #define MAX_INTERSECTIONS_NUMBER 4
 
 typedef RouteConfig
 {
-    int routeId;
-    int intersectionIds[MAX_INTERSECTIONS_NUMBER];
-    int intersectionIdsLength;
+    byte intersectionIds[MAX_INTERSECTIONS_NUMBER];
+    byte intersectionIdsLength;
 }
 
 typedef Intersection
 {
     bool isAcquired;
     bool isAcquisitionSucceded;
-    int owner;
-    int firstRouteId;
-    int secondRouteId;
+    byte owner;
+    byte firstRouteId;
+    byte secondRouteId;
 }
 
 mtype = {green, red};
 
-
-bool isIntersectionOccupied [INTERSECTIONS_NUMBER] = {false, false, false, false, false, false, false, false, false};
-mtype trafficLights [ROUTES_NUMBER] = {red, red, red, red, red};
+mtype trafficLights [ROUTES_NUMBER] = {red, red, red, red, red, red};
 Intersection Intersections [INTERSECTIONS_NUMBER];
 RouteConfig RouteConfigs [ROUTES_NUMBER];
-
-int flag [ROUTES_NUMBER] = {0, 0, 0, 0, 0};
-int turn [ROUTES_NUMBER] = {0, 0, 0, 0, 0};
 
 chan trafficChannels [ROUTES_NUMBER] = [1] of {bool};
 chan turnChannel [ROUTES_NUMBER] = [0] of {bool};
 
-bool locked = false;
 
 inline InitIntersection(i)
 {
@@ -77,7 +70,6 @@ inline InitRouteConfig(index)
 {
     if
     ::  index == 0 ->
-        RouteConfigs[0].routeId = 0;
 
         RouteConfigs[0].intersectionIds[0] = 2;
         RouteConfigs[0].intersectionIds[1] = 4;
@@ -85,20 +77,17 @@ inline InitRouteConfig(index)
         RouteConfigs[0].intersectionIdsLength = 3;
 
     ::  index == 1 ->
-        RouteConfigs[1].routeId = 1;
         RouteConfigs[1].intersectionIds[0] = 0;
         RouteConfigs[1].intersectionIds[1] = 6;
         RouteConfigs[1].intersectionIdsLength = 2;
 
     ::  index == 2 ->
-        RouteConfigs[2].routeId = 2;
         RouteConfigs[2].intersectionIds[0] = 1;
         RouteConfigs[2].intersectionIds[1] = 4;
         RouteConfigs[2].intersectionIds[2] = 7;
         RouteConfigs[2].intersectionIdsLength = 3;
 
     ::  index == 3 ->
-        RouteConfigs[3].routeId = 2;
         RouteConfigs[3].intersectionIds[0] = 0;
         RouteConfigs[3].intersectionIds[1] = 1;
         RouteConfigs[3].intersectionIds[2] = 2;
@@ -106,13 +95,11 @@ inline InitRouteConfig(index)
         RouteConfigs[3].intersectionIdsLength = 4;
 
     ::  index == 4 ->
-        RouteConfigs[4].routeId = 2;
         RouteConfigs[4].intersectionIds[0] = 5;
         RouteConfigs[4].intersectionIds[1] = 7;
         RouteConfigs[4].intersectionIdsLength = 2;
 
     ::  index == 5 ->
-        RouteConfigs[5].routeId = 2;
         RouteConfigs[5].intersectionIds[0] = 3;
         RouteConfigs[5].intersectionIds[1] = 5;
         RouteConfigs[5].intersectionIds[2] = 8;
@@ -177,7 +164,7 @@ inline ReleaseIntersection(index, routeId)
     fi
 }
 
-proctype TrafficGenerator(int routeId; chan trafficChannel)
+proctype TrafficGenerator(byte routeId; chan trafficChannel)
 {
     do
     ::  trafficChannel! true;
@@ -185,16 +172,16 @@ proctype TrafficGenerator(int routeId; chan trafficChannel)
     od
 }
 
-proctype Controller(int routeId; chan prevChannel, nextChannel, trafficChannel)
+proctype Controller(byte routeId; chan prevChannel, nextChannel, trafficChannel)
 {
     do
     ::  prevChannel? _ ->
         printf("[Controller] [Route %d] My turn:\n", routeId);
-        int j = 0;
+        byte i = 0;
         do
-        ::  (j < RouteConfigs[routeId].intersectionIdsLength) ->
-            ReleaseIntersection(RouteConfigs[routeId].intersectionIds[j], routeId);
-            j++;
+        ::  (i < RouteConfigs[routeId].intersectionIdsLength) ->
+            ReleaseIntersection(RouteConfigs[routeId].intersectionIds[i], routeId);
+            i++;
         ::  else ->
             break;
         od;
@@ -205,13 +192,12 @@ proctype Controller(int routeId; chan prevChannel, nextChannel, trafficChannel)
         ::  nempty(trafficChannel) ->
             bool isAllIntersectionsAcquired = true;
             // Try get all required intersections
-            int i = 0;
+            i = 0;
             do
             ::  i < RouteConfigs[routeId].intersectionIdsLength ->
-                int id = RouteConfigs[routeId].intersectionIds[i];
-                TryAcquireIntersection(id, routeId);
-                isAllIntersectionsAcquired = isAllIntersectionsAcquired && Intersections[id].isAcquisitionSucceded;
-                Intersections[id].isAcquisitionSucceded = false;
+                TryAcquireIntersection(RouteConfigs[routeId].intersectionIds[i], routeId);
+                isAllIntersectionsAcquired = isAllIntersectionsAcquired && Intersections[RouteConfigs[routeId].intersectionIds[i]].isAcquisitionSucceded;
+                Intersections[RouteConfigs[routeId].intersectionIds[i]].isAcquisitionSucceded = false;
                 i++;
             ::  else ->
                 break;
@@ -238,18 +224,16 @@ proctype Controller(int routeId; chan prevChannel, nextChannel, trafficChannel)
                 printf("[Controller] [Route %d] Cars passed\n", routeId);
                 trafficLights[routeId] = red;
                 printf("[Controller] [Route %d] Switched light to red\n", routeId);
-                locked = false;
             fi
         ::  empty(trafficChannel) ->
             nextChannel! true;
         fi;
-        printf("[Controller] [Route %d] Pass turn\n", routeId);
     od
 }
 
 active proctype main()
 {
-    int intersectionId = 0;
+    byte intersectionId = 0;
     do
     ::  intersectionId < INTERSECTIONS_NUMBER ->
         InitIntersection(intersectionId);
@@ -258,7 +242,7 @@ active proctype main()
         break;
     od;
 
-    int routeId = 0;
+    byte routeId = 0;
     do
     ::  routeId < ROUTES_NUMBER ->
         InitRouteConfig(routeId);
@@ -271,7 +255,7 @@ active proctype main()
     do
     ::  routeId < ROUTES_NUMBER ->
         run TrafficGenerator(routeId, trafficChannels[routeId])
-        int nextRouteId = (routeId + 1) % ROUTES_NUMBER;
+        byte nextRouteId = (routeId + 1) % ROUTES_NUMBER;
         run Controller(routeId, turnChannel[routeId], turnChannel[nextRouteId], trafficChannels[routeId]);
         routeId++;
     ::  routeId == ROUTES_NUMBER ->
@@ -284,6 +268,17 @@ active proctype main()
 #define tl_green_1 (trafficLights[1] == green)
 #define tl_green_2 (trafficLights[2] == green)
 #define tl_green_3 (trafficLights[3] == green)
+#define tl_green_4 (trafficLights[4] == green)
+#define tl_green_5 (trafficLights[5] == green)
+
+
+#define traffic_present_0 (len(trafficChannels[0]) > 0)
+#define traffic_present_1 (len(trafficChannels[1]) > 0)
+#define traffic_present_2 (len(trafficChannels[2]) > 0)
+#define traffic_present_3 (len(trafficChannels[3]) > 0)
+#define traffic_present_4 (len(trafficChannels[4]) > 0)
+#define traffic_present_5 (len(trafficChannels[5]) > 0)
+
 
 ltl safety_0_1 { [] !(tl_green_0 && tl_green_1)}
 ltl safety_0_2 { [] !(tl_green_0 && tl_green_2)}
@@ -291,18 +286,22 @@ ltl safety_0_3 { [] !(tl_green_0 && tl_green_3)}
 ltl safety_1_3 { [] !(tl_green_1 && tl_green_3)}
 ltl safety_2_3 { [] !(tl_green_2 && tl_green_3)}
 
-#define traffic_present_0 (len(trafficChannels[0]) > 0)
-#define traffic_present_1 (len(trafficChannels[1]) > 0)
-#define traffic_present_2 (len(trafficChannels[2]) > 0)
 
 // Check if buffered channel is not empty for liveness and then expect green light to appear
-ltl liveness_0 {[] (traffic_present_0 -> <> (trafficLights[0] == green))}
-ltl liveness_1 {[] (traffic_present_1 -> <> (trafficLights[1] == green))}
-ltl liveness_2 {[] (traffic_present_2 -> <> (trafficLights[2] == green))}
+ltl liveness_0 {[] (traffic_present_0 -> <> tl_green_0)}
+ltl liveness_1 {[] (traffic_present_1 -> <> tl_green_1)}
+ltl liveness_2 {[] (traffic_present_2 -> <> tl_green_2)}
+ltl liveness_3 {[] (traffic_present_3 -> <> tl_green_3)}
+ltl liveness_4 {[] (traffic_present_4 -> <> tl_green_4)}
+ltl liveness_5 {[] (traffic_present_5 -> <> tl_green_5)}
 
-ltl fairness_0 {[] <> !(trafficLights[0] == green && traffic_present_0)} // check if really need traffic_present_0
-ltl fairness_1 {[] <> !(trafficLights[1] == green && traffic_present_1)}
-ltl fairness_2 {[] <> !(trafficLights[2] == green && traffic_present_2)}
+
+ltl fairness_0 {[] <> !(tl_green_0 && traffic_present_0)} // check if really need traffic_present_0
+ltl fairness_1 {[] <> !(tl_green_1 && traffic_present_1)}
+ltl fairness_2 {[] <> !(tl_green_2 && traffic_present_2)}
+ltl fairness_3 {[] <> !(tl_green_3 && traffic_present_3)}
+ltl fairness_4 {[] <> !(tl_green_4 && traffic_present_4)}
+ltl fairness_5 {[] <> !(tl_green_5 && traffic_present_5)}
 
 
-ltl check_no_traffic_possible {<> (traffic_present_0 || traffic_present_1 || traffic_present_2)}
+ltl check_no_traffic_possible {<> (traffic_present_0 || traffic_present_1 || traffic_present_2 || traffic_present_3 || traffic_present_4 || traffic_present_5)}
