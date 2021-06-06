@@ -23,6 +23,7 @@ int turn [ROUTES_NUMBER] = {0, 0, 0, 0, 0};
 chan trafficChannels [ROUTES_NUMBER] = [1] of {bool};
 chan turnChannel [ROUTES_NUMBER] = [0] of {bool};
 
+bool locked = false;
 
 proctype TrafficGenerator(int routeId; chan trafficChannel)
 {
@@ -39,13 +40,22 @@ proctype Controller(int routeId; chan prevChannel, nextChannel, trafficChannel)
         printf("[Controller] [Route %d] My turn:\n", routeId);
         if
         ::  nempty(trafficChannel) ->
-            trafficLights[routeId] = green;
-            printf("[Controller] [Route %d] Switched light to green\n", routeId);
-            trafficChannel? _ ;
-            printf("[Controller] [Route %d] Cars passed\n", routeId);
-            trafficLights[routeId] = red;
-            printf("[Controller] [Route %d] Switched light to red\n", routeId);
-            nextChannel! true;
+            if
+            ::  locked ->
+                nextChannel! true;
+            ::  else ->
+                locked = true;
+                nextChannel! true;
+
+                // Pass cars
+                trafficLights[routeId] = green;
+                printf("[Controller] [Route %d] Switched light to green\n", routeId);
+                trafficChannel? _ ;
+                printf("[Controller] [Route %d] Cars passed\n", routeId);
+                trafficLights[routeId] = red;
+                printf("[Controller] [Route %d] Switched light to red\n", routeId);
+                locked = false;
+            fi
         ::  empty(trafficChannel) ->
             nextChannel! true;
         fi;
