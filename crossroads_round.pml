@@ -2,19 +2,20 @@
 #define INTERSECTIONS_NUMBER 3
 #define ROUTES_NUMBER 3
 #define BUFSIZE 0
-#define MAX_INTERSECTIONS_NUMBER INTERSECTION_NUMBER
+#define MAX_INTERSECTIONS_NUMBER INTERSECTIONS_NUMBER
 
 typedef RouteConfig
 {
-    byte routeId;
-    byte intersectionIds[MAX_INTERSECTIONS_NUMBER];
-    byte intersectionIdsLength;
+    int routeId;
+    int intersectionIds[MAX_INTERSECTIONS_NUMBER];
+    int intersectionIdsLength;
 }
 
 typedef Intersection
 {
     bool isAcquired;
     bool isAcquisitionSucceded;
+    int owner;
     int firstRouteId;
     int secondRouteId;
 }
@@ -22,7 +23,7 @@ typedef Intersection
 mtype = {green, red};
 
 
-bool isIntersectionOccupied [INTERSECTION_NUMBER] = {false, false, false};
+bool isIntersectionOccupied [INTERSECTIONS_NUMBER] = {false, false, false};
 mtype trafficLights [ROUTES_NUMBER] = {red, red, red, red, red};
 Intersection Intersections [ROUTES_NUMBER];
 RouteConfig RouteConfigs [ROUTES_NUMBER];
@@ -39,6 +40,7 @@ inline InitIntersection(int index)
 {
     Intersections[i].isAcquired = false;
     Intersections[i].isAcquisitionSucceded = false;
+    Intersections[i].owner = ROUTES_NUMBER;
     Intersections[i].firstRouteId = ROUTES_NUMBER;
     Intersections[i].secondRouteId = ROUTES_NUMBER;
 }
@@ -83,10 +85,12 @@ inline TryAcquireIntersection(int index, int routeId)
         ::  Intersections[index].firstRouteId == ROUTES_NUMBER ->
             Intersections[index].isAcquired = true;
             Intersections[index].isAcquisitionSucceded = true;
+            Intersections[index].owner = routeId;
 
         ::  Intersections[index].firstRouteId == routeId ->
             Intersections[index].isAcquired = true;
             Intersections[index].isAcquisitionSucceded = true;
+            Intersections[index].owner = routeId;
             Intersections[index].firstRouteId = Intersections[index].secondRouteId;
             Intersections[index].secondRouteId = ROUTES_NUMBER;
 
@@ -103,7 +107,11 @@ inline TryAcquireIntersection(int index, int routeId)
 
 inline ReleaseIntersection(int index)
 {
-    Intersections[index].isAcquired = false;
+    if
+    ::  routeId == Intersections[index].owner ->
+        Intersections[index].isAcquired = false;
+        Intersections[index].owner = ROUTES_NUMBER;
+    fi
 }
 
 proctype TrafficGenerator(int routeId; chan trafficChannel)
@@ -119,6 +127,16 @@ proctype Controller(int routeId; RouteConfig config; chan prevChannel, nextChann
     do
     ::  prevChannel? _ ->
         printf("[Controller] [Route %d] My turn:\n", routeId);
+        int j = 0;
+        do
+        ::  j < config.intersectionIdsLength ->
+            int id = config.intersectionIds[j];
+            ReleaseIntersection(id, routeId);
+            j++;
+        ::  else ->
+            break;
+        od;
+
         if
         ::  nempty(trafficChannel) ->
             bool isAllIntersectionsAcquired = true;
