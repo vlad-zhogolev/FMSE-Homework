@@ -108,15 +108,18 @@ inline InitRouteConfig(index)
 // Can't call twice in sequence by the same route without calling ReleaseIntersection(...).
 inline TryAcquireIntersection(index, routeId)
 {
+    printf("[TryAcquireIntersection] [Route %d] Intersection %d, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, index, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
     if
     ::  Intersections[index].owner != ROUTES_NUMBER
         isAcquisitionSucceded = false;
         if
         ::  Intersections[index].firstRouteId == ROUTES_NUMBER -> //process is first in queue
             Intersections[index].firstRouteId = routeId;
+            printf("[TryAcquireIntersection] [Route %d] Intersection already acquired, 1 in queue , firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
 
         ::  Intersections[index].firstRouteId != ROUTES_NUMBER && Intersections[index].firstRouteId != routeId ->
             Intersections[index].secondRouteId = routeId;
+            printf("[TryAcquireIntersection] [Route %d] Intersection already acquired, 2 in queue , firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
 
         ::  else ->
             // can't be since resource is acquired by other route
@@ -126,10 +129,13 @@ inline TryAcquireIntersection(index, routeId)
         if
         ::  Intersections[index].firstRouteId == ROUTES_NUMBER || Intersections[index].firstRouteId == routeId ->
             isAcquisitionSucceded = true;
+            
+            printf("[TryAcquireIntersection] [Route %d] Can acquire intersection, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
 
         ::  Intersections[index].firstRouteId != routeId && Intersections[index].firstRouteId != ROUTES_NUMBER
             isAcquisitionSucceded = false;
             Intersections[index].secondRouteId = routeId;
+            printf("[TryAcquireIntersection] [Route %d] Can't acquire intersection, 2 in queue , firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
         
         ::  else ->
             // can't be since the other route had to move us to first position
@@ -143,19 +149,19 @@ inline SetAsOwner(index, routeId)
     Intersections[index].owner = routeId;
     Intersections[index].firstRouteId = Intersections[index].secondRouteId;
     Intersections[index].secondRouteId = ROUTES_NUMBER;
-    printf("[Controller] [Route %d] Set as owner for intersection %d\n", routeId, index);
+    printf("[SetAsOwner] [Route %d] Set as owner for intersection %d\n", routeId, index);
 }
 
 inline ReleaseIntersection(index, routeId)
 {
-    printf("[Controller] [Route %d] Try release intersection %d\n", routeId, index);
+    printf("[ReleaseIntersection] [Route %d] Try release intersection %d\n", routeId, index);
     if
     ::  routeId == Intersections[index].owner ->
         Intersections[index].owner = ROUTES_NUMBER;
-        printf("[Controller] [Route %d] Release intersection %d\n", routeId, index);
+        printf("[ReleaseIntersection] [Route %d] Release intersection %d\n", routeId, index);
     ::  else ->
         skip;
-        printf("[Controller] [Route %d] Release skip %d\n", routeId, index);
+        printf("[ReleaseIntersection] [Route %d] Release skip %d\n", routeId, index);
     fi
 }
 
