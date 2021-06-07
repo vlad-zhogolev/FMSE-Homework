@@ -1,0 +1,112 @@
+spin -search -a -b -m1000000 -w27 -DCOLLAPSE -ltl fairness_0 crossroads_round.pml
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+  the model contains 18 never claims: check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+pan: ltl formula fairness_0
+Depth=  371301 States=    1e+06 Transitions= 1.99e+06 Memory=   603.364 t=     2.82 R=   4e+05
+Depth=  471082 States=    2e+06 Transitions= 4.49e+06 Memory=   659.809 t=     6.33 R=   3e+05
+Depth=  521668 States=    3e+06 Transitions= 7.31e+06 Memory=   718.891 t=     10.3 R=   3e+05
+Depth=  569882 States=    4e+06 Transitions= 1.02e+07 Memory=   777.680 t=     14.4 R=   3e+05
+Depth=  599540 States=    5e+06 Transitions= 1.34e+07 Memory=   835.688 t=     18.8 R=   3e+05
+Depth=  621888 States=    6e+06 Transitions= 1.72e+07 Memory=   891.059 t=     23.8 R=   3e+05
+Depth=  621888 States=    7e+06 Transitions= 2.06e+07 Memory=   943.305 t=     28.4 R=   2e+05
+Depth=  621888 States=    8e+06 Transitions= 2.35e+07 Memory=   993.012 t=     32.4 R=   2e+05
+Depth=  621888 States=    9e+06 Transitions= 2.62e+07 Memory=  1043.989 t=       36 R=   3e+05
+Depth=  621888 States=    1e+07 Transitions= 2.93e+07 Memory=  1095.258 t=     40.1 R=   2e+05
+Depth=  621888 States=  1.1e+07 Transitions= 3.26e+07 Memory=  1148.383 t=     44.6 R=   2e+05
+Depth=  621888 States=  1.2e+07 Transitions= 3.55e+07 Memory=  1203.754 t=     48.6 R=   2e+05
+Depth=  621888 States=  1.3e+07 Transitions=  3.9e+07 Memory=  1260.395 t=     53.4 R=   2e+05
+Depth=  621888 States=  1.4e+07 Transitions=  4.2e+07 Memory=  1312.153 t=     57.6 R=   2e+05
+Depth=  621888 States=  1.5e+07 Transitions= 4.48e+07 Memory=  1366.938 t=     61.3 R=   2e+05
+Depth=  621888 States=  1.6e+07 Transitions= 4.81e+07 Memory=  1423.383 t=     65.8 R=   2e+05
+Depth=  621888 States=  1.7e+07 Transitions= 5.16e+07 Memory=  1474.653 t=     70.5 R=   2e+05
+Depth=  621888 States=  1.8e+07 Transitions= 5.49e+07 Memory=  1526.801 t=       75 R=   2e+05
+Depth=  621888 States=  1.9e+07 Transitions= 5.81e+07 Memory=  1580.805 t=     79.4 R=   2e+05
+Depth=  621888 States=    2e+07 Transitions= 6.09e+07 Memory=  1636.176 t=     84.5 R=   2e+05
+Depth=  621888 States=  2.1e+07 Transitions= 6.44e+07 Memory=  1692.524 t=     89.2 R=   2e+05
+Depth=  621888 States=  2.2e+07 Transitions= 6.77e+07 Memory=  1742.621 t=     93.8 R=   2e+05
+Depth=  621888 States=  2.3e+07 Transitions=  7.1e+07 Memory=  1793.989 t=     98.2 R=   2e+05
+Depth=  621888 States=  2.4e+07 Transitions= 7.43e+07 Memory=  1845.746 t=      103 R=   2e+05
+Depth=  621888 States=  2.5e+07 Transitions= 7.78e+07 Memory=  1896.723 t=      107 R=   2e+05
+Depth=  621888 States=  2.6e+07 Transitions= 8.08e+07 Memory=  1948.090 t=      111 R=   2e+05
+Depth=  621888 States=  2.7e+07 Transitions= 8.36e+07 Memory=  2001.801 t=      115 R=   2e+05
+Depth=  621888 States=  2.8e+07 Transitions= 8.71e+07 Memory=  2054.340 t=      120 R=   2e+05
+Depth=  621888 States=  2.9e+07 Transitions= 9.02e+07 Memory=  2103.461 t=      124 R=   2e+05
+Depth=  621888 States=    3e+07 Transitions= 9.34e+07 Memory=  2153.754 t=      129 R=   2e+05
+Depth=  621888 States=  3.1e+07 Transitions= 9.65e+07 Memory=  2204.340 t=      133 R=   2e+05
+Depth=  621888 States=  3.2e+07 Transitions= 9.99e+07 Memory=  2252.289 t=      138 R=   2e+05
+Depth=  621888 States=  3.3e+07 Transitions= 1.03e+08 Memory=  2301.703 t=      142 R=   2e+05
+Depth=  621888 States=  3.4e+07 Transitions= 1.07e+08 Memory=  2351.313 t=      147 R=   2e+05
+Depth=  621888 States=  3.5e+07 Transitions=  1.1e+08 Memory=  2398.578 t=      152 R=   2e+05
+Depth=  621888 States=  3.6e+07 Transitions= 1.13e+08 Memory=  2449.946 t=      156 R=   2e+05
+Depth=  621888 States=  3.7e+07 Transitions= 1.16e+08 Memory=  2507.368 t=      161 R=   2e+05
+Depth=  621888 States=  3.8e+07 Transitions=  1.2e+08 Memory=  2564.008 t=      166 R=   2e+05
+Depth=  621888 States=  3.9e+07 Transitions= 1.23e+08 Memory=  2620.649 t=      170 R=   2e+05
+Depth=  621888 States=    4e+07 Transitions= 1.26e+08 Memory=  2677.582 t=      175 R=   2e+05
+Depth=  621888 States=  4.1e+07 Transitions=  1.3e+08 Memory=  2734.223 t=      180 R=   2e+05
+Depth=  621888 States=  4.2e+07 Transitions= 1.33e+08 Memory=  2790.571 t=      185 R=   2e+05
+Depth=  621888 States=  4.3e+07 Transitions= 1.36e+08 Memory=  2846.625 t=      189 R=   2e+05
+Depth=  621888 States=  4.4e+07 Transitions=  1.4e+08 Memory=  2902.094 t=      194 R=   2e+05
+
+(Spin Version 6.5.1 -- 31 July 2020)
+        + Partial Order Reduction
+        + Compression
+
+Full statespace search for:
+        never claim             + (fairness_0)
+        assertion violations    + (if within scope of claim)
+        acceptance   cycles     + (fairness disabled)
+        invalid end states      - (disabled by never claim)
+
+State-vector 260 byte, depth reached 621888, errors: 0
+ 39496127 states, stored (4.40938e+07 visited)
+ 95801914 states, matched
+1.3989572e+08 transitions (= visited+matched)
+        0 atomic steps
+hash conflicts:   7244313 (resolved)
+
+Stats on memory usage (in Megabytes):
+10546.604       equivalent memory usage for states (stored*(State-vector + overhead))
+ 2361.611       actual memory usage for states (compression: 22.39%)
+                state-vector as stored = 43 byte + 20 byte overhead
+  512.000       memory used for hash table (-w27)
+   34.332       memory used for DFS stack (-m1000000)
+ 2907.172       total actual memory usage
+
+
+nr of templates: [ 0:globals 1:chans 2:procs ]
+collapse counts: [ 0:1347910 2:6 3:786 4:110 16:2 ]
+unreached in proctype TrafficGenerator
+        crossroads_round.pml:175, state 5, "-end-"
+        (1 of 5 states)
+unreached in proctype Controller
+        crossroads_round.pml:117, state 26, "Intersections[RouteConfigs[routeId].intersectionIds[i]].firstRouteId = routeId"
+        crossroads_round.pml:234, state 77, "-end-"
+        (2 of 77 states)
+unreached in proctype main
+        (0 of 57 states)
+unreached in claim fairness_0
+        _spin_nvr.tmp:121, state 13, "-end-"
+        (1 of 13 states)
+
+pan: elapsed time 195 seconds
+pan: rate  226606.7 states/second
