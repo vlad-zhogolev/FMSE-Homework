@@ -129,7 +129,8 @@ inline TryAcquireIntersection(index, routeId)
         if
         ::  Intersections[index].firstRouteId == ROUTES_NUMBER || Intersections[index].firstRouteId == routeId ->
             isAcquisitionSucceded = true;
-            
+            Intersections[index].firstRouteId = routeId;
+
             printf("[TryAcquireIntersection] [Route %d] Can acquire intersection, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
 
         ::  Intersections[index].firstRouteId != routeId && Intersections[index].firstRouteId != ROUTES_NUMBER
