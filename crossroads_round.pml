@@ -148,8 +148,6 @@ inline TryAcquireIntersection(index, routeId)
 inline SetAsOwner(index, routeId)
 {
     Intersections[index].owner = routeId;
-    Intersections[index].firstRouteId = Intersections[index].secondRouteId;
-    Intersections[index].secondRouteId = ROUTES_NUMBER;
     printf("[SetAsOwner] [Route %d] Set as owner for intersection %d\n", routeId, index);
 }
 
@@ -159,6 +157,8 @@ inline ReleaseIntersection(index, routeId)
     if
     ::  routeId == Intersections[index].owner ->
         Intersections[index].owner = ROUTES_NUMBER;
+        Intersections[index].firstRouteId = Intersections[index].secondRouteId;
+        Intersections[index].secondRouteId = ROUTES_NUMBER;
         printf("[ReleaseIntersection] [Route %d] Release intersection %d\n", routeId, index);
     ::  else ->
         skip;
