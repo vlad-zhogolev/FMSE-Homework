@@ -12,7 +12,6 @@ typedef RouteConfig
 
 typedef Intersection
 {
-    bool isAcquired;
     byte owner;
     byte firstRouteId;
     byte secondRouteId;
@@ -31,7 +30,6 @@ bool isAcquisitionSucceded = false;
 
 inline InitIntersection(i)
 {
-    Intersections[i].isAcquired = false;
     Intersections[i].owner = ROUTES_NUMBER;
     Intersections[i].firstRouteId = ROUTES_NUMBER;
     Intersections[i].secondRouteId = ROUTES_NUMBER;
@@ -111,7 +109,7 @@ inline InitRouteConfig(index)
 inline TryAcquireIntersection(index, routeId)
 {
     if
-    ::  Intersections[index].isAcquired->
+    ::  Intersections[index].owner != ROUTES_NUMBER
         isAcquisitionSucceded = false;
         if
         ::  Intersections[index].firstRouteId == ROUTES_NUMBER -> //process is first in queue
@@ -143,7 +141,6 @@ inline TryAcquireIntersection(index, routeId)
 inline SetAsOwner(index, routeId)
 {
     Intersections[index].owner = routeId;
-    Intersections[index].isAcquired = true;
     Intersections[index].firstRouteId = Intersections[index].secondRouteId;
     Intersections[index].secondRouteId = ROUTES_NUMBER;
     printf("[Controller] [Route %d] Set as owner for intersection %d\n", routeId, index);
@@ -154,7 +151,6 @@ inline ReleaseIntersection(index, routeId)
     printf("[Controller] [Route %d] Try release intersection %d\n", routeId, index);
     if
     ::  routeId == Intersections[index].owner ->
-        Intersections[index].isAcquired = false;
         Intersections[index].owner = ROUTES_NUMBER;
         printf("[Controller] [Route %d] Release intersection %d\n", routeId, index);
     ::  else ->
