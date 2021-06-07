@@ -13,7 +13,6 @@ typedef RouteConfig
 typedef Intersection
 {
     bool isAcquired;
-    bool isAcquisitionSucceded;
     byte owner;
     byte firstRouteId;
     byte secondRouteId;
@@ -27,12 +26,12 @@ RouteConfig RouteConfigs [ROUTES_NUMBER];
 
 chan trafficChannels [ROUTES_NUMBER] = [1] of {bool};
 chan turnChannel [ROUTES_NUMBER] = [0] of {bool};
+bool isAcquisitionSucceded = false;
 
 
 inline InitIntersection(i)
 {
     Intersections[i].isAcquired = false;
-    Intersections[i].isAcquisitionSucceded = false;
     Intersections[i].owner = ROUTES_NUMBER;
     Intersections[i].firstRouteId = ROUTES_NUMBER;
     Intersections[i].secondRouteId = ROUTES_NUMBER;
@@ -112,8 +111,8 @@ inline InitRouteConfig(index)
 inline TryAcquireIntersection(index, routeId)
 {
     if
-    ::  Intersections[index].isAcquired ->
-        Intersections[index].isAcquisitionSucceded = false;
+    ::  Intersections[index].owner != routeId && Intersections[index].owner !=ROUTES_NUMBER ->
+        isAcquisitionSucceded = false;
         if
         ::  Intersections[index].firstRouteId == ROUTES_NUMBER -> //process is first in queue
             Intersections[index].firstRouteId = routeId;
@@ -128,10 +127,10 @@ inline TryAcquireIntersection(index, routeId)
     ::  else ->
         if
         ::  Intersections[index].firstRouteId == ROUTES_NUMBER || Intersections[index].firstRouteId == routeId ->
-            Intersections[index].isAcquisitionSucceded = true;
+            isAcquisitionSucceded = true;
 
         ::  Intersections[index].firstRouteId != routeId && Intersections[index].firstRouteId != ROUTES_NUMBER
-            Intersections[index].isAcquisitionSucceded = false;
+            isAcquisitionSucceded = false;
             Intersections[index].secondRouteId = routeId;
         
         ::  else ->
@@ -196,8 +195,8 @@ proctype Controller(byte routeId; chan prevChannel, nextChannel, trafficChannel)
             do
             ::  i < RouteConfigs[routeId].intersectionIdsLength ->
                 TryAcquireIntersection(RouteConfigs[routeId].intersectionIds[i], routeId);
-                isAllIntersectionsAcquired = isAllIntersectionsAcquired && Intersections[RouteConfigs[routeId].intersectionIds[i]].isAcquisitionSucceded;
-                Intersections[RouteConfigs[routeId].intersectionIds[i]].isAcquisitionSucceded = false;
+                isAllIntersectionsAcquired = isAllIntersectionsAcquired && isAcquisitionSucceded;
+                isAcquisitionSucceded = false;
                 i++;
             ::  else ->
                 break;
