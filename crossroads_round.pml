@@ -111,7 +111,7 @@ inline InitRouteConfig(index)
 inline TryAcquireIntersection(index, routeId)
 {
     if
-    ::  Intersections[index].owner != routeId && Intersections[index].owner !=ROUTES_NUMBER ->
+    ::  Intersections[index].isAcquired->
         isAcquisitionSucceded = false;
         if
         ::  Intersections[index].firstRouteId == ROUTES_NUMBER -> //process is first in queue
