@@ -82,7 +82,8 @@ inline InitRouteConfig(index)
         RouteConfigs[2].intersectionIds[0] = 1;
         RouteConfigs[2].intersectionIds[1] = 4;
         RouteConfigs[2].intersectionIds[2] = 7;
-        RouteConfigs[2].intersectionIdsLength = 3;
+        RouteConfigs[2].intersectionIds[3] = 8;
+        RouteConfigs[2].intersectionIdsLength = 4;
 
     ::  index == 3 ->
         RouteConfigs[3].intersectionIds[0] = 0;
