@@ -1,6 +1,6 @@
 
 #define INTERSECTIONS_NUMBER 9
-#define ROUTES_NUMBER 6
+#define ROUTES_NUMBER 4
 #define MAX_INTERSECTIONS_NUMBER 4
 
 typedef RouteConfig
@@ -12,8 +12,7 @@ typedef RouteConfig
 typedef Intersection
 {
     byte owner;
-    byte firstRouteId;
-    byte secondRouteId;
+    chan queue = [2] of {byte};
 }
 
 mtype = {green, red};
@@ -31,8 +30,6 @@ bool isAcquisitionSucceded = false;
 inline InitIntersection(i)
 {
     Intersections[i].owner = ROUTES_NUMBER;
-    Intersections[i].firstRouteId = ROUTES_NUMBER;
-    Intersections[i].secondRouteId = ROUTES_NUMBER;
 }
 
 inline InitRouteConfig(routeId)
@@ -80,61 +77,43 @@ inline InitRouteConfig(routeId)
 // Can't call twice in sequence by the same route without calling ReleaseIntersection(...).
 inline TryAcquireIntersection(index, routeId)
 {
-    // printf("[TryAcquireIntersection] [Route %d] Intersection %d, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, index, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
+    printf("[TryAcquireIntersection %d] [Route %d] owner: %d, \n", index, routeId, Intersections[index].owner);
+    if
+    ::  full(Intersections[index].queue) ->
+        skip;
+    ::  nfull(Intersections[index].queue) ->
+        Intersections[index].queue! routeId;
+    fi;
+
+    int topRouteId;
+    Intersections[index].queue? <topRouteId>;
     if
     ::  Intersections[index].owner != ROUTES_NUMBER
         isAcquisitionSucceded = false;
-        if
-        ::  Intersections[index].firstRouteId == ROUTES_NUMBER -> //process is first in queue
-            Intersections[index].firstRouteId = routeId;
-            // printf("[TryAcquireIntersection] [Route %d] Intersection already acquired, 1 in queue , firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
-
-        ::  Intersections[index].firstRouteId != ROUTES_NUMBER && Intersections[index].firstRouteId != routeId ->
-            Intersections[index].secondRouteId = routeId;
-            // printf("[TryAcquireIntersection] [Route %d] Intersection already acquired, 2 in queue , firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
-
-        // ::  else ->
-        //     // can't be since resource is acquired by other route
-        //     printf("[TryAcquireIntersection] [Route %d] Error during intersection acquisition 1, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
-        fi;
+        printf("[TryAcquireIntersection %d] [Route %d] Acquisition failed, topRouteId: %d, owner: %d, \n", index, routeId, topRouteId, Intersections[index].owner);
     ::  else ->
-        if
-        ::  Intersections[index].firstRouteId == ROUTES_NUMBER || Intersections[index].firstRouteId == routeId ->
-            isAcquisitionSucceded = true;
-            Intersections[index].firstRouteId = routeId;
-
-            // printf("[TryAcquireIntersection] [Route %d] Can acquire intersection, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
-
-        ::  Intersections[index].firstRouteId != routeId && Intersections[index].firstRouteId != ROUTES_NUMBER
-            isAcquisitionSucceded = false;
-            Intersections[index].secondRouteId = routeId;
-            // printf("[TryAcquireIntersection] [Route %d] Can't acquire intersection, 2 in queue , firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
-        
-        // ::  else ->
-        //     // can't be since the other route had to move us to first position
-        //     printf("[TryAcquireIntersection] [Route %d] Error during intersection acquisition 2, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
-        fi;
+        isAcquisitionSucceded = (topRouteId == routeId);
+        printf("[TryAcquireIntersection %d] [Route %d] Acquisition %d, topRouteId: %d, owner: %d\n", index, routeId, isAcquisitionSucceded, topRouteId, Intersections[index].owner);
     fi
 }
 
 inline SetAsOwner(index, routeId)
 {
     Intersections[index].owner = routeId;
-    // printf("[SetAsOwner] [Route %d] Set as owner for intersection %d\n", routeId, index);
+    printf("[SetAsOwner] [Route %d] Set as owner for intersection %d\n", routeId, index);
 }
 
 inline ReleaseIntersection(index, routeId)
 {
-    // printf("[ReleaseIntersection] [Route %d] Try release intersection %d\n", routeId, index);
+    printf("[ReleaseIntersection] [Route %d] Try release intersection %d\n", routeId, index);
     if
     ::  routeId == Intersections[index].owner ->
         Intersections[index].owner = ROUTES_NUMBER;
-        Intersections[index].firstRouteId = Intersections[index].secondRouteId;
-        Intersections[index].secondRouteId = ROUTES_NUMBER;
-        // printf("[ReleaseIntersection] [Route %d] Release intersection %d\n", routeId, index);
+        Intersections[index].queue? _;
+        printf("[ReleaseIntersection] [Route %d] Release intersection %d\n", routeId, index);
     ::  else ->
         skip;
-        // printf("[ReleaseIntersection] [Route %d] Release skip %d\n", routeId, index);
+        printf("[ReleaseIntersection] [Route %d] Release skip %d\n", routeId, index);
     fi
 }
 
@@ -142,7 +121,7 @@ proctype TrafficGenerator(byte routeId; chan trafficChannel)
 {
     do
     ::  trafficChannel! true;
-        // printf("[TrsafficGenerator] [Route %d] New traffic\n", routeId);
+        printf("[TrsafficGenerator] [Route %d] New traffic\n", routeId);
     od
 }
 
@@ -150,7 +129,7 @@ proctype Controller(byte routeId; chan prevChannel, nextChannel, trafficChannel)
 {
     do
     ::  prevChannel? _ ->
-        // printf("[Controller] [Route %d] My turn:\n", routeId);
+        printf("[Controller] [Route %d] My turn:\n", routeId);
         byte i = 0;
         do
         ::  (i < RouteConfigs[routeId].intersectionIdsLength) ->
@@ -160,7 +139,7 @@ proctype Controller(byte routeId; chan prevChannel, nextChannel, trafficChannel)
             break;
         od;
 
-        // printf("[Controller] [Route %d] Released resources:\n", routeId);
+        printf("[Controller] [Route %d] Released resources:\n", routeId);
 
         if
         ::  nempty(trafficChannel) ->
@@ -193,11 +172,11 @@ proctype Controller(byte routeId; chan prevChannel, nextChannel, trafficChannel)
 
                 // Pass cars
                 trafficLights[routeId] = green;
-                // printf("[Controller] [Route %d] Switched light to green\n", routeId);
+                printf("[Controller] [Route %d] Switched light to green\n", routeId);
                 trafficChannel? _ ;
-                // printf("[Controller] [Route %d] Cars passed\n", routeId);
+                printf("[Controller] [Route %d] Cars passed\n", routeId);
                 trafficLights[routeId] = red;
-                // printf("[Controller] [Route %d] Switched light to red\n", routeId);
+                printf("[Controller] [Route %d] Switched light to red\n", routeId);
             fi
         ::  empty(trafficChannel) ->
             nextChannel! true;
@@ -276,4 +255,4 @@ ltl fairness_5 {[] <> !(tl_green_5 && traffic_present_5)}
 
 
 ltl check_no_traffic_possible {<> (traffic_present_0 || traffic_present_1 || traffic_present_2 || traffic_present_3 || traffic_present_4 || traffic_present_5)}
-ltl check_both_green_0_4 {[] !(tl_green_0 && tl_green_4)}
+ltl check_simultaneous_green_0_4 {[] !(tl_green_0 && tl_green_4)}
