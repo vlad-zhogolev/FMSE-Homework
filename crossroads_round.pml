@@ -35,44 +35,44 @@ inline InitIntersection(i)
     Intersections[i].secondRouteId = ROUTES_NUMBER;
 }
 
-inline InitRouteConfig(index)
+inline InitRouteConfig(routeId)
 {
     if
-    ::  index == 0 ->
-        RouteConfigs[0].intersectionIds[0] = 2;
-        RouteConfigs[0].intersectionIds[1] = 4;
-        RouteConfigs[0].intersectionIds[2] = 6;
-        RouteConfigs[0].intersectionIdsLength = 3;
+    ::  routeId == 0 ->
+        RouteConfigs[routeId].intersectionIds[0] = 2;
+        RouteConfigs[routeId].intersectionIds[1] = 4;
+        RouteConfigs[routeId].intersectionIds[2] = 6;
+        RouteConfigs[routeId].intersectionIdsLength = 3;
 
-    ::  index == 1 ->
-        RouteConfigs[1].intersectionIds[0] = 0;
-        RouteConfigs[1].intersectionIds[1] = 6;
-        RouteConfigs[1].intersectionIdsLength = 2;
+    ::  routeId == 1 ->
+        RouteConfigs[routeId].intersectionIds[0] = 0;
+        RouteConfigs[routeId].intersectionIds[1] = 6;
+        RouteConfigs[routeId].intersectionIdsLength = 2;
 
-    ::  index == 2 ->
-        RouteConfigs[2].intersectionIds[0] = 1;
-        RouteConfigs[2].intersectionIds[1] = 4;
-        RouteConfigs[2].intersectionIds[2] = 7;
-        RouteConfigs[2].intersectionIds[3] = 8;
-        RouteConfigs[2].intersectionIdsLength = 4;
+    ::  routeId == 2 ->
+        RouteConfigs[routeId].intersectionIds[0] = 1;
+        RouteConfigs[routeId].intersectionIds[1] = 4;
+        RouteConfigs[routeId].intersectionIds[2] = 7;
+        RouteConfigs[routeId].intersectionIds[3] = 8;
+        RouteConfigs[routeId].intersectionIdsLength = 4;
 
-    ::  index == 3 ->
-        RouteConfigs[3].intersectionIds[0] = 0;
-        RouteConfigs[3].intersectionIds[1] = 1;
-        RouteConfigs[3].intersectionIds[2] = 2;
-        RouteConfigs[3].intersectionIds[3] = 3;
-        RouteConfigs[3].intersectionIdsLength = 4;
+    ::  routeId == 3 ->
+        RouteConfigs[routeId].intersectionIds[0] = 0;
+        RouteConfigs[routeId].intersectionIds[1] = 1;
+        RouteConfigs[routeId].intersectionIds[2] = 2;
+        RouteConfigs[routeId].intersectionIds[3] = 3;
+        RouteConfigs[routeId].intersectionIdsLength = 4;
 
-    ::  index == 4 ->
-        RouteConfigs[4].intersectionIds[0] = 5;
-        RouteConfigs[4].intersectionIds[1] = 7;
-        RouteConfigs[4].intersectionIdsLength = 2;
+    ::  routeId == 4 ->
+        RouteConfigs[routeId].intersectionIds[0] = 5;
+        RouteConfigs[routeId].intersectionIds[1] = 7;
+        RouteConfigs[routeId].intersectionIdsLength = 2;
 
-    ::  index == 5 ->
-        RouteConfigs[5].intersectionIds[0] = 3;
-        RouteConfigs[5].intersectionIds[1] = 5;
-        RouteConfigs[5].intersectionIds[2] = 8;
-        RouteConfigs[5].intersectionIdsLength = 3;
+    ::  routeId == 5 ->
+        RouteConfigs[routeId].intersectionIds[0] = 3;
+        RouteConfigs[routeId].intersectionIds[1] = 5;
+        RouteConfigs[routeId].intersectionIds[2] = 8;
+        RouteConfigs[routeId].intersectionIdsLength = 3;
     fi;
 }
 
