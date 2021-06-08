@@ -276,3 +276,4 @@ ltl fairness_5 {[] <> !(tl_green_5 && traffic_present_5)}
 
 
 ltl check_no_traffic_possible {<> (traffic_present_0 || traffic_present_1 || traffic_present_2 || traffic_present_3 || traffic_present_4 || traffic_present_5)}
+ltl check_both_green_0_4 {[] !(tl_green_0 && tl_green_4)}
