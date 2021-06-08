@@ -252,6 +252,10 @@ ltl safety_0_2 { [] !(tl_green_0 && tl_green_2)}
 ltl safety_0_3 { [] !(tl_green_0 && tl_green_3)}
 ltl safety_1_3 { [] !(tl_green_1 && tl_green_3)}
 ltl safety_2_3 { [] !(tl_green_2 && tl_green_3)}
+ltl safety_2_4 { [] !(tl_green_2 && tl_green_4)}
+ltl safety_2_5 { [] !(tl_green_2 && tl_green_5)}
+ltl safety_3_5 { [] !(tl_green_3 && tl_green_5)}
+ltl safety_4_5 { [] !(tl_green_4 && tl_green_5)}
 
 
 // Check if buffered channel is not empty for liveness and then expect green light to appear
