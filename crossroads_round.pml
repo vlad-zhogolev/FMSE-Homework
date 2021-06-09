@@ -3,6 +3,17 @@
 #define ROUTES_NUMBER 6
 #define MAX_INTERSECTIONS_NUMBER 4
 
+#define for(I,low,high) \
+    byte I = low; \
+    do \
+    :: ( I >= high ) -> \
+        break; \
+    :: else ->
+
+#define rof(I) \
+    ; I++ \
+    od
+
 typedef RouteConfig
 {
     byte intersectionIds[MAX_INTERSECTIONS_NUMBER];
@@ -80,10 +91,10 @@ inline InitRouteConfig(routeId)
 // Can't call twice in sequence by the same route without calling ReleaseIntersection(...).
 inline TryAcquireIntersection(index, routeId)
 {
+    isAcquisitionSucceded = false;
     // printf("[TryAcquireIntersection] [Route %d] Intersection %d, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, index, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
     if
     ::  Intersections[index].owner != ROUTES_NUMBER
-        isAcquisitionSucceded = false;
         if
         ::  Intersections[index].firstRouteId == ROUTES_NUMBER -> //process is first in queue
             Intersections[index].firstRouteId = routeId;
@@ -106,7 +117,6 @@ inline TryAcquireIntersection(index, routeId)
             // printf("[TryAcquireIntersection] [Route %d] Can acquire intersection, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
 
         ::  Intersections[index].firstRouteId != routeId && Intersections[index].firstRouteId != ROUTES_NUMBER
-            isAcquisitionSucceded = false;
             Intersections[index].secondRouteId = routeId;
             // printf("[TryAcquireIntersection] [Route %d] Can't acquire intersection, 2 in queue , firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
         
@@ -150,56 +160,36 @@ proctype Controller(byte routeId; chan prevChannel, nextChannel, trafficChannel)
 {
     do
     ::  prevChannel? _ ->
-        // printf("[Controller] [Route %d] My turn:\n", routeId);
-        byte i = 0;
-        do
-        ::  (i < RouteConfigs[routeId].intersectionIdsLength) ->
-            ReleaseIntersection(RouteConfigs[routeId].intersectionIds[i], routeId);
-            i++;
-        ::  else ->
-            break;
-        od;
 
-        // printf("[Controller] [Route %d] Released resources:\n", routeId);
+        for (i, 0, RouteConfigs[routeId].intersectionIdsLength)
+            ReleaseIntersection(RouteConfigs[routeId].intersectionIds[i], routeId);
+        rof (i);
 
         if
         ::  empty(trafficChannel) ->
             nextChannel! true;
+
         ::  nempty(trafficChannel) ->
-            bool isAllIntersectionsAcquired = true;
-            // Try get all required intersections
-            i = 0;
-            do
-            ::  i < RouteConfigs[routeId].intersectionIdsLength ->
-                TryAcquireIntersection(RouteConfigs[routeId].intersectionIds[i], routeId);
-                isAllIntersectionsAcquired = isAllIntersectionsAcquired && isAcquisitionSucceded;
-                isAcquisitionSucceded = false;
-                i++;
-            ::  else ->
-                break;
-            od;
+
+            bool isAllAcquired = true;
+            for (j, 0, RouteConfigs[routeId].intersectionIdsLength)
+                TryAcquireIntersection(RouteConfigs[routeId].intersectionIds[j], routeId);
+                isAllAcquired = isAllAcquired && isAcquisitionSucceded;
+            rof (j);
             
             if
-            ::  !isAllIntersectionsAcquired -> // Failed to get all of them but stepped into queue
+            ::  !isAllAcquired ->
                 nextChannel! true;
             ::  else ->
-                i = 0;
-                do
-                ::  i < RouteConfigs[routeId].intersectionIdsLength ->
-                    SetAsOwner(RouteConfigs[routeId].intersectionIds[i], routeId);
-                    i++;
-                ::  else ->
-                    break;
-                od;
+                for (k, 0, RouteConfigs[routeId].intersectionIdsLength)
+                    SetAsOwner(RouteConfigs[routeId].intersectionIds[k], routeId);
+                rof (k);
                 nextChannel! true;
 
                 // Pass cars
                 trafficLights[routeId] = green;
-                // printf("[Controller] [Route %d] Switched light to green\n", routeId);
                 trafficChannel? _ ;
-                // printf("[Controller] [Route %d] Cars passed\n", routeId);
                 trafficLights[routeId] = red;
-                // printf("[Controller] [Route %d] Switched light to red\n", routeId);
             fi
         fi;
     od
@@ -207,26 +197,16 @@ proctype Controller(byte routeId; chan prevChannel, nextChannel, trafficChannel)
 
 active proctype main()
 {
-    byte intersectionId = 0;
-    do
-    ::  intersectionId < INTERSECTIONS_NUMBER ->
+    for (intersectionId, 0, INTERSECTIONS_NUMBER)
         InitIntersection(intersectionId);
-        intersectionId++;
-    ::  else ->
-        break;
-    od;
+    rof (intersectionId);
 
-    byte routeId = 0;
-    do
-    ::  routeId < ROUTES_NUMBER ->
+    for (routeId, 0, ROUTES_NUMBER)
         InitRouteConfig(routeId);
         run TrafficGenerator(routeId, trafficChannels[routeId])
         byte nextRouteId = (routeId + 1) % ROUTES_NUMBER;
         run Controller(routeId, turnChannel[routeId], turnChannel[nextRouteId], trafficChannels[routeId]);
-        routeId++;
-    ::  else ->
-        break;
-    od;
+    rof (routeId);
 
     turnChannel[0]! true; // start traffic processing
 }
