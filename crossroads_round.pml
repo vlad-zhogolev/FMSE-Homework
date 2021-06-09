@@ -163,6 +163,8 @@ proctype Controller(byte routeId; chan prevChannel, nextChannel, trafficChannel)
         // printf("[Controller] [Route %d] Released resources:\n", routeId);
 
         if
+        ::  empty(trafficChannel) ->
+            nextChannel! true;
         ::  nempty(trafficChannel) ->
             bool isAllIntersectionsAcquired = true;
             // Try get all required intersections
@@ -199,8 +201,6 @@ proctype Controller(byte routeId; chan prevChannel, nextChannel, trafficChannel)
                 trafficLights[routeId] = red;
                 // printf("[Controller] [Route %d] Switched light to red\n", routeId);
             fi
-        ::  empty(trafficChannel) ->
-            nextChannel! true;
         fi;
     od
 }
