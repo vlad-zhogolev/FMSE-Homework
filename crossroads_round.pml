@@ -92,37 +92,19 @@ inline InitRouteConfig(routeId)
 inline TryAcquireIntersection(index, routeId)
 {
     isAcquisitionSucceded = false;
-    // printf("[TryAcquireIntersection] [Route %d] Intersection %d, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, index, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
+    // printf("[TryAcquireIntersection %d] [Route %d] firstRouteId: %d, secondRouteId: %d, owner: %d, \n", index, routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
     if
-    ::  Intersections[index].owner != ROUTES_NUMBER
+    ::  Intersections[index].owner != ROUTES_NUMBER // there is owner
+        Intersections[index].secondRouteId = routeId; // owner is also in queue, so take 2nd place
+    ::  else -> // no owner
         if
-        ::  Intersections[index].firstRouteId == ROUTES_NUMBER -> //process is first in queue
-            Intersections[index].firstRouteId = routeId;
-            // printf("[TryAcquireIntersection] [Route %d] Intersection already acquired, 1 in queue , firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
-
-        ::  Intersections[index].firstRouteId != ROUTES_NUMBER && Intersections[index].firstRouteId != routeId ->
-            Intersections[index].secondRouteId = routeId;
-            // printf("[TryAcquireIntersection] [Route %d] Intersection already acquired, 2 in queue , firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
-
-        // ::  else ->
-        //     // can't be since resource is acquired by other route
-        //     printf("[TryAcquireIntersection] [Route %d] Error during intersection acquisition 1, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
-        fi;
-    ::  else ->
-        if
-        ::  Intersections[index].firstRouteId == ROUTES_NUMBER || Intersections[index].firstRouteId == routeId ->
+        ::  Intersections[index].firstRouteId == ROUTES_NUMBER -> // no one in queue
             isAcquisitionSucceded = true;
             Intersections[index].firstRouteId = routeId;
-
-            // printf("[TryAcquireIntersection] [Route %d] Can acquire intersection, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
-
-        ::  Intersections[index].firstRouteId != routeId && Intersections[index].firstRouteId != ROUTES_NUMBER
+        ::  Intersections[index].firstRouteId == routeId -> // the process is already waiting to become an owner
+            isAcquisitionSucceded = true;
+        ::  else -> // someone already waiting, so take 2nd place
             Intersections[index].secondRouteId = routeId;
-            // printf("[TryAcquireIntersection] [Route %d] Can't acquire intersection, 2 in queue , firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
-        
-        // ::  else ->
-        //     // can't be since the other route had to move us to first position
-        //     printf("[TryAcquireIntersection] [Route %d] Error during intersection acquisition 2, firstRouteId: %d, secondRouteId: %d, owner: %d, \n", routeId, Intersections[index].firstRouteId, Intersections[index].secondRouteId, Intersections[index].owner);
         fi;
     fi
 }
