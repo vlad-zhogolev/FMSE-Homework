@@ -1,0 +1,899 @@
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -b -m1000000 -w27 -DMA=260 -DNOREDUCE -ltl liveness_0 crossroads_round.pml 
+pan: ltl formula liveness_0
+Depth=    6420 States=    1e+06 Transitions= 2.56e+06 Nodes=  597792 Memory=    57.922	t=     13.5 R=   7e+04
+Depth=   15058 States=    2e+06 Transitions= 5.81e+06 Nodes= 1019471 Memory=    77.258	t=     27.8 R=   7e+04
+Depth=   31107 States=    3e+06 Transitions= 9.43e+06 Nodes= 1398181 Memory=    94.641	t=     43.2 R=   7e+04
+Depth=  102477 States=    4e+06 Transitions=  1.3e+07 Nodes= 1895425 Memory=   117.492	t=     57.9 R=   7e+04
+Depth=  218651 States=    5e+06 Transitions= 1.62e+07 Nodes= 2433452 Memory=   142.492	t=     71.2 R=   7e+04
+Depth=  348163 States=    6e+06 Transitions= 1.98e+07 Nodes= 3200811 Memory=   177.941	t=     85.7 R=   7e+04
+Depth=  424605 States=    7e+06 Transitions= 2.39e+07 Nodes= 3959379 Memory=   212.805	t=      103 R=   7e+04
+Depth=  479308 States=    8e+06 Transitions= 2.83e+07 Nodes= 4549832 Memory=   240.051	t=      120 R=   7e+04
+Depth=  510288 States=    9e+06 Transitions= 3.29e+07 Nodes= 5111899 Memory=   266.027	t=      139 R=   6e+04
+Depth=  547413 States=    1e+07 Transitions= 3.77e+07 Nodes= 5614757 Memory=   289.367	t=      160 R=   6e+04
+Depth=  574805 States=  1.1e+07 Transitions= 4.29e+07 Nodes= 6022825 Memory=   308.410	t=      182 R=   6e+04
+Depth=  597019 States=  1.2e+07 Transitions= 4.83e+07 Nodes= 6377160 Memory=   325.012	t=      205 R=   6e+04
+Depth=  621888 States=  1.3e+07 Transitions=  5.4e+07 Nodes= 6635594 Memory=   337.609	t=      230 R=   6e+04
+Depth=  621888 States=  1.4e+07 Transitions=    6e+07 Nodes= 6273613 Memory=   337.609	t=      258 R=   5e+04
+Depth=  621888 States=  1.5e+07 Transitions= 6.53e+07 Nodes= 6007093 Memory=   337.609	t=      283 R=   5e+04
+Depth=  621888 States=  1.6e+07 Transitions= 6.95e+07 Nodes= 5963049 Memory=   337.609	t=      304 R=   5e+04
+Depth=  621888 States=  1.7e+07 Transitions= 7.36e+07 Nodes= 6124493 Memory=   337.609	t=      328 R=   5e+04
+Depth=  621888 States=  1.8e+07 Transitions= 7.79e+07 Nodes= 6426708 Memory=   337.609	t=      352 R=   5e+04
+Depth=  621888 States=  1.9e+07 Transitions= 8.29e+07 Nodes= 6557571 Memory=   337.707	t=      380 R=   5e+04
+Depth=  621888 States=    2e+07 Transitions= 8.91e+07 Nodes= 6175370 Memory=   337.707	t=      411 R=   5e+04
+Depth=  621888 States=  2.1e+07 Transitions= 9.29e+07 Nodes= 6162665 Memory=   337.707	t=      435 R=   5e+04
+Depth=  621888 States=  2.2e+07 Transitions= 9.67e+07 Nodes= 6272309 Memory=   337.707	t=      457 R=   5e+04
+Depth=  621888 States=  2.3e+07 Transitions= 1.01e+08 Nodes= 6583657 Memory=   338.098	t=      483 R=   5e+04
+Depth=  621888 States=  2.4e+07 Transitions= 1.07e+08 Nodes= 6640518 Memory=   341.613	t=      514 R=   5e+04
+Depth=  621888 States=  2.5e+07 Transitions= 1.12e+08 Nodes= 6163607 Memory=   341.613	t=      544 R=   5e+04
+Depth=  621888 States=  2.6e+07 Transitions= 1.17e+08 Nodes= 6281711 Memory=   341.613	t=      568 R=   5e+04
+Depth=  621888 States=  2.7e+07 Transitions= 1.21e+08 Nodes= 6315609 Memory=   341.613	t=      596 R=   5e+04
+Depth=  621888 States=  2.8e+07 Transitions= 1.25e+08 Nodes= 6583553 Memory=   341.613	t=      621 R=   5e+04
+Depth=  621888 States=  2.9e+07 Transitions=  1.3e+08 Nodes= 6765800 Memory=   344.348	t=      648 R=   4e+04
+Depth=  621888 States=    3e+07 Transitions= 1.35e+08 Nodes= 6796959 Memory=   346.203	t=      680 R=   4e+04
+Depth=  621888 States=  3.1e+07 Transitions= 1.41e+08 Nodes= 6594761 Memory=   346.984	t=      713 R=   4e+04
+Depth=  621888 States=  3.2e+07 Transitions= 1.46e+08 Nodes= 6344108 Memory=   346.984	t=      743 R=   4e+04
+Depth=  621888 States=  3.3e+07 Transitions= 1.51e+08 Nodes= 6224725 Memory=   346.984	t=      773 R=   4e+04
+Depth=  621888 States=  3.4e+07 Transitions= 1.56e+08 Nodes= 6408833 Memory=   346.984	t=      801 R=   4e+04
+Depth=  621888 States=  3.5e+07 Transitions= 1.62e+08 Nodes= 6271898 Memory=   346.984	t=      832 R=   4e+04
+Depth=  621888 States=  3.6e+07 Transitions= 1.65e+08 Nodes= 6414912 Memory=   346.984	t=      859 R=   4e+04
+Depth=  621888 States=  3.7e+07 Transitions= 1.69e+08 Nodes= 6614237 Memory=   346.984	t=      885 R=   4e+04
+Depth=  621888 States=  3.8e+07 Transitions= 1.74e+08 Nodes= 6880166 Memory=   349.816	t=      913 R=   4e+04
+Depth=  621888 States=  3.9e+07 Transitions= 1.79e+08 Nodes= 6968948 Memory=   354.602	t=      943 R=   4e+04
+Depth=  621888 States=    4e+07 Transitions= 1.85e+08 Nodes= 6475417 Memory=   354.602	t=      978 R=   4e+04
+Depth=  621888 States=  4.1e+07 Transitions=  1.9e+08 Nodes= 6440134 Memory=   354.602	t= 1.01e+03 R=   4e+04
+Depth=  621888 States=  4.2e+07 Transitions= 1.96e+08 Nodes= 6302842 Memory=   354.602	t= 1.04e+03 R=   4e+04
+Depth=  621888 States=  4.3e+07 Transitions=    2e+08 Nodes= 6469117 Memory=   354.602	t= 1.07e+03 R=   4e+04
+Depth=  621888 States=  4.4e+07 Transitions= 2.05e+08 Nodes= 6300884 Memory=   354.602	t=  1.1e+03 R=   4e+04
+Depth=  621888 States=  4.5e+07 Transitions=  2.1e+08 Nodes= 6457320 Memory=   354.602	t= 1.13e+03 R=   4e+04
+Depth=  621888 States=  4.6e+07 Transitions= 2.15e+08 Nodes= 6308943 Memory=   354.602	t= 1.16e+03 R=   4e+04
+Depth=  621888 States=  4.7e+07 Transitions= 2.21e+08 Nodes= 6278608 Memory=   354.602	t= 1.19e+03 R=   4e+04
+Depth=  621888 States=  4.8e+07 Transitions= 2.24e+08 Nodes= 6443515 Memory=   354.602	t= 1.22e+03 R=   4e+04
+Depth=  621888 States=  4.9e+07 Transitions= 2.28e+08 Nodes= 6699433 Memory=   354.602	t= 1.24e+03 R=   4e+04
+Depth=  621888 States=    5e+07 Transitions= 2.32e+08 Nodes= 7008042 Memory=   356.066	t= 1.27e+03 R=   4e+04
+Depth=  621888 States=  5.1e+07 Transitions= 2.38e+08 Nodes= 7013357 Memory=   361.438	t= 1.31e+03 R=   4e+04
+Depth=  621888 States=  5.2e+07 Transitions= 2.43e+08 Nodes= 6645249 Memory=   361.438	t= 1.34e+03 R=   4e+04
+Depth=  621888 States=  5.3e+07 Transitions= 2.47e+08 Nodes= 6796500 Memory=   361.438	t= 1.36e+03 R=   4e+04
+Depth=  621888 States=  5.4e+07 Transitions= 2.52e+08 Nodes= 6691539 Memory=   361.438	t=  1.4e+03 R=   4e+04
+Depth=  621888 States=  5.5e+07 Transitions= 2.57e+08 Nodes= 6579811 Memory=   361.438	t= 1.43e+03 R=   4e+04
+Depth=  621888 States=  5.6e+07 Transitions= 2.61e+08 Nodes= 6659684 Memory=   361.438	t= 1.46e+03 R=   4e+04
+Depth=  621888 States=  5.7e+07 Transitions= 2.66e+08 Nodes= 6557526 Memory=   361.438	t= 1.49e+03 R=   4e+04
+Depth=  621888 States=  5.8e+07 Transitions= 2.71e+08 Nodes= 6536927 Memory=   361.438	t= 1.52e+03 R=   4e+04
+Depth=  621888 States=  5.9e+07 Transitions= 2.75e+08 Nodes= 6693035 Memory=   361.438	t= 1.55e+03 R=   4e+04
+Depth=  621888 States=    6e+07 Transitions=  2.8e+08 Nodes= 6586386 Memory=   361.438	t= 1.58e+03 R=   4e+04
+Depth=  621888 States=  6.1e+07 Transitions= 2.85e+08 Nodes= 6529059 Memory=   361.438	t= 1.62e+03 R=   4e+04
+Depth=  621888 States=  6.2e+07 Transitions=  2.9e+08 Nodes= 6570126 Memory=   361.438	t= 1.65e+03 R=   4e+04
+Depth=  621888 States=  6.3e+07 Transitions= 2.94e+08 Nodes= 7057631 Memory=   361.438	t= 1.68e+03 R=   4e+04
+Depth=  621888 States=  6.4e+07 Transitions= 2.98e+08 Nodes= 7362943 Memory=   372.766	t= 1.71e+03 R=   4e+04
+Depth=  621888 States=  6.5e+07 Transitions= 3.04e+08 Nodes= 7404028 Memory=   378.820	t= 1.74e+03 R=   4e+04
+Depth=  621888 States=  6.6e+07 Transitions= 3.09e+08 Nodes= 6937641 Memory=   378.820	t= 1.77e+03 R=   4e+04
+Depth=  621888 States=  6.7e+07 Transitions= 3.13e+08 Nodes= 7146976 Memory=   378.820	t=  1.8e+03 R=   4e+04
+Depth=  621888 States=  6.8e+07 Transitions= 3.18e+08 Nodes= 7065565 Memory=   378.820	t= 1.83e+03 R=   4e+04
+Depth=  621888 States=  6.9e+07 Transitions= 3.24e+08 Nodes= 6909728 Memory=   378.820	t= 1.86e+03 R=   4e+04
+Depth=  621888 States=    7e+07 Transitions= 3.28e+08 Nodes= 7016120 Memory=   378.820	t=  1.9e+03 R=   4e+04
+Depth=  621888 States=  7.1e+07 Transitions= 3.34e+08 Nodes= 6869549 Memory=   378.820	t= 1.93e+03 R=   4e+04
+Depth=  621888 States=  7.2e+07 Transitions= 3.39e+08 Nodes= 6793531 Memory=   378.820	t= 1.96e+03 R=   4e+04
+Depth=  621888 States=  7.3e+07 Transitions= 3.44e+08 Nodes= 7022356 Memory=   378.820	t= 1.99e+03 R=   4e+04
+Depth=  621888 States=  7.4e+07 Transitions= 3.49e+08 Nodes= 6792452 Memory=   378.820	t= 2.03e+03 R=   4e+04
+Depth=  621888 States=  7.5e+07 Transitions= 3.55e+08 Nodes= 6755029 Memory=   378.820	t= 2.07e+03 R=   4e+04
+Depth=  621888 States=  7.6e+07 Transitions= 3.59e+08 Nodes= 6877986 Memory=   378.820	t=  2.1e+03 R=   4e+04
+Depth=  621888 States=  7.7e+07 Transitions= 3.64e+08 Nodes= 6822071 Memory=   378.820	t= 2.13e+03 R=   4e+04
+Depth=  621888 States=  7.8e+07 Transitions= 3.69e+08 Nodes= 6753259 Memory=   378.820	t= 2.17e+03 R=   4e+04
+Depth=  621888 States=  7.9e+07 Transitions= 3.74e+08 Nodes= 6690922 Memory=   378.820	t= 2.21e+03 R=   4e+04
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Graph Encoding (-DMA=260)
+
+Full statespace search for:
+	never claim         	+ (liveness_0)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 264 byte, depth reached 621888, errors: 0
+MA stats: -DMA=201 is sufficient
+Minimized Automaton:	6643648 nodes and 2.02609e+07 edges
+ 78208993 states, stored (7.95296e+07 visited)
+2.9746245e+08 states, matched
+3.7699205e+08 transitions (= visited+matched)
+        0 atomic steps
+
+Stats on memory usage (in Megabytes):
+20585.711	equivalent memory usage for states (stored*(State-vector + overhead))
+  348.403	actual memory usage for states (compression: 1.69%)
+   30.518	memory used for DFS stack (-m1000000)
+  378.820	total actual memory usage
+
+
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:147, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:89, state 26, "Intersections[RouteConfigs[routeId].intersectionIds[i]].firstRouteId = routeId"
+	crossroads_round.pml:206, state 77, "-end-"
+	(2 of 77 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim liveness_0
+	_spin_nvr.tmp:91, state 13, "-end-"
+	(1 of 13 states)
+
+pan: elapsed time 2.22e+03 seconds
+pan: rate 35751.447 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -b -m1000000 -w27 -DMA=260 -DNOREDUCE -ltl liveness_1 crossroads_round.pml 
+pan: ltl formula liveness_1
+Depth=    2871 States=    1e+06 Transitions=  2.5e+06 Nodes=  519103 Memory=    54.309	t=     14.5 R=   7e+04
+Depth=    5419 States=    2e+06 Transitions= 5.23e+06 Nodes=  887714 Memory=    71.106	t=     29.7 R=   7e+04
+Depth=   23045 States=    3e+06 Transitions=  8.3e+06 Nodes= 1266683 Memory=    88.586	t=     44.5 R=   7e+04
+Depth=   58131 States=    4e+06 Transitions= 1.16e+07 Nodes= 1664221 Memory=   106.750	t=       61 R=   7e+04
+Depth=  162341 States=    5e+06 Transitions=  1.5e+07 Nodes= 2150398 Memory=   129.211	t=     75.7 R=   7e+04
+Depth=  307784 States=    6e+06 Transitions= 1.85e+07 Nodes= 2872941 Memory=   162.512	t=     90.1 R=   7e+04
+Depth=  406427 States=    7e+06 Transitions= 2.23e+07 Nodes= 3731636 Memory=   202.160	t=      106 R=   7e+04
+Depth=  472777 States=    8e+06 Transitions= 2.63e+07 Nodes= 4378335 Memory=   231.848	t=      123 R=   6e+04
+Depth=  508453 States=    9e+06 Transitions= 3.05e+07 Nodes= 4971436 Memory=   259.191	t=      142 R=   6e+04
+Depth=  541094 States=    1e+07 Transitions= 3.47e+07 Nodes= 5415766 Memory=   279.992	t=      162 R=   6e+04
+Depth=  573570 States=  1.1e+07 Transitions= 3.93e+07 Nodes= 5872319 Memory=   301.184	t=      184 R=   6e+04
+Depth=  597467 States=  1.2e+07 Transitions= 4.44e+07 Nodes= 6311843 Memory=   321.594	t=      208 R=   6e+04
+Depth=  621888 States=  1.3e+07 Transitions= 5.02e+07 Nodes= 6534086 Memory=   333.313	t=      235 R=   6e+04
+Depth=  621888 States=  1.4e+07 Transitions=  5.6e+07 Nodes= 6196659 Memory=   333.313	t=      264 R=   5e+04
+Depth=  621888 States=  1.5e+07 Transitions= 6.11e+07 Nodes= 5947017 Memory=   333.313	t=      290 R=   5e+04
+Depth=  621888 States=  1.6e+07 Transitions= 6.54e+07 Nodes= 5805102 Memory=   333.313	t=      313 R=   5e+04
+Depth=  621888 States=  1.7e+07 Transitions= 6.92e+07 Nodes= 5959785 Memory=   333.313	t=      338 R=   5e+04
+Depth=  621888 States=  1.8e+07 Transitions= 7.34e+07 Nodes= 6309120 Memory=   333.313	t=      363 R=   5e+04
+Depth=  621888 States=  1.9e+07 Transitions= 7.84e+07 Nodes= 6441352 Memory=   333.313	t=      391 R=   5e+04
+Depth=  621888 States=    2e+07 Transitions= 8.44e+07 Nodes= 5904465 Memory=   333.313	t=      422 R=   5e+04
+Depth=  621888 States=  2.1e+07 Transitions= 8.76e+07 Nodes= 5999582 Memory=   333.313	t=      446 R=   5e+04
+Depth=  621888 States=  2.2e+07 Transitions= 9.13e+07 Nodes= 6260424 Memory=   333.313	t=      469 R=   5e+04
+Depth=  621888 States=  2.3e+07 Transitions=  9.6e+07 Nodes= 6514492 Memory=   334.191	t=      497 R=   5e+04
+Depth=  621888 States=  2.4e+07 Transitions= 1.01e+08 Nodes= 6273004 Memory=   334.875	t=      528 R=   5e+04
+Depth=  621888 States=  2.5e+07 Transitions= 1.06e+08 Nodes= 6099595 Memory=   334.875	t=      554 R=   5e+04
+Depth=  621888 States=  2.6e+07 Transitions= 1.11e+08 Nodes= 6085455 Memory=   334.875	t=      582 R=   4e+04
+Depth=  621888 States=  2.7e+07 Transitions= 1.14e+08 Nodes= 6179372 Memory=   334.875	t=      610 R=   4e+04
+Depth=  621888 States=  2.8e+07 Transitions= 1.18e+08 Nodes= 6519997 Memory=   334.875	t=      638 R=   4e+04
+Depth=  621888 States=  2.9e+07 Transitions= 1.23e+08 Nodes= 6609863 Memory=   337.316	t=      666 R=   4e+04
+Depth=  621888 States=    3e+07 Transitions= 1.29e+08 Nodes= 6329409 Memory=   337.707	t=      702 R=   4e+04
+Depth=  621888 States=  3.1e+07 Transitions= 1.34e+08 Nodes= 6163992 Memory=   337.707	t=      730 R=   4e+04
+Depth=  621888 States=  3.2e+07 Transitions= 1.39e+08 Nodes= 6096396 Memory=   337.707	t=      761 R=   4e+04
+Depth=  621888 States=  3.3e+07 Transitions= 1.43e+08 Nodes= 6184589 Memory=   337.707	t=      793 R=   4e+04
+Depth=  621888 States=  3.4e+07 Transitions= 1.48e+08 Nodes= 6091633 Memory=   337.707	t=      822 R=   4e+04
+Depth=  621888 States=  3.5e+07 Transitions= 1.52e+08 Nodes= 6270254 Memory=   337.707	t=      849 R=   4e+04
+Depth=  621888 States=  3.6e+07 Transitions= 1.56e+08 Nodes= 6513945 Memory=   337.707	t=      877 R=   4e+04
+Depth=  621888 States=  3.7e+07 Transitions= 1.61e+08 Nodes= 6739379 Memory=   342.883	t=      908 R=   4e+04
+Depth=  621888 States=  3.8e+07 Transitions= 1.67e+08 Nodes= 6598038 Memory=   343.664	t=      942 R=   4e+04
+Depth=  621888 States=  3.9e+07 Transitions= 1.72e+08 Nodes= 6159572 Memory=   343.664	t=      975 R=   4e+04
+Depth=  621888 States=    4e+07 Transitions= 1.77e+08 Nodes= 6277939 Memory=   343.664	t= 1.01e+03 R=   4e+04
+Depth=  621888 States=  4.1e+07 Transitions= 1.82e+08 Nodes= 6199487 Memory=   343.664	t= 1.04e+03 R=   4e+04
+Depth=  621888 States=  4.2e+07 Transitions= 1.88e+08 Nodes= 6108421 Memory=   343.664	t= 1.07e+03 R=   4e+04
+Depth=  621888 States=  4.3e+07 Transitions= 1.92e+08 Nodes= 6230894 Memory=   343.664	t=  1.1e+03 R=   4e+04
+Depth=  621888 States=  4.4e+07 Transitions= 1.98e+08 Nodes= 6088442 Memory=   343.664	t= 1.13e+03 R=   4e+04
+Depth=  621888 States=  4.5e+07 Transitions= 2.03e+08 Nodes= 6126301 Memory=   343.664	t= 1.16e+03 R=   4e+04
+Depth=  621888 States=  4.6e+07 Transitions= 2.07e+08 Nodes= 6570062 Memory=   343.664	t= 1.19e+03 R=   4e+04
+Depth=  621888 States=  4.7e+07 Transitions= 2.11e+08 Nodes= 6782075 Memory=   345.617	t= 1.22e+03 R=   4e+04
+Depth=  621888 States=  4.8e+07 Transitions= 2.17e+08 Nodes= 6745523 Memory=   349.426	t= 1.25e+03 R=   4e+04
+Depth=  621888 States=  4.9e+07 Transitions= 2.21e+08 Nodes= 6364168 Memory=   349.426	t= 1.28e+03 R=   4e+04
+Depth=  621888 States=    5e+07 Transitions= 2.26e+08 Nodes= 6547106 Memory=   349.426	t= 1.31e+03 R=   4e+04
+Depth=  621888 States=  5.1e+07 Transitions=  2.3e+08 Nodes= 6493968 Memory=   349.426	t= 1.34e+03 R=   4e+04
+Depth=  621888 States=  5.2e+07 Transitions= 2.35e+08 Nodes= 6333804 Memory=   349.426	t= 1.37e+03 R=   4e+04
+Depth=  621888 States=  5.3e+07 Transitions=  2.4e+08 Nodes= 6433581 Memory=   349.426	t=  1.4e+03 R=   4e+04
+Depth=  621888 States=  5.4e+07 Transitions= 2.45e+08 Nodes= 6307286 Memory=   349.426	t= 1.44e+03 R=   4e+04
+Depth=  621888 States=  5.5e+07 Transitions=  2.5e+08 Nodes= 6383108 Memory=   349.426	t= 1.47e+03 R=   4e+04
+Depth=  621888 States=  5.6e+07 Transitions= 2.55e+08 Nodes= 6352300 Memory=   349.426	t=  1.5e+03 R=   4e+04
+Depth=  621888 States=  5.7e+07 Transitions=  2.6e+08 Nodes= 6303574 Memory=   349.426	t= 1.53e+03 R=   4e+04
+Depth=  621888 States=  5.8e+07 Transitions= 2.66e+08 Nodes= 6244779 Memory=   349.426	t= 1.57e+03 R=   4e+04
+Depth=  621888 States=  5.9e+07 Transitions= 2.69e+08 Nodes= 6354376 Memory=   349.426	t=  1.6e+03 R=   4e+04
+Depth=  621888 States=    6e+07 Transitions= 2.73e+08 Nodes= 6694654 Memory=   349.426	t= 1.63e+03 R=   4e+04
+Depth=  621888 States=  6.1e+07 Transitions= 2.77e+08 Nodes= 7075051 Memory=   359.191	t= 1.66e+03 R=   4e+04
+Depth=  621888 States=  6.2e+07 Transitions= 2.82e+08 Nodes= 7080147 Memory=   366.613	t= 1.69e+03 R=   4e+04
+Depth=  621888 States=  6.3e+07 Transitions= 2.87e+08 Nodes= 6676319 Memory=   366.613	t= 1.72e+03 R=   4e+04
+Depth=  621888 States=  6.4e+07 Transitions= 2.92e+08 Nodes= 6836415 Memory=   366.613	t= 1.76e+03 R=   4e+04
+Depth=  621888 States=  6.5e+07 Transitions= 2.96e+08 Nodes= 6775174 Memory=   366.613	t= 1.79e+03 R=   4e+04
+Depth=  621888 States=  6.6e+07 Transitions= 3.01e+08 Nodes= 6625297 Memory=   366.613	t= 1.82e+03 R=   4e+04
+Depth=  621888 States=  6.7e+07 Transitions= 3.05e+08 Nodes= 6765543 Memory=   366.613	t= 1.85e+03 R=   4e+04
+Depth=  621888 States=  6.8e+07 Transitions=  3.1e+08 Nodes= 6598409 Memory=   366.613	t= 1.89e+03 R=   4e+04
+Depth=  621888 States=  6.9e+07 Transitions= 3.15e+08 Nodes= 6538470 Memory=   366.613	t= 1.92e+03 R=   4e+04
+Depth=  621888 States=    7e+07 Transitions= 3.19e+08 Nodes= 6704131 Memory=   366.613	t= 1.96e+03 R=   4e+04
+Depth=  621888 States=  7.1e+07 Transitions= 3.25e+08 Nodes= 6552918 Memory=   366.613	t= 1.99e+03 R=   4e+04
+Depth=  621888 States=  7.2e+07 Transitions= 3.29e+08 Nodes= 6490004 Memory=   366.613	t= 2.02e+03 R=   4e+04
+Depth=  621888 States=  7.3e+07 Transitions= 3.34e+08 Nodes= 6562064 Memory=   366.613	t= 2.05e+03 R=   4e+04
+Depth=  621888 States=  7.4e+07 Transitions= 3.39e+08 Nodes= 6511941 Memory=   366.613	t= 2.09e+03 R=   4e+04
+Depth=  621888 States=  7.5e+07 Transitions= 3.44e+08 Nodes= 6463559 Memory=   366.613	t= 2.12e+03 R=   4e+04
+Depth=  621888 States=  7.6e+07 Transitions= 3.49e+08 Nodes= 6473121 Memory=   366.613	t= 2.16e+03 R=   4e+04
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Graph Encoding (-DMA=260)
+
+Full statespace search for:
+	never claim         	+ (liveness_1)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 264 byte, depth reached 621888, errors: 0
+MA stats: -DMA=201 is sufficient
+Minimized Automaton:	6385553 nodes and 1.9437e+07 edges
+ 74902497 states, stored (7.6716e+07 visited)
+2.7573762e+08 states, matched
+3.5245361e+08 transitions (= visited+matched)
+        0 atomic steps
+
+Stats on memory usage (in Megabytes):
+19715.394	equivalent memory usage for states (stored*(State-vector + overhead))
+  336.195	actual memory usage for states (compression: 1.71%)
+   30.518	memory used for DFS stack (-m1000000)
+  366.613	total actual memory usage
+
+
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:147, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:89, state 26, "Intersections[RouteConfigs[routeId].intersectionIds[i]].firstRouteId = routeId"
+	crossroads_round.pml:206, state 77, "-end-"
+	(2 of 77 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim liveness_1
+	_spin_nvr.tmp:102, state 13, "-end-"
+	(1 of 13 states)
+
+pan: elapsed time 2.18e+03 seconds
+pan: rate 35197.971 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -b -m1000000 -w27 -DMA=260 -DNOREDUCE -ltl liveness_2 crossroads_round.pml 
+pan: ltl formula liveness_2
+Depth=    3518 States=    1e+06 Transitions= 2.83e+06 Nodes=  479569 Memory=    52.649	t=     14.1 R=   7e+04
+Depth=    6385 States=    2e+06 Transitions= 6.46e+06 Nodes=  790030 Memory=    66.809	t=     29.6 R=   7e+04
+Depth=   22420 States=    3e+06 Transitions= 9.95e+06 Nodes= 1098212 Memory=    81.066	t=     43.9 R=   7e+04
+Depth=   48487 States=    4e+06 Transitions= 1.35e+07 Nodes= 1475222 Memory=    98.352	t=     58.7 R=   7e+04
+Depth=   76548 States=    5e+06 Transitions= 1.73e+07 Nodes= 1742095 Memory=   110.754	t=     74.3 R=   7e+04
+Depth=  209170 States=    6e+06 Transitions= 2.07e+07 Nodes= 2252161 Memory=   134.191	t=     89.5 R=   7e+04
+Depth=  372541 States=    7e+06 Transitions= 2.48e+07 Nodes= 3211930 Memory=   178.332	t=      106 R=   7e+04
+Depth=  452473 States=    8e+06 Transitions= 2.93e+07 Nodes= 3922304 Memory=   210.949	t=      124 R=   6e+04
+Depth=  496615 States=    9e+06 Transitions= 3.43e+07 Nodes= 4597026 Memory=   242.004	t=      144 R=   6e+04
+Depth=  523671 States=    1e+07 Transitions= 3.91e+07 Nodes= 5019602 Memory=   261.633	t=      163 R=   6e+04
+Depth=  548493 States=  1.1e+07 Transitions= 4.41e+07 Nodes= 5466258 Memory=   282.336	t=      184 R=   6e+04
+Depth=  578198 States=  1.2e+07 Transitions=  4.9e+07 Nodes= 5979605 Memory=   306.164	t=      204 R=   6e+04
+Depth=  594354 States=  1.3e+07 Transitions= 5.44e+07 Nodes= 6329274 Memory=   322.375	t=      227 R=   6e+04
+Depth=  616527 States=  1.4e+07 Transitions= 5.98e+07 Nodes= 6646493 Memory=   337.219	t=      252 R=   6e+04
+Depth=  621888 States=  1.5e+07 Transitions= 6.58e+07 Nodes= 6338655 Memory=   338.391	t=      280 R=   5e+04
+Depth=  621888 States=  1.6e+07 Transitions= 7.17e+07 Nodes= 6037258 Memory=   338.391	t=      305 R=   5e+04
+Depth=  621888 States=  1.7e+07 Transitions= 7.64e+07 Nodes= 5887051 Memory=   338.391	t=      326 R=   5e+04
+Depth=  621888 States=  1.8e+07 Transitions= 8.03e+07 Nodes= 6100825 Memory=   338.391	t=      347 R=   5e+04
+Depth=  621888 States=  1.9e+07 Transitions= 8.48e+07 Nodes= 6423080 Memory=   338.391	t=      372 R=   5e+04
+Depth=  621888 States=    2e+07 Transitions= 8.99e+07 Nodes= 6518191 Memory=   338.391	t=      398 R=   5e+04
+Depth=  621888 States=  2.1e+07 Transitions=  9.6e+07 Nodes= 6187619 Memory=   338.391	t=      428 R=   5e+04
+Depth=  621888 States=  2.2e+07 Transitions=    1e+08 Nodes= 6071749 Memory=   338.391	t=      452 R=   5e+04
+Depth=  621888 States=  2.3e+07 Transitions= 1.04e+08 Nodes= 6171460 Memory=   338.391	t=      473 R=   5e+04
+Depth=  621888 States=  2.4e+07 Transitions= 1.08e+08 Nodes= 6559534 Memory=   338.391	t=      499 R=   5e+04
+Depth=  621888 States=  2.5e+07 Transitions= 1.14e+08 Nodes= 6618228 Memory=   339.660	t=      528 R=   5e+04
+Depth=  621888 States=  2.6e+07 Transitions=  1.2e+08 Nodes= 6165033 Memory=   339.660	t=      556 R=   5e+04
+Depth=  621888 States=  2.7e+07 Transitions= 1.24e+08 Nodes= 6284803 Memory=   339.660	t=      581 R=   5e+04
+Depth=  621888 States=  2.8e+07 Transitions= 1.28e+08 Nodes= 6244810 Memory=   339.660	t=      608 R=   5e+04
+Depth=  621888 States=  2.9e+07 Transitions= 1.32e+08 Nodes= 6407317 Memory=   339.660	t=      632 R=   5e+04
+Depth=  621888 States=    3e+07 Transitions= 1.38e+08 Nodes= 6618390 Memory=   339.660	t=      659 R=   5e+04
+Depth=  621888 States=  3.1e+07 Transitions= 1.43e+08 Nodes= 6708692 Memory=   341.906	t=      687 R=   5e+04
+Depth=  621888 States=  3.2e+07 Transitions= 1.49e+08 Nodes= 6625706 Memory=   342.883	t=      718 R=   4e+04
+Depth=  621888 States=  3.3e+07 Transitions= 1.54e+08 Nodes= 6244154 Memory=   342.883	t=      746 R=   4e+04
+Depth=  621888 States=  3.4e+07 Transitions=  1.6e+08 Nodes= 6266957 Memory=   342.883	t=      776 R=   4e+04
+Depth=  621888 States=  3.5e+07 Transitions= 1.64e+08 Nodes= 6358605 Memory=   342.883	t=      804 R=   4e+04
+Depth=  621888 States=  3.6e+07 Transitions=  1.7e+08 Nodes= 6239743 Memory=   342.883	t=      834 R=   4e+04
+Depth=  621888 States=  3.7e+07 Transitions= 1.74e+08 Nodes= 6661215 Memory=   342.883	t=      859 R=   4e+04
+Depth=  621888 States=  3.8e+07 Transitions= 1.79e+08 Nodes= 6908551 Memory=   350.402	t=      885 R=   4e+04
+Depth=  621888 States=  3.9e+07 Transitions= 1.84e+08 Nodes= 6934045 Memory=   352.746	t=      913 R=   4e+04
+Depth=  621888 States=    4e+07 Transitions= 1.89e+08 Nodes= 6513992 Memory=   352.746	t=      946 R=   4e+04
+Depth=  621888 States=  4.1e+07 Transitions= 1.94e+08 Nodes= 6454684 Memory=   352.746	t=      973 R=   4e+04
+Depth=  621888 States=  4.2e+07 Transitions= 1.99e+08 Nodes= 6307871 Memory=   352.746	t=    1e+03 R=   4e+04
+Depth=  621888 States=  4.3e+07 Transitions= 2.04e+08 Nodes= 6359663 Memory=   352.746	t= 1.03e+03 R=   4e+04
+Depth=  621888 States=  4.4e+07 Transitions= 2.09e+08 Nodes= 6387178 Memory=   352.746	t= 1.06e+03 R=   4e+04
+Depth=  621888 States=  4.5e+07 Transitions= 2.14e+08 Nodes= 6394563 Memory=   352.746	t= 1.09e+03 R=   4e+04
+Depth=  621888 States=  4.6e+07 Transitions= 2.19e+08 Nodes= 6291673 Memory=   352.746	t= 1.12e+03 R=   4e+04
+Depth=  621888 States=  4.7e+07 Transitions= 2.23e+08 Nodes= 6349055 Memory=   352.746	t= 1.15e+03 R=   4e+04
+Depth=  621888 States=  4.8e+07 Transitions= 2.27e+08 Nodes= 6465321 Memory=   352.746	t= 1.17e+03 R=   4e+04
+Depth=  621888 States=  4.9e+07 Transitions= 2.32e+08 Nodes= 6746598 Memory=   352.746	t= 1.19e+03 R=   4e+04
+Depth=  621888 States=    5e+07 Transitions= 2.37e+08 Nodes= 6976771 Memory=   354.504	t= 1.23e+03 R=   4e+04
+Depth=  621888 States=  5.1e+07 Transitions= 2.42e+08 Nodes= 6971768 Memory=   358.703	t= 1.26e+03 R=   4e+04
+Depth=  621888 States=  5.2e+07 Transitions= 2.48e+08 Nodes= 6588343 Memory=   358.703	t= 1.29e+03 R=   4e+04
+Depth=  621888 States=  5.3e+07 Transitions= 2.53e+08 Nodes= 6747997 Memory=   358.703	t= 1.32e+03 R=   4e+04
+Depth=  621888 States=  5.4e+07 Transitions= 2.58e+08 Nodes= 6604739 Memory=   358.703	t= 1.35e+03 R=   4e+04
+Depth=  621888 States=  5.5e+07 Transitions= 2.63e+08 Nodes= 6565166 Memory=   358.703	t= 1.38e+03 R=   4e+04
+Depth=  621888 States=  5.6e+07 Transitions= 2.68e+08 Nodes= 6582313 Memory=   358.703	t= 1.41e+03 R=   4e+04
+Depth=  621888 States=  5.7e+07 Transitions= 2.73e+08 Nodes= 6643729 Memory=   358.703	t= 1.44e+03 R=   4e+04
+Depth=  621888 States=  5.8e+07 Transitions= 2.79e+08 Nodes= 6547439 Memory=   358.703	t= 1.47e+03 R=   4e+04
+Depth=  621888 States=  5.9e+07 Transitions= 2.84e+08 Nodes= 6665774 Memory=   358.703	t=  1.5e+03 R=   4e+04
+Depth=  621888 States=    6e+07 Transitions= 2.89e+08 Nodes= 6550483 Memory=   358.703	t= 1.54e+03 R=   4e+04
+Depth=  621888 States=  6.1e+07 Transitions= 2.94e+08 Nodes= 6502105 Memory=   358.703	t= 1.57e+03 R=   4e+04
+Depth=  621888 States=  6.2e+07 Transitions= 2.99e+08 Nodes= 6494289 Memory=   358.703	t=  1.6e+03 R=   4e+04
+Depth=  621888 States=  6.3e+07 Transitions= 3.03e+08 Nodes= 6633670 Memory=   358.703	t= 1.63e+03 R=   4e+04
+Depth=  621888 States=  6.4e+07 Transitions= 3.07e+08 Nodes= 6917742 Memory=   358.703	t= 1.65e+03 R=   4e+04
+Depth=  621888 States=  6.5e+07 Transitions= 3.12e+08 Nodes= 7278378 Memory=   369.055	t= 1.68e+03 R=   4e+04
+Depth=  621888 States=  6.6e+07 Transitions= 3.18e+08 Nodes= 7410686 Memory=   377.356	t= 1.71e+03 R=   4e+04
+Depth=  621888 States=  6.7e+07 Transitions= 3.23e+08 Nodes= 6905553 Memory=   377.356	t= 1.75e+03 R=   4e+04
+Depth=  621888 States=  6.8e+07 Transitions= 3.28e+08 Nodes= 7114239 Memory=   377.356	t= 1.78e+03 R=   4e+04
+Depth=  621888 States=  6.9e+07 Transitions= 3.33e+08 Nodes= 6903509 Memory=   377.356	t= 1.81e+03 R=   4e+04
+Depth=  621888 States=    7e+07 Transitions= 3.38e+08 Nodes= 6985934 Memory=   377.356	t= 1.84e+03 R=   4e+04
+Depth=  621888 States=  7.1e+07 Transitions= 3.43e+08 Nodes= 6848848 Memory=   377.356	t= 1.87e+03 R=   4e+04
+Depth=  621888 States=  7.2e+07 Transitions= 3.48e+08 Nodes= 7011329 Memory=   377.356	t=  1.9e+03 R=   4e+04
+Depth=  621888 States=  7.3e+07 Transitions= 3.54e+08 Nodes= 6850150 Memory=   377.356	t= 1.94e+03 R=   4e+04
+Depth=  621888 States=  7.4e+07 Transitions= 3.59e+08 Nodes= 6817820 Memory=   377.356	t= 1.98e+03 R=   4e+04
+Depth=  621888 States=  7.5e+07 Transitions= 3.64e+08 Nodes= 6985469 Memory=   377.356	t= 2.02e+03 R=   4e+04
+Depth=  621888 States=  7.6e+07 Transitions=  3.7e+08 Nodes= 6755124 Memory=   377.356	t= 2.05e+03 R=   4e+04
+Depth=  621888 States=  7.7e+07 Transitions= 3.75e+08 Nodes= 6679375 Memory=   377.356	t= 2.08e+03 R=   4e+04
+Depth=  621888 States=  7.8e+07 Transitions= 3.79e+08 Nodes= 6732093 Memory=   377.356	t= 2.11e+03 R=   4e+04
+Depth=  621888 States=  7.9e+07 Transitions= 3.85e+08 Nodes= 6749523 Memory=   377.356	t= 2.15e+03 R=   4e+04
+Depth=  621888 States=    8e+07 Transitions=  3.9e+08 Nodes= 6711534 Memory=   377.356	t= 2.19e+03 R=   4e+04
+Depth=  621888 States=  8.1e+07 Transitions= 3.95e+08 Nodes= 6684130 Memory=   377.356	t= 2.22e+03 R=   4e+04
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Graph Encoding (-DMA=260)
+
+Full statespace search for:
+	never claim         	+ (liveness_2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 264 byte, depth reached 621888, errors: 0
+MA stats: -DMA=201 is sufficient
+Minimized Automaton:	6629642 nodes and 2.0189e+07 edges
+ 81173951 states, stored (8.19863e+07 visited)
+3.1777166e+08 states, matched
+3.9975793e+08 transitions (= visited+matched)
+        0 atomic steps
+
+Stats on memory usage (in Megabytes):
+21366.129	equivalent memory usage for states (stored*(State-vector + overhead))
+  346.938	actual memory usage for states (compression: 1.62%)
+   30.518	memory used for DFS stack (-m1000000)
+  377.356	total actual memory usage
+
+
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:147, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:89, state 26, "Intersections[RouteConfigs[routeId].intersectionIds[i]].firstRouteId = routeId"
+	crossroads_round.pml:206, state 77, "-end-"
+	(2 of 77 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim liveness_2
+	_spin_nvr.tmp:113, state 13, "-end-"
+	(1 of 13 states)
+
+pan: elapsed time 2.25e+03 seconds
+pan: rate 36390.728 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -b -m1000000 -w27 -DMA=260 -DNOREDUCE -ltl liveness_3 crossroads_round.pml 
+pan: ltl formula liveness_3
+Depth=    4029 States=    1e+06 Transitions= 2.91e+06 Nodes=  437357 Memory=    50.793	t=       13 R=   8e+04
+Depth=   15411 States=    2e+06 Transitions= 6.31e+06 Nodes=  776641 Memory=    66.223	t=     27.6 R=   7e+04
+Depth=   42193 States=    3e+06 Transitions= 9.95e+06 Nodes= 1160648 Memory=    83.899	t=     42.8 R=   7e+04
+Depth=   64921 States=    4e+06 Transitions= 1.34e+07 Nodes= 1444602 Memory=    96.887	t=     57.8 R=   7e+04
+Depth=   86515 States=    5e+06 Transitions= 1.71e+07 Nodes= 1736447 Memory=   110.168	t=     73.9 R=   7e+04
+Depth=  184924 States=    6e+06 Transitions= 2.07e+07 Nodes= 2211919 Memory=   132.043	t=     89.7 R=   7e+04
+Depth=  306525 States=    7e+06 Transitions= 2.46e+07 Nodes= 2800371 Memory=   159.191	t=      106 R=   7e+04
+Depth=  398378 States=    8e+06 Transitions= 2.88e+07 Nodes= 3601483 Memory=   196.106	t=      124 R=   6e+04
+Depth=  466801 States=    9e+06 Transitions= 3.35e+07 Nodes= 4236119 Memory=   225.402	t=      144 R=   6e+04
+Depth=  501034 States=    1e+07 Transitions= 3.84e+07 Nodes= 4871740 Memory=   254.504	t=      165 R=   6e+04
+Depth=  527799 States=  1.1e+07 Transitions= 4.32e+07 Nodes= 5294955 Memory=   274.231	t=      185 R=   6e+04
+Depth=  560660 States=  1.2e+07 Transitions= 4.83e+07 Nodes= 5719211 Memory=   294.055	t=      207 R=   6e+04
+Depth=  584878 States=  1.3e+07 Transitions= 5.34e+07 Nodes= 6188819 Memory=   315.832	t=      230 R=   6e+04
+Depth=  609003 States=  1.4e+07 Transitions= 5.88e+07 Nodes= 6537438 Memory=   332.141	t=      255 R=   5e+04
+Depth=  621888 States=  1.5e+07 Transitions=  6.5e+07 Nodes= 6409206 Memory=   338.586	t=      284 R=   5e+04
+Depth=  621888 States=  1.6e+07 Transitions= 7.14e+07 Nodes= 6117842 Memory=   338.586	t=      312 R=   5e+04
+Depth=  621888 States=  1.7e+07 Transitions= 7.66e+07 Nodes= 5892153 Memory=   338.586	t=      336 R=   5e+04
+Depth=  621888 States=  1.8e+07 Transitions= 8.07e+07 Nodes= 6006504 Memory=   338.586	t=      360 R=   5e+04
+Depth=  621888 States=  1.9e+07 Transitions= 8.52e+07 Nodes= 6287528 Memory=   338.586	t=      385 R=   5e+04
+Depth=  621888 States=    2e+07 Transitions= 9.02e+07 Nodes= 6478263 Memory=   338.586	t=      414 R=   5e+04
+Depth=  621888 States=  2.1e+07 Transitions= 9.62e+07 Nodes= 6242110 Memory=   338.586	t=      446 R=   5e+04
+Depth=  621888 States=  2.2e+07 Transitions= 1.01e+08 Nodes= 6081116 Memory=   338.586	t=      472 R=   5e+04
+Depth=  621888 States=  2.3e+07 Transitions= 1.05e+08 Nodes= 6147997 Memory=   338.586	t=      494 R=   5e+04
+Depth=  621888 States=  2.4e+07 Transitions= 1.09e+08 Nodes= 6404904 Memory=   338.586	t=      520 R=   5e+04
+Depth=  621888 States=  2.5e+07 Transitions= 1.15e+08 Nodes= 6581961 Memory=   338.586	t=      551 R=   5e+04
+Depth=  621888 States=  2.6e+07 Transitions= 1.21e+08 Nodes= 6227601 Memory=   338.781	t=      582 R=   4e+04
+Depth=  621888 States=  2.7e+07 Transitions= 1.26e+08 Nodes= 6189849 Memory=   338.781	t=      608 R=   4e+04
+Depth=  621888 States=  2.8e+07 Transitions= 1.31e+08 Nodes= 6345419 Memory=   338.781	t=      636 R=   4e+04
+Depth=  621888 States=  2.9e+07 Transitions= 1.35e+08 Nodes= 6587049 Memory=   338.781	t=      661 R=   4e+04
+Depth=  621888 States=    3e+07 Transitions=  1.4e+08 Nodes= 6667376 Memory=   340.051	t=      690 R=   4e+04
+Depth=  621888 States=  3.1e+07 Transitions= 1.45e+08 Nodes= 6618013 Memory=   340.051	t=      721 R=   4e+04
+Depth=  621888 States=  3.2e+07 Transitions=  1.5e+08 Nodes= 6205063 Memory=   340.051	t=      749 R=   4e+04
+Depth=  621888 States=  3.3e+07 Transitions= 1.55e+08 Nodes= 6231131 Memory=   340.051	t=      778 R=   4e+04
+Depth=  621888 States=  3.4e+07 Transitions=  1.6e+08 Nodes= 6300843 Memory=   340.051	t=      808 R=   4e+04
+Depth=  621888 States=  3.5e+07 Transitions= 1.65e+08 Nodes= 6178391 Memory=   340.051	t=      838 R=   4e+04
+Depth=  621888 States=  3.6e+07 Transitions= 1.69e+08 Nodes= 6257104 Memory=   340.051	t=      867 R=   4e+04
+Depth=  621888 States=  3.7e+07 Transitions= 1.73e+08 Nodes= 6437864 Memory=   340.051	t=      894 R=   4e+04
+Depth=  621888 States=  3.8e+07 Transitions= 1.78e+08 Nodes= 6633123 Memory=   340.051	t=      924 R=   4e+04
+Depth=  621888 States=  3.9e+07 Transitions= 1.83e+08 Nodes= 6832741 Memory=   347.277	t=      955 R=   4e+04
+Depth=  621888 States=    4e+07 Transitions= 1.89e+08 Nodes= 6813300 Memory=   349.231	t=      989 R=   4e+04
+Depth=  621888 States=  4.1e+07 Transitions= 1.95e+08 Nodes= 6311389 Memory=   349.231	t= 1.02e+03 R=   4e+04
+Depth=  621888 States=  4.2e+07 Transitions=    2e+08 Nodes= 6415461 Memory=   349.231	t= 1.05e+03 R=   4e+04
+Depth=  621888 States=  4.3e+07 Transitions= 2.05e+08 Nodes= 6328614 Memory=   349.231	t= 1.09e+03 R=   4e+04
+Depth=  621888 States=  4.4e+07 Transitions= 2.11e+08 Nodes= 6247680 Memory=   349.231	t= 1.12e+03 R=   4e+04
+Depth=  621888 States=  4.5e+07 Transitions= 2.16e+08 Nodes= 6385802 Memory=   349.231	t= 1.15e+03 R=   4e+04
+Depth=  621888 States=  4.6e+07 Transitions= 2.21e+08 Nodes= 6253130 Memory=   349.231	t= 1.18e+03 R=   4e+04
+Depth=  621888 States=  4.7e+07 Transitions= 2.26e+08 Nodes= 6238261 Memory=   349.231	t= 1.21e+03 R=   4e+04
+Depth=  621888 States=  4.8e+07 Transitions=  2.3e+08 Nodes= 6340828 Memory=   349.231	t= 1.24e+03 R=   4e+04
+Depth=  621888 States=  4.9e+07 Transitions= 2.33e+08 Nodes= 6457787 Memory=   349.231	t= 1.27e+03 R=   4e+04
+Depth=  621888 States=    5e+07 Transitions= 2.38e+08 Nodes= 6799552 Memory=   349.231	t=  1.3e+03 R=   4e+04
+Depth=  621888 States=  5.1e+07 Transitions= 2.43e+08 Nodes= 6995983 Memory=   355.090	t= 1.33e+03 R=   4e+04
+Depth=  621888 States=  5.2e+07 Transitions= 2.49e+08 Nodes= 6668403 Memory=   355.969	t= 1.36e+03 R=   4e+04
+Depth=  621888 States=  5.3e+07 Transitions= 2.54e+08 Nodes= 6658725 Memory=   355.969	t= 1.39e+03 R=   4e+04
+Depth=  621888 States=  5.4e+07 Transitions= 2.59e+08 Nodes= 6530093 Memory=   355.969	t= 1.43e+03 R=   4e+04
+Depth=  621888 States=  5.5e+07 Transitions= 2.64e+08 Nodes= 6656192 Memory=   355.969	t= 1.46e+03 R=   4e+04
+Depth=  621888 States=  5.6e+07 Transitions= 2.69e+08 Nodes= 6586491 Memory=   355.969	t= 1.49e+03 R=   4e+04
+Depth=  621888 States=  5.7e+07 Transitions= 2.74e+08 Nodes= 6510779 Memory=   355.969	t= 1.52e+03 R=   4e+04
+Depth=  621888 States=  5.8e+07 Transitions= 2.79e+08 Nodes= 6461190 Memory=   355.969	t= 1.55e+03 R=   4e+04
+Depth=  621888 States=  5.9e+07 Transitions= 2.83e+08 Nodes= 6571328 Memory=   355.969	t= 1.59e+03 R=   4e+04
+Depth=  621888 States=    6e+07 Transitions= 2.89e+08 Nodes= 6484243 Memory=   355.969	t= 1.62e+03 R=   4e+04
+Depth=  621888 States=  6.1e+07 Transitions= 2.94e+08 Nodes= 6493494 Memory=   355.969	t= 1.66e+03 R=   4e+04
+Depth=  621888 States=  6.2e+07 Transitions=    3e+08 Nodes= 6446201 Memory=   355.969	t= 1.69e+03 R=   4e+04
+Depth=  621888 States=  6.3e+07 Transitions= 3.03e+08 Nodes= 6541487 Memory=   355.969	t= 1.72e+03 R=   4e+04
+Depth=  621888 States=  6.4e+07 Transitions= 3.07e+08 Nodes= 6821163 Memory=   355.969	t= 1.74e+03 R=   4e+04
+Depth=  621888 States=  6.5e+07 Transitions= 3.12e+08 Nodes= 7147378 Memory=   362.512	t= 1.77e+03 R=   4e+04
+Depth=  621888 States=  6.6e+07 Transitions= 3.17e+08 Nodes= 7352112 Memory=   372.277	t=  1.8e+03 R=   4e+04
+Depth=  621888 States=  6.7e+07 Transitions= 3.23e+08 Nodes= 6952234 Memory=   374.426	t= 1.84e+03 R=   4e+04
+Depth=  621888 States=  6.8e+07 Transitions= 3.28e+08 Nodes= 7007546 Memory=   374.426	t= 1.87e+03 R=   4e+04
+Depth=  621888 States=  6.9e+07 Transitions= 3.34e+08 Nodes= 6838014 Memory=   374.426	t= 1.91e+03 R=   4e+04
+Depth=  621888 States=    7e+07 Transitions= 3.39e+08 Nodes= 7004634 Memory=   374.426	t= 1.95e+03 R=   4e+04
+Depth=  621888 States=  7.1e+07 Transitions= 3.45e+08 Nodes= 6803221 Memory=   374.426	t= 1.98e+03 R=   4e+04
+Depth=  621888 States=  7.2e+07 Transitions=  3.5e+08 Nodes= 6977768 Memory=   374.426	t= 2.02e+03 R=   4e+04
+Depth=  621888 States=  7.3e+07 Transitions= 3.55e+08 Nodes= 6744704 Memory=   374.426	t= 2.05e+03 R=   4e+04
+Depth=  621888 States=  7.4e+07 Transitions=  3.6e+08 Nodes= 6723040 Memory=   374.426	t= 2.08e+03 R=   4e+04
+Depth=  621888 States=  7.5e+07 Transitions= 3.65e+08 Nodes= 6893512 Memory=   374.426	t= 2.12e+03 R=   4e+04
+Depth=  621888 States=  7.6e+07 Transitions=  3.7e+08 Nodes= 6751856 Memory=   374.426	t= 2.15e+03 R=   4e+04
+Depth=  621888 States=  7.7e+07 Transitions= 3.76e+08 Nodes= 6686636 Memory=   374.426	t= 2.18e+03 R=   4e+04
+Depth=  621888 States=  7.8e+07 Transitions= 3.81e+08 Nodes= 6663732 Memory=   374.426	t= 2.22e+03 R=   4e+04
+Depth=  621888 States=  7.9e+07 Transitions= 3.85e+08 Nodes= 6782645 Memory=   374.426	t= 2.25e+03 R=   4e+04
+Depth=  621888 States=    8e+07 Transitions=  3.9e+08 Nodes= 6721278 Memory=   374.426	t= 2.28e+03 R=   4e+04
+Depth=  621888 States=  8.1e+07 Transitions= 3.95e+08 Nodes= 6627778 Memory=   374.426	t= 2.32e+03 R=   3e+04
+Depth=  621888 States=  8.2e+07 Transitions=    4e+08 Nodes= 6600452 Memory=   374.426	t= 2.35e+03 R=   3e+04
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Graph Encoding (-DMA=260)
+
+Full statespace search for:
+	never claim         	+ (liveness_3)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 264 byte, depth reached 621888, errors: 0
+MA stats: -DMA=201 is sufficient
+Minimized Automaton:	6589887 nodes and 2.00612e+07 edges
+ 81259748 states, stored (8.20737e+07 visited)
+3.1834846e+08 states, matched
+4.0042221e+08 transitions (= visited+matched)
+        0 atomic steps
+
+Stats on memory usage (in Megabytes):
+21388.712	equivalent memory usage for states (stored*(State-vector + overhead))
+  344.009	actual memory usage for states (compression: 1.61%)
+   30.518	memory used for DFS stack (-m1000000)
+  374.426	total actual memory usage
+
+
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:147, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:89, state 26, "Intersections[RouteConfigs[routeId].intersectionIds[i]].firstRouteId = routeId"
+	crossroads_round.pml:206, state 77, "-end-"
+	(2 of 77 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim liveness_3
+	_spin_nvr.tmp:124, state 13, "-end-"
+	(1 of 13 states)
+
+pan: elapsed time 2.36e+03 seconds
+pan: rate 34845.119 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -b -m1000000 -w27 -DMA=260 -DNOREDUCE -ltl liveness_4 crossroads_round.pml 
+pan: ltl formula liveness_4
+Depth=    4300 States=    1e+06 Transitions= 2.68e+06 Nodes=  465606 Memory=    52.063	t=     13.7 R=   7e+04
+Depth=   10649 States=    2e+06 Transitions= 5.69e+06 Nodes= 1000994 Memory=    76.281	t=     28.7 R=   7e+04
+Depth=   21710 States=    3e+06 Transitions= 9.03e+06 Nodes= 1365870 Memory=    92.883	t=     43.5 R=   7e+04
+Depth=   21710 States=    4e+06 Transitions= 1.22e+07 Nodes= 1734611 Memory=   109.777	t=     60.4 R=   7e+04
+Depth=   80779 States=    5e+06 Transitions= 1.55e+07 Nodes= 2120258 Memory=   127.746	t=     75.6 R=   7e+04
+Depth=  280686 States=    6e+06 Transitions= 1.89e+07 Nodes= 2876458 Memory=   162.414	t=     90.1 R=   7e+04
+Depth=  394086 States=    7e+06 Transitions= 2.27e+07 Nodes= 3714206 Memory=   201.086	t=      107 R=   7e+04
+Depth=  457298 States=    8e+06 Transitions= 2.68e+07 Nodes= 4310726 Memory=   228.527	t=      124 R=   6e+04
+Depth=  497836 States=    9e+06 Transitions= 3.15e+07 Nodes= 4965569 Memory=   258.606	t=      144 R=   6e+04
+Depth=  537578 States=    1e+07 Transitions= 3.58e+07 Nodes= 5439078 Memory=   280.676	t=      164 R=   6e+04
+Depth=  565756 States=  1.1e+07 Transitions= 4.03e+07 Nodes= 5827474 Memory=   298.840	t=      185 R=   6e+04
+Depth=  597467 States=  1.2e+07 Transitions= 4.54e+07 Nodes= 6205874 Memory=   316.613	t=      210 R=   6e+04
+Depth=  621888 States=  1.3e+07 Transitions= 5.16e+07 Nodes= 6241712 Memory=   326.574	t=      237 R=   5e+04
+Depth=  621888 States=  1.4e+07 Transitions= 5.71e+07 Nodes= 5922801 Memory=   326.574	t=      263 R=   5e+04
+Depth=  621888 States=  1.5e+07 Transitions= 6.25e+07 Nodes= 5569041 Memory=   326.574	t=      287 R=   5e+04
+Depth=  621888 States=  1.6e+07 Transitions= 6.61e+07 Nodes= 5732232 Memory=   326.574	t=      310 R=   5e+04
+Depth=  621888 States=  1.7e+07 Transitions=    7e+07 Nodes= 5992901 Memory=   326.574	t=      334 R=   5e+04
+Depth=  621888 States=  1.8e+07 Transitions= 7.45e+07 Nodes= 6113991 Memory=   326.574	t=      360 R=   5e+04
+Depth=  621888 States=  1.9e+07 Transitions= 8.04e+07 Nodes= 5696060 Memory=   326.574	t=      389 R=   5e+04
+Depth=  621888 States=    2e+07 Transitions=  8.4e+07 Nodes= 6044856 Memory=   326.574	t=      411 R=   5e+04
+Depth=  621888 States=  2.1e+07 Transitions= 8.86e+07 Nodes= 6265272 Memory=   326.574	t=      438 R=   5e+04
+Depth=  621888 States=  2.2e+07 Transitions= 9.37e+07 Nodes= 6210620 Memory=   326.574	t=      469 R=   5e+04
+Depth=  621888 States=  2.3e+07 Transitions= 9.83e+07 Nodes= 5805345 Memory=   326.574	t=      495 R=   5e+04
+Depth=  621888 States=  2.4e+07 Transitions= 1.03e+08 Nodes= 5933316 Memory=   326.574	t=      522 R=   5e+04
+Depth=  621888 States=  2.5e+07 Transitions= 1.06e+08 Nodes= 5908324 Memory=   326.574	t=      550 R=   5e+04
+Depth=  621888 States=  2.6e+07 Transitions=  1.1e+08 Nodes= 5941781 Memory=   326.574	t=      577 R=   5e+04
+Depth=  621888 States=  2.7e+07 Transitions= 1.15e+08 Nodes= 6230713 Memory=   326.574	t=      604 R=   4e+04
+Depth=  621888 States=  2.8e+07 Transitions=  1.2e+08 Nodes= 6355919 Memory=   326.867	t=      633 R=   4e+04
+Depth=  621888 States=  2.9e+07 Transitions= 1.26e+08 Nodes= 6163639 Memory=   327.063	t=      667 R=   4e+04
+Depth=  621888 States=    3e+07 Transitions= 1.31e+08 Nodes= 5970340 Memory=   327.063	t=      697 R=   4e+04
+Depth=  621888 States=  3.1e+07 Transitions= 1.36e+08 Nodes= 5963788 Memory=   327.063	t=      727 R=   4e+04
+Depth=  621888 States=  3.2e+07 Transitions= 1.41e+08 Nodes= 5883599 Memory=   327.063	t=      758 R=   4e+04
+Depth=  621888 States=  3.3e+07 Transitions= 1.45e+08 Nodes= 5942909 Memory=   327.063	t=      787 R=   4e+04
+Depth=  621888 States=  3.4e+07 Transitions= 1.49e+08 Nodes= 6127979 Memory=   327.063	t=      815 R=   4e+04
+Depth=  621888 States=  3.5e+07 Transitions= 1.53e+08 Nodes= 6367284 Memory=   327.063	t=      845 R=   4e+04
+Depth=  621888 States=  3.6e+07 Transitions= 1.58e+08 Nodes= 6559333 Memory=   334.191	t=      875 R=   4e+04
+Depth=  621888 States=  3.7e+07 Transitions= 1.64e+08 Nodes= 6111557 Memory=   334.387	t=      910 R=   4e+04
+Depth=  621888 States=  3.8e+07 Transitions= 1.68e+08 Nodes= 6072912 Memory=   334.387	t=      940 R=   4e+04
+Depth=  621888 States=  3.9e+07 Transitions= 1.73e+08 Nodes= 6008175 Memory=   334.387	t=      973 R=   4e+04
+Depth=  621888 States=    4e+07 Transitions= 1.78e+08 Nodes= 5932643 Memory=   334.387	t=    1e+03 R=   4e+04
+Depth=  621888 States=  4.1e+07 Transitions= 1.82e+08 Nodes= 5947389 Memory=   334.387	t= 1.03e+03 R=   4e+04
+Depth=  621888 States=  4.2e+07 Transitions= 1.88e+08 Nodes= 6093638 Memory=   334.387	t= 1.07e+03 R=   4e+04
+Depth=  621888 States=  4.3e+07 Transitions= 1.93e+08 Nodes= 5953466 Memory=   334.387	t=  1.1e+03 R=   4e+04
+Depth=  621888 States=  4.4e+07 Transitions= 1.96e+08 Nodes= 6003621 Memory=   334.387	t= 1.13e+03 R=   4e+04
+Depth=  621888 States=  4.5e+07 Transitions=    2e+08 Nodes= 6111383 Memory=   334.387	t= 1.16e+03 R=   4e+04
+Depth=  621888 States=  4.6e+07 Transitions= 2.04e+08 Nodes= 6451316 Memory=   334.387	t= 1.19e+03 R=   4e+04
+Depth=  621888 States=  4.7e+07 Transitions= 2.09e+08 Nodes= 6673200 Memory=   339.856	t= 1.22e+03 R=   4e+04
+Depth=  621888 States=  4.8e+07 Transitions= 2.14e+08 Nodes= 6373299 Memory=   340.930	t= 1.25e+03 R=   4e+04
+Depth=  621888 States=  4.9e+07 Transitions= 2.19e+08 Nodes= 6345533 Memory=   340.930	t= 1.28e+03 R=   4e+04
+Depth=  621888 States=    5e+07 Transitions= 2.23e+08 Nodes= 6342213 Memory=   340.930	t= 1.31e+03 R=   4e+04
+Depth=  621888 States=  5.1e+07 Transitions= 2.28e+08 Nodes= 6204922 Memory=   340.930	t= 1.35e+03 R=   4e+04
+Depth=  621888 States=  5.2e+07 Transitions= 2.32e+08 Nodes= 6215720 Memory=   340.930	t= 1.38e+03 R=   4e+04
+Depth=  621888 States=  5.3e+07 Transitions= 2.38e+08 Nodes= 6194120 Memory=   340.930	t= 1.41e+03 R=   4e+04
+Depth=  621888 States=  5.4e+07 Transitions= 2.43e+08 Nodes= 6156821 Memory=   340.930	t= 1.44e+03 R=   4e+04
+Depth=  621888 States=  5.5e+07 Transitions= 2.47e+08 Nodes= 6318881 Memory=   340.930	t= 1.47e+03 R=   4e+04
+Depth=  621888 States=  5.6e+07 Transitions= 2.52e+08 Nodes= 6212712 Memory=   340.930	t= 1.51e+03 R=   4e+04
+Depth=  621888 States=  5.7e+07 Transitions= 2.57e+08 Nodes= 6147832 Memory=   340.930	t= 1.54e+03 R=   4e+04
+Depth=  621888 States=  5.8e+07 Transitions= 2.62e+08 Nodes= 6183588 Memory=   340.930	t= 1.57e+03 R=   4e+04
+Depth=  621888 States=  5.9e+07 Transitions= 2.65e+08 Nodes= 6282970 Memory=   340.930	t=  1.6e+03 R=   4e+04
+Depth=  621888 States=    6e+07 Transitions= 2.69e+08 Nodes= 6616866 Memory=   340.930	t= 1.63e+03 R=   4e+04
+Depth=  621888 States=  6.1e+07 Transitions= 2.74e+08 Nodes= 6944681 Memory=   353.039	t= 1.66e+03 R=   4e+04
+Depth=  621888 States=  6.2e+07 Transitions=  2.8e+08 Nodes= 6836908 Memory=   359.387	t=  1.7e+03 R=   4e+04
+Depth=  621888 States=  6.3e+07 Transitions= 2.85e+08 Nodes= 6595602 Memory=   359.387	t= 1.73e+03 R=   4e+04
+Depth=  621888 States=  6.4e+07 Transitions=  2.9e+08 Nodes= 6533588 Memory=   359.387	t= 1.77e+03 R=   4e+04
+Depth=  621888 States=  6.5e+07 Transitions= 2.95e+08 Nodes= 6681125 Memory=   359.387	t=  1.8e+03 R=   4e+04
+Depth=  621888 States=  6.6e+07 Transitions=    3e+08 Nodes= 6483844 Memory=   359.387	t= 1.83e+03 R=   4e+04
+Depth=  621888 States=  6.7e+07 Transitions= 3.04e+08 Nodes= 6581972 Memory=   359.387	t= 1.86e+03 R=   4e+04
+Depth=  621888 States=  6.8e+07 Transitions=  3.1e+08 Nodes= 6467202 Memory=   359.387	t=  1.9e+03 R=   4e+04
+Depth=  621888 States=  6.9e+07 Transitions= 3.16e+08 Nodes= 6406721 Memory=   359.387	t= 1.93e+03 R=   4e+04
+Depth=  621888 States=    7e+07 Transitions=  3.2e+08 Nodes= 6580018 Memory=   359.387	t= 1.97e+03 R=   4e+04
+Depth=  621888 States=  7.1e+07 Transitions= 3.25e+08 Nodes= 6420311 Memory=   359.387	t=    2e+03 R=   4e+04
+Depth=  621888 States=  7.2e+07 Transitions=  3.3e+08 Nodes= 6377990 Memory=   359.387	t= 2.04e+03 R=   4e+04
+Depth=  621888 States=  7.3e+07 Transitions= 3.35e+08 Nodes= 6365065 Memory=   359.387	t= 2.07e+03 R=   4e+04
+Depth=  621888 States=  7.4e+07 Transitions= 3.39e+08 Nodes= 6442987 Memory=   359.387	t=  2.1e+03 R=   4e+04
+Depth=  621888 States=  7.5e+07 Transitions= 3.44e+08 Nodes= 6360668 Memory=   359.387	t= 2.14e+03 R=   4e+04
+Depth=  621888 States=  7.6e+07 Transitions= 3.49e+08 Nodes= 6317368 Memory=   359.387	t= 2.17e+03 R=   4e+04
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Graph Encoding (-DMA=260)
+
+Full statespace search for:
+	never claim         	+ (liveness_4)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 264 byte, depth reached 621888, errors: 0
+MA stats: -DMA=201 is sufficient
+Minimized Automaton:	6281296 nodes and 1.91077e+07 edges
+ 75137610 states, stored (7.69746e+07 visited)
+2.7692455e+08 states, matched
+3.5389913e+08 transitions (= visited+matched)
+        0 atomic steps
+
+Stats on memory usage (in Megabytes):
+19777.279	equivalent memory usage for states (stored*(State-vector + overhead))
+  328.968	actual memory usage for states (compression: 1.66%)
+   30.518	memory used for DFS stack (-m1000000)
+  359.387	total actual memory usage
+
+
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:147, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:89, state 26, "Intersections[RouteConfigs[routeId].intersectionIds[i]].firstRouteId = routeId"
+	crossroads_round.pml:206, state 77, "-end-"
+	(2 of 77 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim liveness_4
+	_spin_nvr.tmp:135, state 13, "-end-"
+	(1 of 13 states)
+
+pan: elapsed time 2.2e+03 seconds
+pan: rate 34924.645 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -b -m1000000 -w27 -DMA=260 -DNOREDUCE -ltl liveness_5 crossroads_round.pml 
+pan: ltl formula liveness_5
+Depth=    2817 States=    1e+06 Transitions= 2.64e+06 Nodes=  563832 Memory=    56.359	t=     13.4 R=   7e+04
+Depth=   20881 States=    2e+06 Transitions= 6.01e+06 Nodes= 1007368 Memory=    76.574	t=     27.3 R=   7e+04
+Depth=   45784 States=    3e+06 Transitions= 9.52e+06 Nodes= 1359590 Memory=    92.785	t=     42.1 R=   7e+04
+Depth=   66881 States=    4e+06 Transitions= 1.33e+07 Nodes= 1722855 Memory=   109.387	t=     58.1 R=   7e+04
+Depth=  149676 States=    5e+06 Transitions= 1.66e+07 Nodes= 2185116 Memory=   130.578	t=     72.7 R=   7e+04
+Depth=  259707 States=    6e+06 Transitions= 2.01e+07 Nodes= 2724585 Memory=   155.578	t=     87.9 R=   7e+04
+Depth=  348163 States=    7e+06 Transitions=  2.4e+07 Nodes= 3325978 Memory=   183.215	t=      105 R=   7e+04
+Depth=  418870 States=    8e+06 Transitions= 2.82e+07 Nodes= 3982811 Memory=   213.391	t=      122 R=   7e+04
+Depth=  472757 States=    9e+06 Transitions= 3.26e+07 Nodes= 4505057 Memory=   237.512	t=      140 R=   6e+04
+Depth=  506863 States=    1e+07 Transitions= 3.73e+07 Nodes= 5018040 Memory=   261.145	t=      160 R=   6e+04
+Depth=  541094 States=  1.1e+07 Transitions= 4.21e+07 Nodes= 5454768 Memory=   281.457	t=      179 R=   6e+04
+Depth=  572488 States=  1.2e+07 Transitions= 4.72e+07 Nodes= 5901598 Memory=   302.356	t=      200 R=   6e+04
+Depth=  600394 States=  1.3e+07 Transitions= 5.26e+07 Nodes= 6300278 Memory=   321.008	t=      222 R=   6e+04
+Depth=  621888 States=  1.4e+07 Transitions=  5.9e+07 Nodes= 6148445 Memory=   328.723	t=      250 R=   6e+04
+Depth=  621888 States=  1.5e+07 Transitions= 6.51e+07 Nodes= 5788865 Memory=   328.723	t=      275 R=   5e+04
+Depth=  621888 States=  1.6e+07 Transitions= 7.02e+07 Nodes= 5800104 Memory=   328.723	t=      298 R=   5e+04
+Depth=  621888 States=  1.7e+07 Transitions= 7.46e+07 Nodes= 6040051 Memory=   328.723	t=      321 R=   5e+04
+Depth=  621888 States=  1.8e+07 Transitions= 7.93e+07 Nodes= 6141399 Memory=   328.723	t=      345 R=   5e+04
+Depth=  621888 States=  1.9e+07 Transitions= 8.43e+07 Nodes= 6089610 Memory=   328.723	t=      372 R=   5e+04
+Depth=  621888 States=    2e+07 Transitions= 8.78e+07 Nodes= 5815320 Memory=   328.723	t=      397 R=   5e+04
+Depth=  621888 States=  2.1e+07 Transitions= 9.15e+07 Nodes= 5943422 Memory=   328.723	t=      420 R=   5e+04
+Depth=  621888 States=  2.2e+07 Transitions= 9.57e+07 Nodes= 6193081 Memory=   328.723	t=      445 R=   5e+04
+Depth=  621888 States=  2.3e+07 Transitions= 1.01e+08 Nodes= 6348080 Memory=   328.723	t=      473 R=   5e+04
+Depth=  621888 States=  2.4e+07 Transitions= 1.06e+08 Nodes= 5931791 Memory=   328.723	t=      502 R=   5e+04
+Depth=  621888 States=  2.5e+07 Transitions= 1.11e+08 Nodes= 6036391 Memory=   328.723	t=      527 R=   5e+04
+Depth=  621888 States=  2.6e+07 Transitions= 1.14e+08 Nodes= 6006178 Memory=   328.723	t=      554 R=   5e+04
+Depth=  621888 States=  2.7e+07 Transitions= 1.18e+08 Nodes= 6164265 Memory=   328.723	t=      580 R=   5e+04
+Depth=  621888 States=  2.8e+07 Transitions= 1.23e+08 Nodes= 6351574 Memory=   328.723	t=      607 R=   5e+04
+Depth=  621888 States=  2.9e+07 Transitions= 1.28e+08 Nodes= 6444406 Memory=   329.504	t=      636 R=   5e+04
+Depth=  621888 States=    3e+07 Transitions= 1.35e+08 Nodes= 6016408 Memory=   329.602	t=      667 R=   4e+04
+Depth=  621888 States=  3.1e+07 Transitions=  1.4e+08 Nodes= 6107081 Memory=   329.602	t=      696 R=   4e+04
+Depth=  621888 States=  3.2e+07 Transitions= 1.44e+08 Nodes= 6032944 Memory=   329.602	t=      724 R=   4e+04
+Depth=  621888 States=  3.3e+07 Transitions=  1.5e+08 Nodes= 5991068 Memory=   329.602	t=      755 R=   4e+04
+Depth=  621888 States=  3.4e+07 Transitions= 1.54e+08 Nodes= 6032974 Memory=   329.602	t=      783 R=   4e+04
+Depth=  621888 States=  3.5e+07 Transitions= 1.57e+08 Nodes= 6202177 Memory=   329.602	t=      810 R=   4e+04
+Depth=  621888 States=  3.6e+07 Transitions= 1.62e+08 Nodes= 6383682 Memory=   329.602	t=      839 R=   4e+04
+Depth=  621888 States=  3.7e+07 Transitions= 1.67e+08 Nodes= 6580200 Memory=   335.656	t=      868 R=   4e+04
+Depth=  621888 States=  3.8e+07 Transitions= 1.73e+08 Nodes= 6494678 Memory=   337.316	t=      900 R=   4e+04
+Depth=  621888 States=  3.9e+07 Transitions= 1.78e+08 Nodes= 6149937 Memory=   337.316	t=      931 R=   4e+04
+Depth=  621888 States=    4e+07 Transitions= 1.83e+08 Nodes= 6042944 Memory=   337.316	t=      961 R=   4e+04
+Depth=  621888 States=  4.1e+07 Transitions= 1.88e+08 Nodes= 6168489 Memory=   337.316	t=      991 R=   4e+04
+Depth=  621888 States=  4.2e+07 Transitions= 1.92e+08 Nodes= 6045833 Memory=   337.316	t= 1.02e+03 R=   4e+04
+Depth=  621888 States=  4.3e+07 Transitions= 1.97e+08 Nodes= 6177680 Memory=   337.316	t= 1.05e+03 R=   4e+04
+Depth=  621888 States=  4.4e+07 Transitions= 2.03e+08 Nodes= 6028121 Memory=   337.316	t= 1.08e+03 R=   4e+04
+Depth=  621888 States=  4.5e+07 Transitions= 2.07e+08 Nodes= 6084603 Memory=   337.316	t= 1.11e+03 R=   4e+04
+Depth=  621888 States=  4.6e+07 Transitions= 2.11e+08 Nodes= 6221432 Memory=   337.316	t= 1.14e+03 R=   4e+04
+Depth=  621888 States=  4.7e+07 Transitions= 2.15e+08 Nodes= 6413763 Memory=   337.316	t= 1.16e+03 R=   4e+04
+Depth=  621888 States=  4.8e+07 Transitions= 2.19e+08 Nodes= 6622586 Memory=   337.609	t= 1.19e+03 R=   4e+04
+Depth=  621888 States=  4.9e+07 Transitions= 2.25e+08 Nodes= 6735399 Memory=   344.934	t= 1.22e+03 R=   4e+04
+Depth=  621888 States=    5e+07 Transitions= 2.31e+08 Nodes= 6391890 Memory=   344.934	t= 1.26e+03 R=   4e+04
+Depth=  621888 States=  5.1e+07 Transitions= 2.36e+08 Nodes= 6344671 Memory=   344.934	t= 1.29e+03 R=   4e+04
+Depth=  621888 States=  5.2e+07 Transitions=  2.4e+08 Nodes= 6451782 Memory=   344.934	t= 1.31e+03 R=   4e+04
+Depth=  621888 States=  5.3e+07 Transitions= 2.45e+08 Nodes= 6301433 Memory=   344.934	t= 1.35e+03 R=   4e+04
+Depth=  621888 States=  5.4e+07 Transitions= 2.49e+08 Nodes= 6394558 Memory=   344.934	t= 1.38e+03 R=   4e+04
+Depth=  621888 States=  5.5e+07 Transitions= 2.54e+08 Nodes= 6275920 Memory=   344.934	t= 1.41e+03 R=   4e+04
+Depth=  621888 States=  5.6e+07 Transitions= 2.59e+08 Nodes= 6295949 Memory=   344.934	t= 1.44e+03 R=   4e+04
+Depth=  621888 States=  5.7e+07 Transitions= 2.64e+08 Nodes= 6444045 Memory=   344.934	t= 1.47e+03 R=   4e+04
+Depth=  621888 States=  5.8e+07 Transitions= 2.69e+08 Nodes= 6267316 Memory=   344.934	t=  1.5e+03 R=   4e+04
+Depth=  621888 States=  5.9e+07 Transitions= 2.74e+08 Nodes= 6290015 Memory=   344.934	t= 1.54e+03 R=   4e+04
+Depth=  621888 States=    6e+07 Transitions= 2.79e+08 Nodes= 6345961 Memory=   344.934	t= 1.57e+03 R=   4e+04
+Depth=  621888 States=  6.1e+07 Transitions= 2.83e+08 Nodes= 6466108 Memory=   344.934	t= 1.59e+03 R=   4e+04
+Depth=  621888 States=  6.2e+07 Transitions= 2.87e+08 Nodes= 6734544 Memory=   344.934	t= 1.62e+03 R=   4e+04
+Depth=  621888 States=  6.3e+07 Transitions= 2.92e+08 Nodes= 7015032 Memory=   356.555	t= 1.65e+03 R=   4e+04
+Depth=  621888 States=  6.4e+07 Transitions= 2.98e+08 Nodes= 6901729 Memory=   363.391	t= 1.69e+03 R=   4e+04
+Depth=  621888 States=  6.5e+07 Transitions= 3.04e+08 Nodes= 6760064 Memory=   363.391	t= 1.72e+03 R=   4e+04
+Depth=  621888 States=  6.6e+07 Transitions= 3.09e+08 Nodes= 6625918 Memory=   363.391	t= 1.75e+03 R=   4e+04
+Depth=  621888 States=  6.7e+07 Transitions= 3.13e+08 Nodes= 6765625 Memory=   363.391	t= 1.78e+03 R=   4e+04
+Depth=  621888 States=  6.8e+07 Transitions= 3.19e+08 Nodes= 6599570 Memory=   363.391	t= 1.81e+03 R=   4e+04
+Depth=  621888 States=  6.9e+07 Transitions= 3.23e+08 Nodes= 6695832 Memory=   363.391	t= 1.84e+03 R=   4e+04
+Depth=  621888 States=    7e+07 Transitions= 3.29e+08 Nodes= 6585480 Memory=   363.391	t= 1.88e+03 R=   4e+04
+Depth=  621888 States=  7.1e+07 Transitions= 3.34e+08 Nodes= 6532492 Memory=   363.391	t= 1.92e+03 R=   4e+04
+Depth=  621888 States=  7.2e+07 Transitions= 3.39e+08 Nodes= 6622765 Memory=   363.391	t= 1.95e+03 R=   4e+04
+Depth=  621888 States=  7.3e+07 Transitions= 3.45e+08 Nodes= 6528994 Memory=   363.391	t= 1.99e+03 R=   4e+04
+Depth=  621888 States=  7.4e+07 Transitions= 3.49e+08 Nodes= 6456719 Memory=   363.391	t= 2.02e+03 R=   4e+04
+Depth=  621888 States=  7.5e+07 Transitions= 3.55e+08 Nodes= 6447752 Memory=   363.391	t= 2.05e+03 R=   4e+04
+Depth=  621888 States=  7.6e+07 Transitions= 3.59e+08 Nodes= 6627281 Memory=   363.391	t= 2.08e+03 R=   4e+04
+Depth=  621888 States=  7.7e+07 Transitions= 3.64e+08 Nodes= 6498678 Memory=   363.391	t= 2.12e+03 R=   4e+04
+Depth=  621888 States=  7.8e+07 Transitions= 3.69e+08 Nodes= 6451737 Memory=   363.391	t= 2.15e+03 R=   4e+04
+Depth=  621888 States=  7.9e+07 Transitions= 3.74e+08 Nodes= 6420933 Memory=   363.391	t= 2.19e+03 R=   4e+04
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Graph Encoding (-DMA=260)
+
+Full statespace search for:
+	never claim         	+ (liveness_5)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 264 byte, depth reached 621888, errors: 0
+MA stats: -DMA=201 is sufficient
+Minimized Automaton:	6392901 nodes and 1.94644e+07 edges
+ 78088044 states, stored (7.93902e+07 visited)
+2.9707622e+08 states, matched
+3.7646646e+08 transitions (= visited+matched)
+        0 atomic steps
+
+Stats on memory usage (in Megabytes):
+20553.875	equivalent memory usage for states (stored*(State-vector + overhead))
+  332.972	actual memory usage for states (compression: 1.62%)
+   30.518	memory used for DFS stack (-m1000000)
+  363.391	total actual memory usage
+
+
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:147, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:89, state 26, "Intersections[RouteConfigs[routeId].intersectionIds[i]].firstRouteId = routeId"
+	crossroads_round.pml:206, state 77, "-end-"
+	(2 of 77 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim liveness_5
+	_spin_nvr.tmp:146, state 13, "-end-"
+	(1 of 13 states)
+
+pan: elapsed time 2.2e+03 seconds
+pan: rate 36080.176 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
