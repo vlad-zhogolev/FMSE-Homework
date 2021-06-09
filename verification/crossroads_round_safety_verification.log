@@ -1,0 +1,963 @@
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -m1000000 -w27 -DCOLLAPSE -ltl safety_0_1 crossroads_round.pml 
+pan: ltl formula safety_0_1
+Depth=  389618 States=    1e+06 Transitions= 1.99e+06 Memory=   611.176	t=      2.9 R=   3e+05
+Depth=  486500 States=    2e+06 Transitions=  4.6e+06 Memory=   675.141	t=     6.51 R=   3e+05
+Depth=  551026 States=    3e+06 Transitions= 7.48e+06 Memory=   740.668	t=     10.6 R=   3e+05
+Depth=  601245 States=    4e+06 Transitions= 1.07e+07 Memory=   806.489	t=     15.2 R=   3e+05
+Depth=  611914 States=    5e+06 Transitions= 1.45e+07 Memory=   868.110	t=     20.6 R=   2e+05
+Depth=  611914 States=    6e+06 Transitions= 1.75e+07 Memory=   925.239	t=     24.7 R=   2e+05
+Depth=  611914 States=    7e+06 Transitions= 2.02e+07 Memory=   987.446	t=     28.6 R=   2e+05
+Depth=  611914 States=    8e+06 Transitions= 2.36e+07 Memory=  1049.946	t=     33.3 R=   2e+05
+Depth=  611914 States=    9e+06 Transitions= 2.64e+07 Memory=  1114.106	t=     37.3 R=   2e+05
+Depth=  611914 States=    1e+07 Transitions= 2.97e+07 Memory=  1173.871	t=     41.9 R=   2e+05
+Depth=  611914 States=  1.1e+07 Transitions= 3.26e+07 Memory=  1236.274	t=     46.2 R=   2e+05
+Depth=  611914 States=  1.2e+07 Transitions=  3.6e+07 Memory=  1299.946	t=     50.9 R=   2e+05
+Depth=  611914 States=  1.3e+07 Transitions= 3.94e+07 Memory=  1359.614	t=     55.6 R=   2e+05
+Depth=  611914 States=  1.4e+07 Transitions= 4.26e+07 Memory=  1420.844	t=       60 R=   2e+05
+Depth=  611914 States=  1.5e+07 Transitions= 4.55e+07 Memory=  1483.832	t=     63.9 R=   2e+05
+Depth=  611914 States=  1.6e+07 Transitions=  4.9e+07 Memory=  1544.868	t=     68.9 R=   2e+05
+Depth=  611914 States=  1.7e+07 Transitions= 5.23e+07 Memory=  1605.805	t=     73.3 R=   2e+05
+Depth=  611914 States=  1.8e+07 Transitions= 5.55e+07 Memory=  1666.254	t=     77.7 R=   2e+05
+Depth=  611914 States=  1.9e+07 Transitions= 5.87e+07 Memory=  1726.215	t=     82.1 R=   2e+05
+Depth=  611914 States=    2e+07 Transitions= 6.17e+07 Memory=  1790.473	t=     86.2 R=   2e+05
+Depth=  611914 States=  2.1e+07 Transitions= 6.49e+07 Memory=  1850.043	t=     90.7 R=   2e+05
+Depth=  611914 States=  2.2e+07 Transitions= 6.82e+07 Memory=  1911.274	t=     95.3 R=   2e+05
+Depth=  611914 States=  2.3e+07 Transitions= 7.14e+07 Memory=  1971.918	t=     99.7 R=   2e+05
+Depth=  611914 States=  2.4e+07 Transitions= 7.47e+07 Memory=  2032.856	t=      104 R=   2e+05
+Depth=  611914 States=  2.5e+07 Transitions= 7.81e+07 Memory=  2092.328	t=      109 R=   2e+05
+Depth=  611914 States=  2.6e+07 Transitions= 8.08e+07 Memory=  2147.309	t=      113 R=   2e+05
+Depth=  611914 States=  2.7e+07 Transitions= 8.44e+07 Memory=  2202.973	t=      118 R=   2e+05
+Depth=  611914 States=  2.8e+07 Transitions= 8.75e+07 Memory=  2257.563	t=      123 R=   2e+05
+Depth=  611914 States=  2.9e+07 Transitions= 9.08e+07 Memory=  2312.055	t=      127 R=   2e+05
+Depth=  611914 States=    3e+07 Transitions= 9.43e+07 Memory=  2365.961	t=      132 R=   2e+05
+Depth=  611914 States=  3.1e+07 Transitions= 9.77e+07 Memory=  2420.258	t=      137 R=   2e+05
+Depth=  611914 States=  3.2e+07 Transitions= 1.01e+08 Memory=  2474.262	t=      142 R=   2e+05
+Depth=  611914 States=  3.3e+07 Transitions= 1.04e+08 Memory=  2527.680	t=      146 R=   2e+05
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Partial Order Reduction
+	+ Compression
+
+Full statespace search for:
+	never claim         	+ (safety_0_1)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 288 byte, depth reached 611914, errors: 0
+ 33369278 states, stored
+ 71981137 states, matched
+1.0535042e+08 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:   6759712 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 9801.614	equivalent memory usage for states (stored*(State-vector + overhead))
+ 2001.725	actual memory usage for states (compression: 20.42%)
+         	state-vector as stored = 43 byte + 20 byte overhead
+  512.000	memory used for hash table (-w27)
+   34.332	memory used for DFS stack (-m1000000)
+ 2547.407	total actual memory usage
+
+
+nr of templates: [ 0:globals 1:chans 2:procs ]
+collapse counts: [ 0:1642457 2:6 3:708 4:109 5:1 ]
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:139, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:178, state 72, "-end-"
+	(1 of 72 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim safety_0_1
+	_spin_nvr.tmp:8, state 10, "-end-"
+	(1 of 10 states)
+
+pan: elapsed time 148 seconds
+pan: rate 225127.36 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -m1000000 -w27 -DCOLLAPSE -ltl safety_0_2 crossroads_round.pml 
+pan: ltl formula safety_0_2
+Depth=  389618 States=    1e+06 Transitions= 1.99e+06 Memory=   611.176	t=     2.77 R=   4e+05
+Depth=  486500 States=    2e+06 Transitions=  4.6e+06 Memory=   675.141	t=     6.35 R=   3e+05
+Depth=  551026 States=    3e+06 Transitions= 7.48e+06 Memory=   740.668	t=     10.3 R=   3e+05
+Depth=  601245 States=    4e+06 Transitions= 1.07e+07 Memory=   806.489	t=     14.7 R=   3e+05
+Depth=  611914 States=    5e+06 Transitions= 1.45e+07 Memory=   868.110	t=     19.9 R=   3e+05
+Depth=  611914 States=    6e+06 Transitions= 1.75e+07 Memory=   925.239	t=     23.9 R=   3e+05
+Depth=  611914 States=    7e+06 Transitions= 2.02e+07 Memory=   987.446	t=     27.6 R=   3e+05
+Depth=  611914 States=    8e+06 Transitions= 2.36e+07 Memory=  1049.946	t=     32.3 R=   2e+05
+Depth=  611914 States=    9e+06 Transitions= 2.64e+07 Memory=  1114.106	t=     36.2 R=   2e+05
+Depth=  611914 States=    1e+07 Transitions= 2.97e+07 Memory=  1173.871	t=     40.7 R=   2e+05
+Depth=  611914 States=  1.1e+07 Transitions= 3.26e+07 Memory=  1236.274	t=     44.7 R=   2e+05
+Depth=  611914 States=  1.2e+07 Transitions=  3.6e+07 Memory=  1299.946	t=     49.3 R=   2e+05
+Depth=  611914 States=  1.3e+07 Transitions= 3.94e+07 Memory=  1359.614	t=       54 R=   2e+05
+Depth=  611914 States=  1.4e+07 Transitions= 4.26e+07 Memory=  1420.844	t=     58.4 R=   2e+05
+Depth=  611914 States=  1.5e+07 Transitions= 4.55e+07 Memory=  1483.832	t=     62.4 R=   2e+05
+Depth=  611914 States=  1.6e+07 Transitions=  4.9e+07 Memory=  1544.868	t=     67.3 R=   2e+05
+Depth=  611914 States=  1.7e+07 Transitions= 5.23e+07 Memory=  1605.805	t=     71.8 R=   2e+05
+Depth=  611914 States=  1.8e+07 Transitions= 5.55e+07 Memory=  1666.254	t=     76.3 R=   2e+05
+Depth=  611914 States=  1.9e+07 Transitions= 5.87e+07 Memory=  1726.215	t=     80.8 R=   2e+05
+Depth=  611914 States=    2e+07 Transitions= 6.17e+07 Memory=  1790.473	t=     84.8 R=   2e+05
+Depth=  611914 States=  2.1e+07 Transitions= 6.49e+07 Memory=  1850.043	t=     89.4 R=   2e+05
+Depth=  611914 States=  2.2e+07 Transitions= 6.82e+07 Memory=  1911.274	t=     93.9 R=   2e+05
+Depth=  611914 States=  2.3e+07 Transitions= 7.14e+07 Memory=  1971.918	t=     98.3 R=   2e+05
+Depth=  611914 States=  2.4e+07 Transitions= 7.47e+07 Memory=  2032.856	t=      103 R=   2e+05
+Depth=  611914 States=  2.5e+07 Transitions= 7.81e+07 Memory=  2092.328	t=      108 R=   2e+05
+Depth=  611914 States=  2.6e+07 Transitions= 8.08e+07 Memory=  2147.309	t=      112 R=   2e+05
+Depth=  611914 States=  2.7e+07 Transitions= 8.44e+07 Memory=  2202.973	t=      117 R=   2e+05
+Depth=  611914 States=  2.8e+07 Transitions= 8.75e+07 Memory=  2257.563	t=      121 R=   2e+05
+Depth=  611914 States=  2.9e+07 Transitions= 9.08e+07 Memory=  2312.055	t=      126 R=   2e+05
+Depth=  611914 States=    3e+07 Transitions= 9.43e+07 Memory=  2365.961	t=      131 R=   2e+05
+Depth=  611914 States=  3.1e+07 Transitions= 9.77e+07 Memory=  2420.258	t=      136 R=   2e+05
+Depth=  611914 States=  3.2e+07 Transitions= 1.01e+08 Memory=  2474.262	t=      140 R=   2e+05
+Depth=  611914 States=  3.3e+07 Transitions= 1.04e+08 Memory=  2527.680	t=      145 R=   2e+05
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Partial Order Reduction
+	+ Compression
+
+Full statespace search for:
+	never claim         	+ (safety_0_2)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 288 byte, depth reached 611914, errors: 0
+ 33369278 states, stored
+ 71981137 states, matched
+1.0535042e+08 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:   6741494 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 9801.614	equivalent memory usage for states (stored*(State-vector + overhead))
+ 2001.725	actual memory usage for states (compression: 20.42%)
+         	state-vector as stored = 43 byte + 20 byte overhead
+  512.000	memory used for hash table (-w27)
+   34.332	memory used for DFS stack (-m1000000)
+ 2547.407	total actual memory usage
+
+
+nr of templates: [ 0:globals 1:chans 2:procs ]
+collapse counts: [ 0:1642457 2:6 3:708 4:109 6:1 ]
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:139, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:178, state 72, "-end-"
+	(1 of 72 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim safety_0_2
+	_spin_nvr.tmp:17, state 10, "-end-"
+	(1 of 10 states)
+
+pan: elapsed time 147 seconds
+pan: rate 227332.84 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -m1000000 -w27 -DCOLLAPSE -ltl safety_0_3 crossroads_round.pml 
+pan: ltl formula safety_0_3
+Depth=  389618 States=    1e+06 Transitions= 1.99e+06 Memory=   611.176	t=     2.78 R=   4e+05
+Depth=  486500 States=    2e+06 Transitions=  4.6e+06 Memory=   675.141	t=     6.37 R=   3e+05
+Depth=  551026 States=    3e+06 Transitions= 7.48e+06 Memory=   740.668	t=     10.3 R=   3e+05
+Depth=  601245 States=    4e+06 Transitions= 1.07e+07 Memory=   806.489	t=     14.8 R=   3e+05
+Depth=  611914 States=    5e+06 Transitions= 1.45e+07 Memory=   868.110	t=     19.9 R=   3e+05
+Depth=  611914 States=    6e+06 Transitions= 1.75e+07 Memory=   925.239	t=       24 R=   2e+05
+Depth=  611914 States=    7e+06 Transitions= 2.02e+07 Memory=   987.446	t=     27.8 R=   3e+05
+Depth=  611914 States=    8e+06 Transitions= 2.36e+07 Memory=  1049.946	t=     32.4 R=   2e+05
+Depth=  611914 States=    9e+06 Transitions= 2.64e+07 Memory=  1114.106	t=     36.4 R=   2e+05
+Depth=  611914 States=    1e+07 Transitions= 2.97e+07 Memory=  1173.871	t=     40.9 R=   2e+05
+Depth=  611914 States=  1.1e+07 Transitions= 3.26e+07 Memory=  1236.274	t=     44.9 R=   2e+05
+Depth=  611914 States=  1.2e+07 Transitions=  3.6e+07 Memory=  1299.946	t=     49.7 R=   2e+05
+Depth=  611914 States=  1.3e+07 Transitions= 3.94e+07 Memory=  1359.614	t=     54.4 R=   2e+05
+Depth=  611914 States=  1.4e+07 Transitions= 4.26e+07 Memory=  1420.844	t=     58.8 R=   2e+05
+Depth=  611914 States=  1.5e+07 Transitions= 4.55e+07 Memory=  1483.832	t=       63 R=   2e+05
+Depth=  611914 States=  1.6e+07 Transitions=  4.9e+07 Memory=  1544.868	t=       68 R=   2e+05
+Depth=  611914 States=  1.7e+07 Transitions= 5.23e+07 Memory=  1605.805	t=     72.4 R=   2e+05
+Depth=  611914 States=  1.8e+07 Transitions= 5.55e+07 Memory=  1666.254	t=     76.9 R=   2e+05
+Depth=  611914 States=  1.9e+07 Transitions= 5.87e+07 Memory=  1726.215	t=     81.3 R=   2e+05
+Depth=  611914 States=    2e+07 Transitions= 6.17e+07 Memory=  1790.473	t=     85.4 R=   2e+05
+Depth=  611914 States=  2.1e+07 Transitions= 6.49e+07 Memory=  1850.043	t=     89.8 R=   2e+05
+Depth=  611914 States=  2.2e+07 Transitions= 6.82e+07 Memory=  1911.274	t=     94.4 R=   2e+05
+Depth=  611914 States=  2.3e+07 Transitions= 7.14e+07 Memory=  1971.918	t=     98.8 R=   2e+05
+Depth=  611914 States=  2.4e+07 Transitions= 7.47e+07 Memory=  2032.856	t=      103 R=   2e+05
+Depth=  611914 States=  2.5e+07 Transitions= 7.81e+07 Memory=  2092.328	t=      108 R=   2e+05
+Depth=  611914 States=  2.6e+07 Transitions= 8.08e+07 Memory=  2147.309	t=      112 R=   2e+05
+Depth=  611914 States=  2.7e+07 Transitions= 8.44e+07 Memory=  2202.973	t=      117 R=   2e+05
+Depth=  611914 States=  2.8e+07 Transitions= 8.75e+07 Memory=  2257.563	t=      122 R=   2e+05
+Depth=  611914 States=  2.9e+07 Transitions= 9.08e+07 Memory=  2312.055	t=      126 R=   2e+05
+Depth=  611914 States=    3e+07 Transitions= 9.43e+07 Memory=  2365.961	t=      131 R=   2e+05
+Depth=  611914 States=  3.1e+07 Transitions= 9.77e+07 Memory=  2420.258	t=      136 R=   2e+05
+Depth=  611914 States=  3.2e+07 Transitions= 1.01e+08 Memory=  2474.262	t=      141 R=   2e+05
+Depth=  611914 States=  3.3e+07 Transitions= 1.04e+08 Memory=  2527.680	t=      145 R=   2e+05
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Partial Order Reduction
+	+ Compression
+
+Full statespace search for:
+	never claim         	+ (safety_0_3)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 288 byte, depth reached 611914, errors: 0
+ 33369278 states, stored
+ 71981137 states, matched
+1.0535042e+08 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:   6757782 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 9801.614	equivalent memory usage for states (stored*(State-vector + overhead))
+ 2001.725	actual memory usage for states (compression: 20.42%)
+         	state-vector as stored = 43 byte + 20 byte overhead
+  512.000	memory used for hash table (-w27)
+   34.332	memory used for DFS stack (-m1000000)
+ 2547.407	total actual memory usage
+
+
+nr of templates: [ 0:globals 1:chans 2:procs ]
+collapse counts: [ 0:1642457 2:6 3:708 4:109 7:1 ]
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:139, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:178, state 72, "-end-"
+	(1 of 72 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim safety_0_3
+	_spin_nvr.tmp:26, state 10, "-end-"
+	(1 of 10 states)
+
+pan: elapsed time 147 seconds
+pan: rate 227156.42 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -m1000000 -w27 -DCOLLAPSE -ltl safety_1_3 crossroads_round.pml 
+pan: ltl formula safety_1_3
+Depth=  389618 States=    1e+06 Transitions= 1.99e+06 Memory=   611.176	t=     2.82 R=   4e+05
+Depth=  486500 States=    2e+06 Transitions=  4.6e+06 Memory=   675.141	t=     6.48 R=   3e+05
+Depth=  551026 States=    3e+06 Transitions= 7.48e+06 Memory=   740.668	t=     10.5 R=   3e+05
+Depth=  601245 States=    4e+06 Transitions= 1.07e+07 Memory=   806.489	t=       15 R=   3e+05
+Depth=  611914 States=    5e+06 Transitions= 1.45e+07 Memory=   868.110	t=     20.1 R=   2e+05
+Depth=  611914 States=    6e+06 Transitions= 1.75e+07 Memory=   925.239	t=     24.2 R=   2e+05
+Depth=  611914 States=    7e+06 Transitions= 2.02e+07 Memory=   987.446	t=     27.9 R=   3e+05
+Depth=  611914 States=    8e+06 Transitions= 2.36e+07 Memory=  1049.946	t=     32.7 R=   2e+05
+Depth=  611914 States=    9e+06 Transitions= 2.64e+07 Memory=  1114.106	t=     36.6 R=   2e+05
+Depth=  611914 States=    1e+07 Transitions= 2.97e+07 Memory=  1173.871	t=       41 R=   2e+05
+Depth=  611914 States=  1.1e+07 Transitions= 3.26e+07 Memory=  1236.274	t=       45 R=   2e+05
+Depth=  611914 States=  1.2e+07 Transitions=  3.6e+07 Memory=  1299.946	t=     49.7 R=   2e+05
+Depth=  611914 States=  1.3e+07 Transitions= 3.94e+07 Memory=  1359.614	t=     54.3 R=   2e+05
+Depth=  611914 States=  1.4e+07 Transitions= 4.26e+07 Memory=  1420.844	t=     58.7 R=   2e+05
+Depth=  611914 States=  1.5e+07 Transitions= 4.55e+07 Memory=  1483.832	t=     62.7 R=   2e+05
+Depth=  611914 States=  1.6e+07 Transitions=  4.9e+07 Memory=  1544.868	t=     67.7 R=   2e+05
+Depth=  611914 States=  1.7e+07 Transitions= 5.23e+07 Memory=  1605.805	t=     72.1 R=   2e+05
+Depth=  611914 States=  1.8e+07 Transitions= 5.55e+07 Memory=  1666.254	t=     76.6 R=   2e+05
+Depth=  611914 States=  1.9e+07 Transitions= 5.87e+07 Memory=  1726.215	t=     81.1 R=   2e+05
+Depth=  611914 States=    2e+07 Transitions= 6.17e+07 Memory=  1790.473	t=     85.1 R=   2e+05
+Depth=  611914 States=  2.1e+07 Transitions= 6.49e+07 Memory=  1850.043	t=     89.6 R=   2e+05
+Depth=  611914 States=  2.2e+07 Transitions= 6.82e+07 Memory=  1911.274	t=     94.2 R=   2e+05
+Depth=  611914 States=  2.3e+07 Transitions= 7.14e+07 Memory=  1971.918	t=     98.6 R=   2e+05
+Depth=  611914 States=  2.4e+07 Transitions= 7.47e+07 Memory=  2032.856	t=      103 R=   2e+05
+Depth=  611914 States=  2.5e+07 Transitions= 7.81e+07 Memory=  2092.328	t=      108 R=   2e+05
+Depth=  611914 States=  2.6e+07 Transitions= 8.08e+07 Memory=  2147.309	t=      112 R=   2e+05
+Depth=  611914 States=  2.7e+07 Transitions= 8.44e+07 Memory=  2202.973	t=      117 R=   2e+05
+Depth=  611914 States=  2.8e+07 Transitions= 8.75e+07 Memory=  2257.563	t=      122 R=   2e+05
+Depth=  611914 States=  2.9e+07 Transitions= 9.08e+07 Memory=  2312.055	t=      126 R=   2e+05
+Depth=  611914 States=    3e+07 Transitions= 9.43e+07 Memory=  2365.961	t=      131 R=   2e+05
+Depth=  611914 States=  3.1e+07 Transitions= 9.77e+07 Memory=  2420.258	t=      136 R=   2e+05
+Depth=  611914 States=  3.2e+07 Transitions= 1.01e+08 Memory=  2474.262	t=      141 R=   2e+05
+Depth=  611914 States=  3.3e+07 Transitions= 1.04e+08 Memory=  2527.680	t=      145 R=   2e+05
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Partial Order Reduction
+	+ Compression
+
+Full statespace search for:
+	never claim         	+ (safety_1_3)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 288 byte, depth reached 611914, errors: 0
+ 33369278 states, stored
+ 71981137 states, matched
+1.0535042e+08 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:   6752055 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 9801.614	equivalent memory usage for states (stored*(State-vector + overhead))
+ 2001.725	actual memory usage for states (compression: 20.42%)
+         	state-vector as stored = 43 byte + 20 byte overhead
+  512.000	memory used for hash table (-w27)
+   34.332	memory used for DFS stack (-m1000000)
+ 2547.407	total actual memory usage
+
+
+nr of templates: [ 0:globals 1:chans 2:procs ]
+collapse counts: [ 0:1642457 2:6 3:708 4:109 8:1 ]
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:139, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:178, state 72, "-end-"
+	(1 of 72 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim safety_1_3
+	_spin_nvr.tmp:35, state 10, "-end-"
+	(1 of 10 states)
+
+pan: elapsed time 147 seconds
+pan: rate 227072.95 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -m1000000 -w27 -DCOLLAPSE -ltl safety_2_3 crossroads_round.pml 
+pan: ltl formula safety_2_3
+Depth=  389618 States=    1e+06 Transitions= 1.99e+06 Memory=   611.176	t=     2.77 R=   4e+05
+Depth=  486500 States=    2e+06 Transitions=  4.6e+06 Memory=   675.141	t=     6.36 R=   3e+05
+Depth=  551026 States=    3e+06 Transitions= 7.48e+06 Memory=   740.668	t=     10.3 R=   3e+05
+Depth=  601245 States=    4e+06 Transitions= 1.07e+07 Memory=   806.489	t=     14.8 R=   3e+05
+Depth=  611914 States=    5e+06 Transitions= 1.45e+07 Memory=   868.110	t=       20 R=   3e+05
+Depth=  611914 States=    6e+06 Transitions= 1.75e+07 Memory=   925.239	t=     24.1 R=   2e+05
+Depth=  611914 States=    7e+06 Transitions= 2.02e+07 Memory=   987.446	t=     27.9 R=   3e+05
+Depth=  611914 States=    8e+06 Transitions= 2.36e+07 Memory=  1049.946	t=     32.5 R=   2e+05
+Depth=  611914 States=    9e+06 Transitions= 2.64e+07 Memory=  1114.106	t=     36.4 R=   2e+05
+Depth=  611914 States=    1e+07 Transitions= 2.97e+07 Memory=  1173.871	t=     40.8 R=   2e+05
+Depth=  611914 States=  1.1e+07 Transitions= 3.26e+07 Memory=  1236.274	t=     44.8 R=   2e+05
+Depth=  611914 States=  1.2e+07 Transitions=  3.6e+07 Memory=  1299.946	t=     49.5 R=   2e+05
+Depth=  611914 States=  1.3e+07 Transitions= 3.94e+07 Memory=  1359.614	t=     54.2 R=   2e+05
+Depth=  611914 States=  1.4e+07 Transitions= 4.26e+07 Memory=  1420.844	t=     58.5 R=   2e+05
+Depth=  611914 States=  1.5e+07 Transitions= 4.55e+07 Memory=  1483.832	t=     62.5 R=   2e+05
+Depth=  611914 States=  1.6e+07 Transitions=  4.9e+07 Memory=  1544.868	t=     67.4 R=   2e+05
+Depth=  611914 States=  1.7e+07 Transitions= 5.23e+07 Memory=  1605.805	t=     71.8 R=   2e+05
+Depth=  611914 States=  1.8e+07 Transitions= 5.55e+07 Memory=  1666.254	t=     76.3 R=   2e+05
+Depth=  611914 States=  1.9e+07 Transitions= 5.87e+07 Memory=  1726.215	t=     80.7 R=   2e+05
+Depth=  611914 States=    2e+07 Transitions= 6.17e+07 Memory=  1790.473	t=     84.8 R=   2e+05
+Depth=  611914 States=  2.1e+07 Transitions= 6.49e+07 Memory=  1850.043	t=     89.3 R=   2e+05
+Depth=  611914 States=  2.2e+07 Transitions= 6.82e+07 Memory=  1911.274	t=     93.9 R=   2e+05
+Depth=  611914 States=  2.3e+07 Transitions= 7.14e+07 Memory=  1971.918	t=     98.2 R=   2e+05
+Depth=  611914 States=  2.4e+07 Transitions= 7.47e+07 Memory=  2032.856	t=      103 R=   2e+05
+Depth=  611914 States=  2.5e+07 Transitions= 7.81e+07 Memory=  2092.328	t=      108 R=   2e+05
+Depth=  611914 States=  2.6e+07 Transitions= 8.08e+07 Memory=  2147.309	t=      111 R=   2e+05
+Depth=  611914 States=  2.7e+07 Transitions= 8.44e+07 Memory=  2202.973	t=      116 R=   2e+05
+Depth=  611914 States=  2.8e+07 Transitions= 8.75e+07 Memory=  2257.563	t=      121 R=   2e+05
+Depth=  611914 States=  2.9e+07 Transitions= 9.08e+07 Memory=  2312.055	t=      126 R=   2e+05
+Depth=  611914 States=    3e+07 Transitions= 9.43e+07 Memory=  2365.961	t=      131 R=   2e+05
+Depth=  611914 States=  3.1e+07 Transitions= 9.77e+07 Memory=  2420.258	t=      135 R=   2e+05
+Depth=  611914 States=  3.2e+07 Transitions= 1.01e+08 Memory=  2474.262	t=      140 R=   2e+05
+Depth=  611914 States=  3.3e+07 Transitions= 1.04e+08 Memory=  2527.680	t=      145 R=   2e+05
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Partial Order Reduction
+	+ Compression
+
+Full statespace search for:
+	never claim         	+ (safety_2_3)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 288 byte, depth reached 611914, errors: 0
+ 33369278 states, stored
+ 71981137 states, matched
+1.0535042e+08 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:   6756379 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 9801.614	equivalent memory usage for states (stored*(State-vector + overhead))
+ 2001.725	actual memory usage for states (compression: 20.42%)
+         	state-vector as stored = 43 byte + 20 byte overhead
+  512.000	memory used for hash table (-w27)
+   34.332	memory used for DFS stack (-m1000000)
+ 2547.407	total actual memory usage
+
+
+nr of templates: [ 0:globals 1:chans 2:procs ]
+collapse counts: [ 0:1642457 2:6 3:708 4:109 9:1 ]
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:139, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:178, state 72, "-end-"
+	(1 of 72 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim safety_2_3
+	_spin_nvr.tmp:44, state 10, "-end-"
+	(1 of 10 states)
+
+pan: elapsed time 147 seconds
+pan: rate 227739.33 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -m1000000 -w27 -DCOLLAPSE -ltl safety_2_4 crossroads_round.pml 
+pan: ltl formula safety_2_4
+Depth=  389618 States=    1e+06 Transitions= 1.99e+06 Memory=   611.176	t=      2.8 R=   4e+05
+Depth=  486500 States=    2e+06 Transitions=  4.6e+06 Memory=   675.141	t=     6.37 R=   3e+05
+Depth=  551026 States=    3e+06 Transitions= 7.48e+06 Memory=   740.668	t=     10.3 R=   3e+05
+Depth=  601245 States=    4e+06 Transitions= 1.07e+07 Memory=   806.489	t=     14.7 R=   3e+05
+Depth=  611914 States=    5e+06 Transitions= 1.45e+07 Memory=   868.110	t=     19.9 R=   3e+05
+Depth=  611914 States=    6e+06 Transitions= 1.75e+07 Memory=   925.239	t=       24 R=   2e+05
+Depth=  611914 States=    7e+06 Transitions= 2.02e+07 Memory=   987.446	t=     27.8 R=   3e+05
+Depth=  611914 States=    8e+06 Transitions= 2.36e+07 Memory=  1049.946	t=     32.7 R=   2e+05
+Depth=  611914 States=    9e+06 Transitions= 2.64e+07 Memory=  1114.106	t=     36.7 R=   2e+05
+Depth=  611914 States=    1e+07 Transitions= 2.97e+07 Memory=  1173.871	t=     41.2 R=   2e+05
+Depth=  611914 States=  1.1e+07 Transitions= 3.26e+07 Memory=  1236.274	t=     45.2 R=   2e+05
+Depth=  611914 States=  1.2e+07 Transitions=  3.6e+07 Memory=  1299.946	t=     49.8 R=   2e+05
+Depth=  611914 States=  1.3e+07 Transitions= 3.94e+07 Memory=  1359.614	t=     54.5 R=   2e+05
+Depth=  611914 States=  1.4e+07 Transitions= 4.26e+07 Memory=  1420.844	t=       59 R=   2e+05
+Depth=  611914 States=  1.5e+07 Transitions= 4.55e+07 Memory=  1483.832	t=       63 R=   2e+05
+Depth=  611914 States=  1.6e+07 Transitions=  4.9e+07 Memory=  1544.868	t=     68.1 R=   2e+05
+Depth=  611914 States=  1.7e+07 Transitions= 5.23e+07 Memory=  1605.805	t=     72.7 R=   2e+05
+Depth=  611914 States=  1.8e+07 Transitions= 5.55e+07 Memory=  1666.254	t=     77.2 R=   2e+05
+Depth=  611914 States=  1.9e+07 Transitions= 5.87e+07 Memory=  1726.215	t=     81.7 R=   2e+05
+Depth=  611914 States=    2e+07 Transitions= 6.17e+07 Memory=  1790.473	t=     85.8 R=   2e+05
+Depth=  611914 States=  2.1e+07 Transitions= 6.49e+07 Memory=  1850.043	t=     90.3 R=   2e+05
+Depth=  611914 States=  2.2e+07 Transitions= 6.82e+07 Memory=  1911.274	t=     94.9 R=   2e+05
+Depth=  611914 States=  2.3e+07 Transitions= 7.14e+07 Memory=  1971.918	t=     99.3 R=   2e+05
+Depth=  611914 States=  2.4e+07 Transitions= 7.47e+07 Memory=  2032.856	t=      104 R=   2e+05
+Depth=  611914 States=  2.5e+07 Transitions= 7.81e+07 Memory=  2092.328	t=      109 R=   2e+05
+Depth=  611914 States=  2.6e+07 Transitions= 8.08e+07 Memory=  2147.309	t=      113 R=   2e+05
+Depth=  611914 States=  2.7e+07 Transitions= 8.44e+07 Memory=  2202.973	t=      118 R=   2e+05
+Depth=  611914 States=  2.8e+07 Transitions= 8.75e+07 Memory=  2257.563	t=      122 R=   2e+05
+Depth=  611914 States=  2.9e+07 Transitions= 9.08e+07 Memory=  2312.055	t=      127 R=   2e+05
+Depth=  611914 States=    3e+07 Transitions= 9.43e+07 Memory=  2365.961	t=      132 R=   2e+05
+Depth=  611914 States=  3.1e+07 Transitions= 9.77e+07 Memory=  2420.258	t=      137 R=   2e+05
+Depth=  611914 States=  3.2e+07 Transitions= 1.01e+08 Memory=  2474.262	t=      141 R=   2e+05
+Depth=  611914 States=  3.3e+07 Transitions= 1.04e+08 Memory=  2527.680	t=      146 R=   2e+05
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Partial Order Reduction
+	+ Compression
+
+Full statespace search for:
+	never claim         	+ (safety_2_4)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 288 byte, depth reached 611914, errors: 0
+ 33369278 states, stored
+ 71981137 states, matched
+1.0535042e+08 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:   6751922 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 9801.614	equivalent memory usage for states (stored*(State-vector + overhead))
+ 2001.725	actual memory usage for states (compression: 20.42%)
+         	state-vector as stored = 43 byte + 20 byte overhead
+  512.000	memory used for hash table (-w27)
+   34.332	memory used for DFS stack (-m1000000)
+ 2547.407	total actual memory usage
+
+
+nr of templates: [ 0:globals 1:chans 2:procs ]
+collapse counts: [ 0:1642457 2:6 3:708 4:109 10:1 ]
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:139, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:178, state 72, "-end-"
+	(1 of 72 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim safety_2_4
+	_spin_nvr.tmp:53, state 10, "-end-"
+	(1 of 10 states)
+
+pan: elapsed time 147 seconds
+pan: rate  226335.2 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -m1000000 -w27 -DCOLLAPSE -ltl safety_2_5 crossroads_round.pml 
+pan: ltl formula safety_2_5
+Depth=  389618 States=    1e+06 Transitions= 1.99e+06 Memory=   611.176	t=     2.78 R=   4e+05
+Depth=  486500 States=    2e+06 Transitions=  4.6e+06 Memory=   675.141	t=     6.35 R=   3e+05
+Depth=  551026 States=    3e+06 Transitions= 7.48e+06 Memory=   740.668	t=     10.3 R=   3e+05
+Depth=  601245 States=    4e+06 Transitions= 1.07e+07 Memory=   806.489	t=     14.7 R=   3e+05
+Depth=  611914 States=    5e+06 Transitions= 1.45e+07 Memory=   868.110	t=     19.8 R=   3e+05
+Depth=  611914 States=    6e+06 Transitions= 1.75e+07 Memory=   925.239	t=     23.9 R=   3e+05
+Depth=  611914 States=    7e+06 Transitions= 2.02e+07 Memory=   987.446	t=     27.6 R=   3e+05
+Depth=  611914 States=    8e+06 Transitions= 2.36e+07 Memory=  1049.946	t=     32.3 R=   2e+05
+Depth=  611914 States=    9e+06 Transitions= 2.64e+07 Memory=  1114.106	t=     36.2 R=   2e+05
+Depth=  611914 States=    1e+07 Transitions= 2.97e+07 Memory=  1173.871	t=     40.7 R=   2e+05
+Depth=  611914 States=  1.1e+07 Transitions= 3.26e+07 Memory=  1236.274	t=     44.6 R=   2e+05
+Depth=  611914 States=  1.2e+07 Transitions=  3.6e+07 Memory=  1299.946	t=     49.3 R=   2e+05
+Depth=  611914 States=  1.3e+07 Transitions= 3.94e+07 Memory=  1359.614	t=       54 R=   2e+05
+Depth=  611914 States=  1.4e+07 Transitions= 4.26e+07 Memory=  1420.844	t=     58.4 R=   2e+05
+Depth=  611914 States=  1.5e+07 Transitions= 4.55e+07 Memory=  1483.832	t=     62.3 R=   2e+05
+Depth=  611914 States=  1.6e+07 Transitions=  4.9e+07 Memory=  1544.868	t=     67.3 R=   2e+05
+Depth=  611914 States=  1.7e+07 Transitions= 5.23e+07 Memory=  1605.805	t=     71.7 R=   2e+05
+Depth=  611914 States=  1.8e+07 Transitions= 5.55e+07 Memory=  1666.254	t=     76.2 R=   2e+05
+Depth=  611914 States=  1.9e+07 Transitions= 5.87e+07 Memory=  1726.215	t=     80.6 R=   2e+05
+Depth=  611914 States=    2e+07 Transitions= 6.17e+07 Memory=  1790.473	t=     84.8 R=   2e+05
+Depth=  611914 States=  2.1e+07 Transitions= 6.49e+07 Memory=  1850.043	t=     89.8 R=   2e+05
+Depth=  611914 States=  2.2e+07 Transitions= 6.82e+07 Memory=  1911.274	t=     94.5 R=   2e+05
+Depth=  611914 States=  2.3e+07 Transitions= 7.14e+07 Memory=  1971.918	t=     99.1 R=   2e+05
+Depth=  611914 States=  2.4e+07 Transitions= 7.47e+07 Memory=  2032.856	t=      104 R=   2e+05
+Depth=  611914 States=  2.5e+07 Transitions= 7.81e+07 Memory=  2092.328	t=      109 R=   2e+05
+Depth=  611914 States=  2.6e+07 Transitions= 8.08e+07 Memory=  2147.309	t=      113 R=   2e+05
+Depth=  611914 States=  2.7e+07 Transitions= 8.44e+07 Memory=  2202.973	t=      118 R=   2e+05
+Depth=  611914 States=  2.8e+07 Transitions= 8.75e+07 Memory=  2257.563	t=      122 R=   2e+05
+Depth=  611914 States=  2.9e+07 Transitions= 9.08e+07 Memory=  2312.055	t=      127 R=   2e+05
+Depth=  611914 States=    3e+07 Transitions= 9.43e+07 Memory=  2365.961	t=      132 R=   2e+05
+Depth=  611914 States=  3.1e+07 Transitions= 9.77e+07 Memory=  2420.258	t=      137 R=   2e+05
+Depth=  611914 States=  3.2e+07 Transitions= 1.01e+08 Memory=  2474.262	t=      142 R=   2e+05
+Depth=  611914 States=  3.3e+07 Transitions= 1.04e+08 Memory=  2527.680	t=      147 R=   2e+05
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Partial Order Reduction
+	+ Compression
+
+Full statespace search for:
+	never claim         	+ (safety_2_5)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 288 byte, depth reached 611914, errors: 0
+ 33369278 states, stored
+ 71981137 states, matched
+1.0535042e+08 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:   6761816 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 9801.614	equivalent memory usage for states (stored*(State-vector + overhead))
+ 2001.725	actual memory usage for states (compression: 20.42%)
+         	state-vector as stored = 43 byte + 20 byte overhead
+  512.000	memory used for hash table (-w27)
+   34.332	memory used for DFS stack (-m1000000)
+ 2547.407	total actual memory usage
+
+
+nr of templates: [ 0:globals 1:chans 2:procs ]
+collapse counts: [ 0:1642457 2:6 3:708 4:109 11:1 ]
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:139, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:178, state 72, "-end-"
+	(1 of 72 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim safety_2_5
+	_spin_nvr.tmp:62, state 10, "-end-"
+	(1 of 10 states)
+
+pan: elapsed time 149 seconds
+pan: rate  224497.3 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -m1000000 -w27 -DCOLLAPSE -ltl safety_3_5 crossroads_round.pml 
+pan: ltl formula safety_3_5
+Depth=  389618 States=    1e+06 Transitions= 1.99e+06 Memory=   611.176	t=     2.77 R=   4e+05
+Depth=  486500 States=    2e+06 Transitions=  4.6e+06 Memory=   675.141	t=     6.35 R=   3e+05
+Depth=  551026 States=    3e+06 Transitions= 7.48e+06 Memory=   740.668	t=     10.3 R=   3e+05
+Depth=  601245 States=    4e+06 Transitions= 1.07e+07 Memory=   806.489	t=     14.7 R=   3e+05
+Depth=  611914 States=    5e+06 Transitions= 1.45e+07 Memory=   868.110	t=     19.9 R=   3e+05
+Depth=  611914 States=    6e+06 Transitions= 1.75e+07 Memory=   925.239	t=     23.9 R=   3e+05
+Depth=  611914 States=    7e+06 Transitions= 2.02e+07 Memory=   987.446	t=     27.6 R=   3e+05
+Depth=  611914 States=    8e+06 Transitions= 2.36e+07 Memory=  1049.946	t=     32.4 R=   2e+05
+Depth=  611914 States=    9e+06 Transitions= 2.64e+07 Memory=  1114.106	t=     36.4 R=   2e+05
+Depth=  611914 States=    1e+07 Transitions= 2.97e+07 Memory=  1173.871	t=     40.8 R=   2e+05
+Depth=  611914 States=  1.1e+07 Transitions= 3.26e+07 Memory=  1236.274	t=     44.8 R=   2e+05
+Depth=  611914 States=  1.2e+07 Transitions=  3.6e+07 Memory=  1299.946	t=     49.4 R=   2e+05
+Depth=  611914 States=  1.3e+07 Transitions= 3.94e+07 Memory=  1359.614	t=     54.1 R=   2e+05
+Depth=  611914 States=  1.4e+07 Transitions= 4.26e+07 Memory=  1420.844	t=     58.4 R=   2e+05
+Depth=  611914 States=  1.5e+07 Transitions= 4.55e+07 Memory=  1483.832	t=     62.4 R=   2e+05
+Depth=  611914 States=  1.6e+07 Transitions=  4.9e+07 Memory=  1544.868	t=     67.3 R=   2e+05
+Depth=  611914 States=  1.7e+07 Transitions= 5.23e+07 Memory=  1605.805	t=     71.8 R=   2e+05
+Depth=  611914 States=  1.8e+07 Transitions= 5.55e+07 Memory=  1666.254	t=     76.2 R=   2e+05
+Depth=  611914 States=  1.9e+07 Transitions= 5.87e+07 Memory=  1726.215	t=     80.6 R=   2e+05
+Depth=  611914 States=    2e+07 Transitions= 6.17e+07 Memory=  1790.473	t=     84.7 R=   2e+05
+Depth=  611914 States=  2.1e+07 Transitions= 6.49e+07 Memory=  1850.043	t=     89.2 R=   2e+05
+Depth=  611914 States=  2.2e+07 Transitions= 6.82e+07 Memory=  1911.274	t=     93.7 R=   2e+05
+Depth=  611914 States=  2.3e+07 Transitions= 7.14e+07 Memory=  1971.918	t=       98 R=   2e+05
+Depth=  611914 States=  2.4e+07 Transitions= 7.47e+07 Memory=  2032.856	t=      103 R=   2e+05
+Depth=  611914 States=  2.5e+07 Transitions= 7.81e+07 Memory=  2092.328	t=      107 R=   2e+05
+Depth=  611914 States=  2.6e+07 Transitions= 8.08e+07 Memory=  2147.309	t=      111 R=   2e+05
+Depth=  611914 States=  2.7e+07 Transitions= 8.44e+07 Memory=  2202.973	t=      116 R=   2e+05
+Depth=  611914 States=  2.8e+07 Transitions= 8.75e+07 Memory=  2257.563	t=      121 R=   2e+05
+Depth=  611914 States=  2.9e+07 Transitions= 9.08e+07 Memory=  2312.055	t=      125 R=   2e+05
+Depth=  611914 States=    3e+07 Transitions= 9.43e+07 Memory=  2365.961	t=      130 R=   2e+05
+Depth=  611914 States=  3.1e+07 Transitions= 9.77e+07 Memory=  2420.258	t=      135 R=   2e+05
+Depth=  611914 States=  3.2e+07 Transitions= 1.01e+08 Memory=  2474.262	t=      140 R=   2e+05
+Depth=  611914 States=  3.3e+07 Transitions= 1.04e+08 Memory=  2527.680	t=      144 R=   2e+05
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Partial Order Reduction
+	+ Compression
+
+Full statespace search for:
+	never claim         	+ (safety_3_5)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 288 byte, depth reached 611914, errors: 0
+ 33369278 states, stored
+ 71981137 states, matched
+1.0535042e+08 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:   6755364 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 9801.614	equivalent memory usage for states (stored*(State-vector + overhead))
+ 2001.725	actual memory usage for states (compression: 20.42%)
+         	state-vector as stored = 43 byte + 20 byte overhead
+  512.000	memory used for hash table (-w27)
+   34.332	memory used for DFS stack (-m1000000)
+ 2547.407	total actual memory usage
+
+
+nr of templates: [ 0:globals 1:chans 2:procs ]
+collapse counts: [ 0:1642457 2:6 3:708 4:109 12:1 ]
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:139, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:178, state 72, "-end-"
+	(1 of 72 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim safety_3_5
+	_spin_nvr.tmp:71, state 10, "-end-"
+	(1 of 10 states)
+
+pan: elapsed time 146 seconds
+pan: rate 228337.74 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
+
+[m[32m]9;8;"USERNAME"\@]9;8;"COMPUTERNAME"\ [92mC:\Program Files (x86)\pc_spin651[90m
+[90m$[m ]9;12\spin -search -a -m1000000 -w27 -DCOLLAPSE -ltl safety_4_5 crossroads_round.pml 
+pan: ltl formula safety_4_5
+Depth=  389618 States=    1e+06 Transitions= 1.99e+06 Memory=   611.176	t=     2.77 R=   4e+05
+Depth=  486500 States=    2e+06 Transitions=  4.6e+06 Memory=   675.141	t=     6.34 R=   3e+05
+Depth=  551026 States=    3e+06 Transitions= 7.48e+06 Memory=   740.668	t=     10.3 R=   3e+05
+Depth=  601245 States=    4e+06 Transitions= 1.07e+07 Memory=   806.489	t=     14.7 R=   3e+05
+Depth=  611914 States=    5e+06 Transitions= 1.45e+07 Memory=   868.110	t=     19.8 R=   3e+05
+Depth=  611914 States=    6e+06 Transitions= 1.75e+07 Memory=   925.239	t=     23.9 R=   3e+05
+Depth=  611914 States=    7e+06 Transitions= 2.02e+07 Memory=   987.446	t=     27.6 R=   3e+05
+Depth=  611914 States=    8e+06 Transitions= 2.36e+07 Memory=  1049.946	t=     32.2 R=   2e+05
+Depth=  611914 States=    9e+06 Transitions= 2.64e+07 Memory=  1114.106	t=     36.1 R=   2e+05
+Depth=  611914 States=    1e+07 Transitions= 2.97e+07 Memory=  1173.871	t=     40.6 R=   2e+05
+Depth=  611914 States=  1.1e+07 Transitions= 3.26e+07 Memory=  1236.274	t=     44.5 R=   2e+05
+Depth=  611914 States=  1.2e+07 Transitions=  3.6e+07 Memory=  1299.946	t=     49.2 R=   2e+05
+Depth=  611914 States=  1.3e+07 Transitions= 3.94e+07 Memory=  1359.614	t=     53.8 R=   2e+05
+Depth=  611914 States=  1.4e+07 Transitions= 4.26e+07 Memory=  1420.844	t=     58.2 R=   2e+05
+Depth=  611914 States=  1.5e+07 Transitions= 4.55e+07 Memory=  1483.832	t=     62.2 R=   2e+05
+Depth=  611914 States=  1.6e+07 Transitions=  4.9e+07 Memory=  1544.868	t=     67.1 R=   2e+05
+Depth=  611914 States=  1.7e+07 Transitions= 5.23e+07 Memory=  1605.805	t=     71.5 R=   2e+05
+Depth=  611914 States=  1.8e+07 Transitions= 5.55e+07 Memory=  1666.254	t=       76 R=   2e+05
+Depth=  611914 States=  1.9e+07 Transitions= 5.87e+07 Memory=  1726.215	t=     80.4 R=   2e+05
+Depth=  611914 States=    2e+07 Transitions= 6.17e+07 Memory=  1790.473	t=     84.5 R=   2e+05
+Depth=  611914 States=  2.1e+07 Transitions= 6.49e+07 Memory=  1850.043	t=       89 R=   2e+05
+Depth=  611914 States=  2.2e+07 Transitions= 6.82e+07 Memory=  1911.274	t=     93.5 R=   2e+05
+Depth=  611914 States=  2.3e+07 Transitions= 7.14e+07 Memory=  1971.918	t=     97.8 R=   2e+05
+Depth=  611914 States=  2.4e+07 Transitions= 7.47e+07 Memory=  2032.856	t=      103 R=   2e+05
+Depth=  611914 States=  2.5e+07 Transitions= 7.81e+07 Memory=  2092.328	t=      107 R=   2e+05
+Depth=  611914 States=  2.6e+07 Transitions= 8.08e+07 Memory=  2147.309	t=      112 R=   2e+05
+Depth=  611914 States=  2.7e+07 Transitions= 8.44e+07 Memory=  2202.973	t=      117 R=   2e+05
+Depth=  611914 States=  2.8e+07 Transitions= 8.75e+07 Memory=  2257.563	t=      121 R=   2e+05
+Depth=  611914 States=  2.9e+07 Transitions= 9.08e+07 Memory=  2312.055	t=      126 R=   2e+05
+Depth=  611914 States=    3e+07 Transitions= 9.43e+07 Memory=  2365.961	t=      131 R=   2e+05
+Depth=  611914 States=  3.1e+07 Transitions= 9.77e+07 Memory=  2420.258	t=      135 R=   2e+05
+Depth=  611914 States=  3.2e+07 Transitions= 1.01e+08 Memory=  2474.262	t=      140 R=   2e+05
+Depth=  611914 States=  3.3e+07 Transitions= 1.04e+08 Memory=  2527.680	t=      144 R=   2e+05
+
+(Spin Version 6.5.1 -- 31 July 2020)
+	+ Partial Order Reduction
+	+ Compression
+
+Full statespace search for:
+	never claim         	+ (safety_4_5)
+	assertion violations	+ (if within scope of claim)
+	acceptance   cycles 	+ (fairness disabled)
+	invalid end states	- (disabled by never claim)
+
+State-vector 288 byte, depth reached 611914, errors: 0
+ 33369278 states, stored
+ 71981137 states, matched
+1.0535042e+08 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:   6756634 (resolved)
+
+Stats on memory usage (in Megabytes):
+ 9801.614	equivalent memory usage for states (stored*(State-vector + overhead))
+ 2001.725	actual memory usage for states (compression: 20.42%)
+         	state-vector as stored = 43 byte + 20 byte overhead
+  512.000	memory used for hash table (-w27)
+   34.332	memory used for DFS stack (-m1000000)
+ 2547.407	total actual memory usage
+
+
+nr of templates: [ 0:globals 1:chans 2:procs ]
+collapse counts: [ 0:1642457 2:6 3:708 4:109 13:1 ]
+unreached in proctype TrafficGenerator
+	crossroads_round.pml:139, state 5, "-end-"
+	(1 of 5 states)
+unreached in proctype Controller
+	crossroads_round.pml:178, state 72, "-end-"
+	(1 of 72 states)
+unreached in proctype main
+	(0 of 57 states)
+unreached in claim safety_4_5
+	_spin_nvr.tmp:80, state 10, "-end-"
+	(1 of 10 states)
+
+pan: elapsed time 146 seconds
+pan: rate 228234.67 states/second
+ltl safety_0_1: [] (! (((trafficLights[0]==green)) && ((trafficLights[1]==green))))
+ltl safety_0_2: [] (! (((trafficLights[0]==green)) && ((trafficLights[2]==green))))
+ltl safety_0_3: [] (! (((trafficLights[0]==green)) && ((trafficLights[3]==green))))
+ltl safety_1_3: [] (! (((trafficLights[1]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_3: [] (! (((trafficLights[2]==green)) && ((trafficLights[3]==green))))
+ltl safety_2_4: [] (! (((trafficLights[2]==green)) && ((trafficLights[4]==green))))
+ltl safety_2_5: [] (! (((trafficLights[2]==green)) && ((trafficLights[5]==green))))
+ltl safety_3_5: [] (! (((trafficLights[3]==green)) && ((trafficLights[5]==green))))
+ltl safety_4_5: [] (! (((trafficLights[4]==green)) && ((trafficLights[5]==green))))
+ltl liveness_0: [] ((! ((len(trafficChannels[0])>0))) || (<> ((trafficLights[0]==green))))
+ltl liveness_1: [] ((! ((len(trafficChannels[1])>0))) || (<> ((trafficLights[1]==green))))
+ltl liveness_2: [] ((! ((len(trafficChannels[2])>0))) || (<> ((trafficLights[2]==green))))
+ltl liveness_3: [] ((! ((len(trafficChannels[3])>0))) || (<> ((trafficLights[3]==green))))
+ltl liveness_4: [] ((! ((len(trafficChannels[4])>0))) || (<> ((trafficLights[4]==green))))
+ltl liveness_5: [] ((! ((len(trafficChannels[5])>0))) || (<> ((trafficLights[5]==green))))
+ltl fairness_0: [] (<> (! (((trafficLights[0]==green)) && ((len(trafficChannels[0])>0)))))
+ltl fairness_1: [] (<> (! (((trafficLights[1]==green)) && ((len(trafficChannels[1])>0)))))
+ltl fairness_2: [] (<> (! (((trafficLights[2]==green)) && ((len(trafficChannels[2])>0)))))
+ltl fairness_3: [] (<> (! (((trafficLights[3]==green)) && ((len(trafficChannels[3])>0)))))
+ltl fairness_4: [] (<> (! (((trafficLights[4]==green)) && ((len(trafficChannels[4])>0)))))
+ltl fairness_5: [] (<> (! (((trafficLights[5]==green)) && ((len(trafficChannels[5])>0)))))
+ltl check_no_traffic_possible: <> (((((((len(trafficChannels[0])>0)) || ((len(trafficChannels[1])>0))) || ((len(trafficChannels[2])>0))) || ((len(trafficChannels[3])>0))) || ((len(trafficChannels[4])>0))) || ((len(trafficChannels[5])>0)))
+ltl check_both_green_0_4: [] (! (((trafficLights[0]==green)) && ((trafficLights[4]==green))))
+  the model contains 23 never claims: check_both_green_0_4, check_no_traffic_possible, fairness_5, fairness_4, fairness_3, fairness_2, fairness_1, fairness_0, liveness_5, liveness_4, liveness_3, liveness_2, liveness_1, liveness_0, safety_4_5, safety_3_5, safety_2_5, safety_2_4, safety_2_3, safety_1_3, safety_0_3, safety_0_2, safety_0_1
+  only one claim is used in a verification run
+  choose which one with ./pan -a -N name (defaults to -N safety_0_1)
+  or use e.g.: spin -search -ltl safety_0_1 crossroads_round.pml
