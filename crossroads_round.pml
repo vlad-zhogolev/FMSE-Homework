@@ -193,49 +193,37 @@ active proctype main()
     turnChannel[0]! true; // start traffic processing
 }
 
-#define tl_green_0 (trafficLights[0] == green)
-#define tl_green_1 (trafficLights[1] == green)
-#define tl_green_2 (trafficLights[2] == green)
-#define tl_green_3 (trafficLights[3] == green)
-#define tl_green_4 (trafficLights[4] == green)
-#define tl_green_5 (trafficLights[5] == green)
+#define tl_green(i) (trafficLights[i] == green)
+#define traffic_present(i) (len(trafficChannels[i]) > 0)
 
 
-#define traffic_present_0 (len(trafficChannels[0]) > 0)
-#define traffic_present_1 (len(trafficChannels[1]) > 0)
-#define traffic_present_2 (len(trafficChannels[2]) > 0)
-#define traffic_present_3 (len(trafficChannels[3]) > 0)
-#define traffic_present_4 (len(trafficChannels[4]) > 0)
-#define traffic_present_5 (len(trafficChannels[5]) > 0)
-
-
-ltl safety_0_1 { [] !(tl_green_0 && tl_green_1)}
-ltl safety_0_2 { [] !(tl_green_0 && tl_green_2)}
-ltl safety_0_3 { [] !(tl_green_0 && tl_green_3)}
-ltl safety_1_3 { [] !(tl_green_1 && tl_green_3)}
-ltl safety_2_3 { [] !(tl_green_2 && tl_green_3)}
-ltl safety_2_4 { [] !(tl_green_2 && tl_green_4)}
-ltl safety_2_5 { [] !(tl_green_2 && tl_green_5)}
-ltl safety_3_5 { [] !(tl_green_3 && tl_green_5)}
-ltl safety_4_5 { [] !(tl_green_4 && tl_green_5)}
+ltl safety_0_1 { [] !(tl_green(0) && tl_green(1))}
+ltl safety_0_2 { [] !(tl_green(0) && tl_green(2)}
+ltl safety_0_3 { [] !(tl_green(0) && tl_green(3)}
+ltl safety_1_3 { [] !(tl_green(1) && tl_green(3)}
+ltl safety_2_3 { [] !(tl_green(2) && tl_green(3)}
+ltl safety_2_4 { [] !(tl_green(2) && tl_green(4)}
+ltl safety_2_5 { [] !(tl_green(2) && tl_green(5)}
+ltl safety_3_5 { [] !(tl_green(3) && tl_green(5)}
+ltl safety_4_5 { [] !(tl_green(4) && tl_green(5)}
 
 
 // Check if buffered channel is not empty for liveness and then expect green light to appear
-ltl liveness_0 {[] (traffic_present_0 -> <> tl_green_0)}
-ltl liveness_1 {[] (traffic_present_1 -> <> tl_green_1)}
-ltl liveness_2 {[] (traffic_present_2 -> <> tl_green_2)}
-ltl liveness_3 {[] (traffic_present_3 -> <> tl_green_3)}
-ltl liveness_4 {[] (traffic_present_4 -> <> tl_green_4)}
-ltl liveness_5 {[] (traffic_present_5 -> <> tl_green_5)}
+ltl liveness_0 {[] (traffic_present(0) -> <> tl_green(0)}
+ltl liveness_1 {[] (traffic_present(1) -> <> tl_green(1)}
+ltl liveness_2 {[] (traffic_present(2) -> <> tl_green(2)}
+ltl liveness_3 {[] (traffic_present(3) -> <> tl_green(3)}
+ltl liveness_4 {[] (traffic_present(4) -> <> tl_green(4)}
+ltl liveness_5 {[] (traffic_present(5) -> <> tl_green(5)}
 
 
-ltl fairness_0 {[] <> !(tl_green_0 && traffic_present_0)} // check if really need traffic_present_0
-ltl fairness_1 {[] <> !(tl_green_1 && traffic_present_1)}
-ltl fairness_2 {[] <> !(tl_green_2 && traffic_present_2)}
-ltl fairness_3 {[] <> !(tl_green_3 && traffic_present_3)}
-ltl fairness_4 {[] <> !(tl_green_4 && traffic_present_4)}
-ltl fairness_5 {[] <> !(tl_green_5 && traffic_present_5)}
+ltl fairness_0 {[] <> !(tl_green(0) && traffic_present(0))} // check if really need traffic_present_0
+ltl fairness_1 {[] <> !(tl_green(1) && traffic_present(1))}
+ltl fairness_2 {[] <> !(tl_green(2) && traffic_present(2))}
+ltl fairness_3 {[] <> !(tl_green(3) && traffic_present(3))}
+ltl fairness_4 {[] <> !(tl_green(4) && traffic_present(4))}
+ltl fairness_5 {[] <> !(tl_green(5) && traffic_present(5))}
 
 
-ltl check_no_traffic_possible {<> (traffic_present_0 || traffic_present_1 || traffic_present_2 || traffic_present_3 || traffic_present_4 || traffic_present_5)}
-ltl check_both_green_0_4 {[] !(tl_green_0 && tl_green_4)}
+ltl check_no_traffic_possible {<> (traffic_present(0) || traffic_present(1) || traffic_present(2) || traffic_present(3) || traffic_present(4) || traffic_present(5))}
+ltl check_both_green_0_4 {[] !(tl_green(0) && tl_green(4))}
