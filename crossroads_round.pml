@@ -197,15 +197,15 @@ active proctype main()
 #define traffic_present(i) (len(trafficChannels[i]) > 0)
 
 
-ltl safety_0_1 { [] !(tl_green(0) && tl_green(1))}
-ltl safety_0_2 { [] !(tl_green(0) && tl_green(2))}
-ltl safety_0_3 { [] !(tl_green(0) && tl_green(3))}
-ltl safety_1_3 { [] !(tl_green(1) && tl_green(3))}
-ltl safety_2_3 { [] !(tl_green(2) && tl_green(3))}
-ltl safety_2_4 { [] !(tl_green(2) && tl_green(4))}
-ltl safety_2_5 { [] !(tl_green(2) && tl_green(5))}
-ltl safety_3_5 { [] !(tl_green(3) && tl_green(5))}
-ltl safety_4_5 { [] !(tl_green(4) && tl_green(5))}
+ltl safety_0_1 {[] !(tl_green(0) && tl_green(1))}
+ltl safety_0_2 {[] !(tl_green(0) && tl_green(2))}
+ltl safety_0_3 {[] !(tl_green(0) && tl_green(3))}
+ltl safety_1_3 {[] !(tl_green(1) && tl_green(3))}
+ltl safety_2_3 {[] !(tl_green(2) && tl_green(3))}
+ltl safety_2_4 {[] !(tl_green(2) && tl_green(4))}
+ltl safety_2_5 {[] !(tl_green(2) && tl_green(5))}
+ltl safety_3_5 {[] !(tl_green(3) && tl_green(5))}
+ltl safety_4_5 {[] !(tl_green(4) && tl_green(5))}
 
 
 // Check if buffered channel is not empty for liveness and then expect green light to appear
