@@ -217,12 +217,12 @@ ltl liveness_4 {[] (traffic_present(4) -> <> tl_green(4))}
 ltl liveness_5 {[] (traffic_present(5) -> <> tl_green(5))}
 
 
-ltl fairness_0 {[] <> !(tl_green(0) && traffic_present(0))} // check if really need traffic_present_0
-ltl fairness_1 {[] <> !(tl_green(1) && traffic_present(1))}
-ltl fairness_2 {[] <> !(tl_green(2) && traffic_present(2))}
-ltl fairness_3 {[] <> !(tl_green(3) && traffic_present(3))}
-ltl fairness_4 {[] <> !(tl_green(4) && traffic_present(4))}
-ltl fairness_5 {[] <> !(tl_green(5) && traffic_present(5))}
+ltl fairness_0 {[] <> !(tl_green(0))}
+ltl fairness_1 {[] <> !(tl_green(1))}
+ltl fairness_2 {[] <> !(tl_green(2))}
+ltl fairness_3 {[] <> !(tl_green(3))}
+ltl fairness_4 {[] <> !(tl_green(4))}
+ltl fairness_5 {[] <> !(tl_green(5))}
 
 
 ltl check_no_traffic_possible {<> (traffic_present(0) || traffic_present(1) || traffic_present(2) || traffic_present(3) || traffic_present(4) || traffic_present(5))}
